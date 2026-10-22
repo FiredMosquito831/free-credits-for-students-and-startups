@@ -1,0 +1,15 @@
+{
+  "name": "Free Credits & Offers for Students and Startups",
+  "short_name": "Free Credits",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1F3A5F",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

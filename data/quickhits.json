@@ -1,0 +1,1616 @@
+{
+ "startup": [
+  {
+   "provider": "Y Combinator",
+   "fronts": [
+    "cloud-credits"
+   ],
+   "offer": "OpenAI API credits for YC startups",
+   "value": 1500000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://mlq.ai/news/openai-and-anthropic-pour-up-to-800m-a-year-in-free-credits-into-yc-startups/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "500 Global",
+   "fronts": [
+    "cloud-credits"
+   ],
+   "offer": "500 Fellowship (500 Global Flagship Accelerator, Palo Alto)",
+   "value": 1000000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://500.co/founders/flagship",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Chargebee",
+   "fronts": [
+    "payments-fintech"
+   ],
+   "offer": "Startup Program — $1M free Billing",
+   "value": 1000000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.chargebee.com/startups/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Cloudflare",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "hosting-paas",
+    "observability",
+    "student-only"
+   ],
+   "offer": "The Cold Start pitch competition — $500,000 credits prize (2026 edition, now concluded)",
+   "value": 500000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://blog.cloudflare.com/introducing-the-cold-start/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Y Combinator",
+   "fronts": [
+    "cloud-credits"
+   ],
+   "offer": "Google Cloud / Gemini credits for YC startups",
+   "value": 500000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://the-decoder.com/openai-and-anthropic-are-giving-away-millions-in-computing-power-to-attract-startups/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Cloudflare",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "hosting-paas",
+    "observability",
+    "student-only"
+   ],
+   "offer": "Cloudflare for Startups: up to $350,000 in credits (3 tiers: $10k / $100k / $350k)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.cloudflare.com/startups/(readtoday)",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Cloudflare",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "hosting-paas",
+    "observability",
+    "student-only"
+   ],
+   "offer": "Cloudflare for Startups — 3-tier credit program (up to $350,000 in credits, 12 months)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.cloudflare.com/startups/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Cloudflare",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "hosting-paas",
+    "observability",
+    "student-only"
+   ],
+   "offer": "Cloudflare Startup Program (up to $350,000 in credits)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.cloudflare.com/startups/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Cloudflare",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "hosting-paas",
+    "observability",
+    "student-only"
+   ],
+   "offer": "Cloudflare Startup Program — annual credits ($10K / $100K / $350K tiers)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.cloudflare.com/startup/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Firebase Authentication",
+   "fronts": [
+    "auth-analytics"
+   ],
+   "offer": "Google for Startups Cloud Program — up to $350,000 GCP credits",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startups",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Gemini API Free Tier",
+   "fronts": [
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program: AI-first track (up to $350,000)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startup/benefits",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program — Scale tier: up to $200,000 credits over 2 years ($350,000 for AI-first startups)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startup/ai",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program — Scale tier (up to $200,000 GCP credits over 2 years; $350,000 for AI-first)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startup/seed-series-a",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program - 'Scale'/'Scale AI' funded tiers (up to $200K-$350K over two years)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startups",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program (credits: Start $2,000 / Scale up to $200,000 / Scale AI up to $350,000)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startup(AItier:https://cloud.google.com/startup/ai;onboarding:https://cloud.google.com/startup/onboarding)",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  }
+ ],
+ "student": [
+  {
+   "provider": "AWS (Amazon Web Services)",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "observability",
+    "email-messaging",
+    "student-only"
+   ],
+   "offer": "AWS Activate / AWS for Startups — up to $200,000 in credits + partner offers",
+   "value": 200000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://aws.amazon.com/startups/",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Microsoft",
+   "fronts": [
+    "devtools",
+    "student-only"
+   ],
+   "offer": "Microsoft for Startups — single-path program, $200 immediate credits, up to $150,000 via milestones (current 2026 structure)",
+   "value": 150000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/getting-started-mfs",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Microsoft Azure",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "devtools",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Microsoft for Startups program: milestone credits up to $150,000 (2026 structure)",
+   "value": 150000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/getting-started-mfs",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Microsoft Azure",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "devtools",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Microsoft for Startups — up to $150,000 startup credits (single-entry, milestone-based, as of 2026)",
+   "value": 150000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/overview(milestones:.../getting-started-mfs;applicationsteps:.../application)",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Microsoft Azure",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "devtools",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Microsoft for Startups Investor Network track (~$100,000+ Azure credits, referral-gated)",
+   "value": 100000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/mfs-faqs",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Microsoft Azure",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "devtools",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Microsoft for Startups, Investor Network track: referral-gated, $100,000+ Azure credits + dedicated Microsoft point of contact",
+   "value": 100000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://www.microsoft.com/en-us/startups/blog/build-fast-scale-smart-and-sell-more-microsoft-for-startups-evolves-to-better-serve-the-startup-ecosystem/;https://www.theregister.com/off-prem/2025/07/01/microsoft-changes-conditions-for-azure-startup-credits/101398;https://learn.microsoft.com/en-us/startups/microsoft-for-startups/overview",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Anthropic",
+   "fronts": [
+    "llm-apis",
+    "student-only"
+   ],
+   "offer": "AI for Science program — up to $20,000 API credits for 6 months (researchers/education)",
+   "value": 20000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://support.claude.com/en/articles/11199177",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Algolia Free Plan",
+   "fronts": [
+    "apis-data"
+   ],
+   "offer": "Algolia Startup Program (trial credits)",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.algolia.com/industries/startups",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "GitHub",
+   "fronts": [
+    "llm-apis",
+    "hosting-paas",
+    "devtools",
+    "student-only"
+   ],
+   "offer": "GitHub for Startups program — $10,000 credits (education/startup front: startup program)",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://github.com/enterprise/startups",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Modal",
+   "fronts": [
+    "gpu-ml"
+   ],
+   "offer": "Modal for Academics — up to $10,000 free compute credits (student/researcher program)",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://modal.com/academics",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Replicate 'Try for Free' collection",
+   "fronts": [
+    "llm-apis"
+   ],
+   "offer": "YC Summer Fellows (2025): Replicate $10,000 credits for students",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.ycombinator.com/blog/summer-fellows",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "AWS (Amazon Web Services)",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "observability",
+    "email-messaging",
+    "student-only"
+   ],
+   "offer": "AWS Cloud Credit for Research: up to $5,000 for students, uncapped for faculty/staff",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://aws.amazon.com/government-education/research-and-technical-computing/cloud-credit-for-research/(FAQ:.../faqs/;apply:https://pages.awscloud.com/aws-cloud-credit-for-research.html)",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Gemini API Free Tier",
+   "fronts": [
+    "student-only"
+   ],
+   "offer": "Google Cloud research credits (Academic Research Grants): up to $5,000",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://edu.google.com/programs/credits/research/",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google Cloud for Education — research credits ('Academic Research Grants', up to $5,000)",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://edu.google.com/programs/credits/research/",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google Cloud for researchers - research credits (up to $5,000) + GPAR program",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/edu/researchers",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": false
+  }
+ ],
+ "nocard": [
+  {
+   "provider": "GitLab",
+   "fronts": [
+    "devtools"
+   ],
+   "offer": "GitLab for Startups (free/reduced Ultimate program)",
+   "value": 5000000.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://about.gitlab.com/solutions/startups/",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program (up to $350,000 GCP credits over 2 years + 12 months Google Workspace Business Plus + monthly Google Maps Platform credits)",
+   "value": 350000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startups",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "AWS (Amazon Web Services)",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "observability",
+    "email-messaging",
+    "student-only"
+   ],
+   "offer": "AWS Activate Program (flagship startup credit program; the VC/accelerator-funded front): up to $100,000 - $200,000 in AWS credits",
+   "value": 200000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://startups.aws.com/aws-startup-credits-promotionandhttps://aws.amazon.com/startups/activate/(portalappshellreadlive2026-10-22)",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Firebase Spark",
+   "fronts": [
+    "databases"
+   ],
+   "offer": "Google Cloud Startup Program / Launch (credit grant for startups)",
+   "value": 200000.0,
+   "pool": true,
+   "confidence": "low",
+   "url": "https://cloud.google.com/launch",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Airwallex",
+   "fronts": [
+    "payments-fintech"
+   ],
+   "offer": "Airwallex for Startups (US) — startup program with fee credits",
+   "value": 150000.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://www.airwallex.com/en-us/startups",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Aiven Startup Program",
+   "fronts": [
+    "databases"
+   ],
+   "offer": "Aiven Startup Program (startup-credits)",
+   "value": 100000.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://aiven.io/startups",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Grafana Labs",
+   "fronts": [
+    "observability"
+   ],
+   "offer": "Grafana Labs Startup Program (up to $100,000 in Grafana Cloud credits)",
+   "value": 100000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://grafana.com/blog/grafana-labs-startup-program/(read2026-10-22)",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Vonage",
+   "fronts": [
+    "email-messaging"
+   ],
+   "offer": "Vonage for Startups program — up to $75,000 in Vonage API credits + tailored support",
+   "value": 75000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://developer.vonage.com/en/startups",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Amplitude Free Plan",
+   "fronts": [
+    "auth-analytics"
+   ],
+   "offer": "Startup Scholarship (Early-Stage Startup Plan) — 1 year of Growth plan free",
+   "value": 60000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://amplitude.com/scholarships",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Stripe",
+   "fronts": [
+    "payments-fintech"
+   ],
+   "offer": "Stripe Atlas: $500 one-time incorporation with $2,500 fee credits + $50,000 partner perks",
+   "value": 50000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://support.stripe.com/questions/atlas-fee-credits-faq",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Zoho CRM Free Edition",
+   "fronts": [
+    "apis-data"
+   ],
+   "offer": "Zoho Books Free Plan (1 user + 1 accountant, $50K revenue cap)",
+   "value": 50000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.zoho.com/books/pricing.html",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "PostHog Free Plan",
+   "fronts": [
+    "observability"
+   ],
+   "offer": "PostHog for Startups — $50,000 in free credits",
+   "value": 50000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://posthog.com/startups",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Koyeb",
+   "fronts": [
+    "hosting-paas"
+   ],
+   "offer": "Koyeb Startup Program — up to $30,000 in free compute credits",
+   "value": 30000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.koyeb.com/blog/koyeb-for-startups-accelerate-with-credits-for-high-performance-infrastructure",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Baseten Startup Program",
+   "fronts": [
+    "gpu-ml"
+   ],
+   "offer": "Baseten AI Startup Program (\"Baseten for Startups\") — up to $25,000 credits (Dedicated Inference/Training) + up to $2,500 (Model APIs)",
+   "value": 25000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.baseten.co/startup-program/",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Resend",
+   "fronts": [
+    "email-messaging"
+   ],
+   "offer": "YC deal — startup credits for Y Combinator companies",
+   "value": 25000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://resend.com/yc(read2026-10-22)",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Airplane",
+   "fronts": [
+    "devtools"
+   ],
+   "offer": "Airplane for Startups - up to $10,000 in credits",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.airplane.dev/startups(dead;archivedcopiesreadtoday:https://web.archive.org/web/20240229194024/https://www.airplane.dev/startups;FAQ/announcement:https://web.archive.org/web/20240104062134/https://www.airplane.dev/blog/introducing-airplane-for-startups)",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Lemon Squeezy",
+   "fronts": [
+    "payments-fintech"
+   ],
+   "offer": "Migration offer: 0% fees for first 30 days, up to $10,000 in sales",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.lemonsqueezy.com/migration-offer",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "AWS (Amazon Web Services)",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "observability",
+    "email-messaging",
+    "student-only"
+   ],
+   "offer": "AWS Impact Bootcamps (with Techstars): up to $5,000 in AWS Activate credits",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://startups.aws.com/lp/aws-impact-bootcamps(servingHTTP500;fullcontentrecoveredfromitsembeddedNext.jspayload;cross-checkedwiththeJul30,2025pressreleasehttps://press.aboutamazon.com/aws/2025/7/aws-and-techstars-launch-impact-bootcamps-to-support-underrepresented-founders-globallyandhttps://aws.amazon.com/aws-startups/learn/what-to-expect-from-the-aws-impact-bootcamps/)",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Education research credits ('Academic Research Grants'): up to $5,000 in GCP credits for 1 year; plus GPAR collaboration program",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/edu/researchersandhttps://edu.google.com/programs/credits/research/",
+   "startup": false,
+   "student": true,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  },
+  {
+   "provider": "OpenRouter Free Models",
+   "fronts": [
+    "llm-apis"
+   ],
+   "offer": "OpenRouter for Startups: up to $5,000 universal inference credits + 12 months of 0% platform/BYOK fees",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://openrouter.ai/startup-program",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": false,
+   "quick": false
+  }
+ ],
+ "selfhost": [
+  {
+   "provider": "Appsmith",
+   "fronts": [
+    "oss-selfhost"
+   ],
+   "offer": "Community Edition (free self-hosted, Apache 2.0)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.appsmith.com/pricing",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Appsmith",
+   "fronts": [
+    "oss-selfhost"
+   ],
+   "offer": "Business Edition 15-day free trial (all new signups, cloud or self-hosted)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.appsmith.com/pricing",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "BookStack",
+   "fronts": [
+    "oss-selfhost"
+   ],
+   "offer": "MIT-licensed BookStack software is free to self-host (no trial, no expiry)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.bookstackapp.com/",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Cal.com",
+   "fronts": [
+    "oss-selfhost"
+   ],
+   "offer": "Self-hosted Cal.com under MIT (free software, self-hosted)",
+   "value": 0.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://raw.githubusercontent.com/calcom/cal.diy/main/LICENSE",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Chroma Cloud Starter",
+   "fronts": [
+    "databases"
+   ],
+   "offer": "Starter free tier ($0/mo + metered usage)",
+   "value": 2.5,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.trychroma.com/pricing",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "CircleCI",
+   "fronts": [
+    "devtools"
+   ],
+   "offer": "Free plan (Cloud)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://circleci.com/pricing/",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "CircleCI",
+   "fronts": [
+    "devtools"
+   ],
+   "offer": "Open source build pool (free OSS program)",
+   "value": 0.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://circleci.com/open-source/",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "ClickHouse Cloud trial",
+   "fronts": [
+    "databases"
+   ],
+   "offer": "Open-source ClickHouse - free forever (self-hosted)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://clickhouse.com/pricing",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "Countly",
+   "fronts": [
+    "auth-analytics"
+   ],
+   "offer": "Countly Lite (Community Edition) — free self-hosted",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://countly.com/lite",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "Countly",
+   "fronts": [
+    "auth-analytics"
+   ],
+   "offer": "No official Countly startup program or trial-credit program found",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://countly.com/pricing",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Decap CMS",
+   "fronts": [
+    "apis-data"
+   ],
+   "offer": "Decap CMS core — free open source (MIT), forever",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://decapcms.org/",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "Directus",
+   "fronts": [
+    "apis-data",
+    "oss-selfhost"
+   ],
+   "offer": "Free self-hosting under open-source license (now MSCL-1.0-GPL, not Apache 2.0)",
+   "value": 0.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://directus.com/license",
+   "startup": false,
+   "student": true,
+   "nocard": true,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Directus",
+   "fronts": [
+    "apis-data",
+    "oss-selfhost"
+   ],
+   "offer": "Open Innovation Grant (OIG) — perpetual full commercial access for small orgs & individuals",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://directus.com/oig",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "DocuSeal",
+   "fronts": [
+    "oss-selfhost"
+   ],
+   "offer": "Open Source self-hosted edition (AGPL-3.0)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.docuseal.com/pricing.md",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Documenso",
+   "fronts": [
+    "oss-selfhost"
+   ],
+   "offer": "Self-hosted Community Edition (free AGPL-3.0 code)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://documenso.com/self-hosted",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Elastic Observability",
+   "fronts": [
+    "observability"
+   ],
+   "offer": "Self-managed Elastic Stack (Elasticsearch/Logstash/Kibana/Beats) — free 'Basic' license, perpetual",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.elastic.co/pricing/faq",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Flagsmith Free Plan",
+   "fronts": [
+    "auth-analytics"
+   ],
+   "offer": "Free self-hosted Open-Source edition (Community build)",
+   "value": 0.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://flagsmith.com/open-source",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "Formbricks",
+   "fronts": [
+    "oss-selfhost"
+   ],
+   "offer": "Self-hosted Formbricks core ('Self-Hosting Free')",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://formbricks.com/docs/self-hosting/overview",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "GPUStack",
+   "fronts": [
+    "gpu-ml"
+   ],
+   "offer": "Free open-source self-hosted runtime (the only real free offer; available to students and startups alike)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://gpustack.ai",
+   "startup": true,
+   "student": true,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "Ghost",
+   "fronts": [
+    "apis-data",
+    "oss-selfhost"
+   ],
+   "offer": "Self-hosted Ghost — free open source (MIT)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://ghost.org/(main;'TryGhostcompletelyfree');tasknotesself-hostedGhostisfree(MIT).",
+   "startup": false,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "Ghost",
+   "fronts": [
+    "apis-data",
+    "oss-selfhost"
+   ],
+   "offer": "Self-hosted Ghost open-source software (MIT, no license fee)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://github.com/TryGhost/Ghost/blob/main/LICENSE",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "GitHub",
+   "fronts": [
+    "llm-apis",
+    "hosting-paas",
+    "devtools",
+    "student-only"
+   ],
+   "offer": "GitHub Actions Free plan (available to everyone, incl. students & startups)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/github-actions",
+   "startup": true,
+   "student": true,
+   "nocard": true,
+   "selfhost": true,
+   "quick": true
+  },
+  {
+   "provider": "GitLab",
+   "fronts": [
+    "devtools"
+   ],
+   "offer": "GitLab for Education (free Ultimate license for educational institutions)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://about.gitlab.com/solutions/education/join/",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "GitLab",
+   "fronts": [
+    "devtools"
+   ],
+   "offer": "GitLab for Startups (free/reduced Ultimate program)",
+   "value": 5000000.0,
+   "pool": true,
+   "confidence": "high",
+   "url": "https://about.gitlab.com/solutions/startups/",
+   "startup": true,
+   "student": false,
+   "nocard": true,
+   "selfhost": true,
+   "quick": false
+  },
+  {
+   "provider": "GitLab",
+   "fronts": [
+    "devtools"
+   ],
+   "offer": "GitLab for Open Source (free Ultimate features for qualifying projects)",
+   "value": 0.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://about.gitlab.com/solutions/open-source/join/",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": true,
+   "quick": false
+  }
+ ],
+ "quick": [
+  {
+   "provider": "ClickHouse Cloud trial",
+   "fronts": [
+    "databases"
+   ],
+   "offer": "ClickHouse x Y Combinator deal: $10,000 credits for 24 months",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://clickhouse.com/deals/ycombinator",
+   "startup": false,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "GitHub",
+   "fronts": [
+    "llm-apis",
+    "hosting-paas",
+    "devtools",
+    "student-only"
+   ],
+   "offer": "GitHub for Startups (startup program) — $10,000 Enterprise credits",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://github.com/enterprise/startups",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Modal",
+   "fronts": [
+    "gpu-ml"
+   ],
+   "offer": "Modal for Academics — up to $10,000 free compute credits (student/researcher program)",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://modal.com/academics",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Replicate 'Try for Free' collection",
+   "fronts": [
+    "llm-apis"
+   ],
+   "offer": "YC Summer Fellows (2025): Replicate $10,000 credits for students",
+   "value": 10000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://www.ycombinator.com/blog/summer-fellows",
+   "startup": false,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "AWS (Amazon Web Services)",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "observability",
+    "email-messaging",
+    "student-only"
+   ],
+   "offer": "AWS Activate Founders tier (self-serve; $1,000 start, up to $5,000)",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://aws.amazon.com/startups/credits/",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "ClickHouse Cloud trial",
+   "fronts": [
+    "databases"
+   ],
+   "offer": "ClickHouse Startup Program: $5,000 credits for 12 months (partner-gated)",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://clickhouse.com/startup-offer",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Microsoft Azure",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "devtools",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Microsoft for Startups, self-service track: $1,000 Azure credits instantly (90 days), up to $5,000 (180 days) after business verification",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://azure.microsoft.com/en-us/free/students(fetched2026-10-22);programoverview:https://learn.microsoft.com/en-us/startups/microsoft-for-startups/overview;changeannouncement:https://www.microsoft.com/en-us/startups/blog/build-fast-scale-smart-and-sell-more-microsoft-for-startups-evolves-to-better-serve-the-startup-ecosystem/",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Microsoft Azure",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "devtools",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Azure for Startups (self-service credit offer, up to $5,000)",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://azure.microsoft.com/en-us/free/students",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Microsoft Azure",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "devtools",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Azure for Startups self-serve credits ($1,000 instant, up to $5,000) — no application",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://azure.microsoft.com/en-us/free/students",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Akamai Linode",
+   "fronts": [
+    "vps-servers"
+   ],
+   "offer": "Enterprise cloud credits (up to US$5,000) — context only, not a student/startup offer",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://www.akamai.com/cloud",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Anthropic",
+   "fronts": [
+    "llm-apis",
+    "student-only"
+   ],
+   "offer": "Claude via AWS Bedrock using AWS Activate credits (startup free-compute route)",
+   "value": 5000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://klymentiev.com/blog/claude-free-credits",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Microsoft",
+   "fronts": [
+    "devtools",
+    "student-only"
+   ],
+   "offer": "Azure for Startups self-service credits — $1,000 (90 days) + up to $4,000 after business verification",
+   "value": 4000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://azure.microsoft.com/en-us/free/students",
+   "startup": true,
+   "student": true,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program — Start tier: up to $2,000 credits / 1 year (self-serve)",
+   "value": 2000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startup/benefits",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Google Cloud",
+   "fronts": [
+    "llm-apis",
+    "cloud-credits",
+    "databases",
+    "vps-servers",
+    "gpu-ml",
+    "student-only"
+   ],
+   "offer": "Google for Startups Cloud Program — Start tier ($2,000 GCP credits)",
+   "value": 2000.0,
+   "pool": false,
+   "confidence": "high",
+   "url": "https://cloud.google.com/startup/pre-seed",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  },
+  {
+   "provider": "Airtable",
+   "fronts": [
+    "apis-data"
+   ],
+   "offer": "VC/accelerator partner credits — $2,000 Airtable credit (Wonder Ventures, SeedBlink, HubSpot for Startups, M Accelerator)",
+   "value": 2000.0,
+   "pool": false,
+   "confidence": "medium",
+   "url": "https://wonder-ventures.builtfirst.com/airtable-build-ai-powered-apps-and-workflows",
+   "startup": true,
+   "student": false,
+   "nocard": false,
+   "selfhost": false,
+   "quick": true
+  }
+ ]
+}

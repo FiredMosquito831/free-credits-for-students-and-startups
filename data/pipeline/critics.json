@@ -1,0 +1,352 @@
+[
+ {
+  "corrections": [
+   {
+    "provider": "GitHub",
+    "item": "GitHub Models (free LLM access)",
+    "correction": "Retired. As of July 30, 2026 GitHub Models is fully retired: the playground, model catalog, inference API and BYOK are unavailable to every customer, including existing users. It closed to new customers on June 16, 2026. GitHub points to Microsoft Foundry (Azure AI Foundry) and GitHub Copilot instead. Remove this entry.",
+    "source_url": "https://github.blog/changelog/2026-07-30-github-models-is-now-retired/"
+   },
+   {
+    "provider": "Fauna",
+    "item": "Fauna Cloud Community (free) plan",
+    "correction": "Discontinued. The Fauna service was shut down on May 30, 2025 and all accounts and data were deleted. New signups stopped and trial accounts could no longer upgrade from March 2025. No free plan exists to list. Remove this entry.",
+    "source_url": "https://docs.fauna.com/fauna/current/eol-faq/"
+   },
+   {
+    "provider": "Airplane",
+    "item": "Airplane",
+    "correction": "Discontinued. Airtable acquired Airplane in January 2024, closed signups and shut the platform down on March 1, 2024. The free plan no longer exists. Remove this entry.",
+    "source_url": "https://www.cbinsights.com/company/airplane"
+   },
+   {
+    "provider": "Hugging Face",
+    "item": "Hugging Face Inference Providers",
+    "correction": "Contradicted by official docs. The Inference Providers pricing page (read Oct 2026) still gives Free users $0.10 of monthly credit (marked subject to change), PRO users $2.00 per month, and pay-as-you-go after that. The claim that free accounts get none is not supported. Oct 2026 forum threads report some new free accounts showing $0.00 balances, so availability looks inconsistent. Restate as reduced to $0.10/month, subject to change.",
+    "source_url": "https://huggingface.co/docs/inference-providers/en/pricing"
+   },
+   {
+    "provider": "AWS",
+    "item": "AWS Activate (Amazon Bedrock)",
+    "correction": "Figures are out of date. The Activate Founders self-serve package is $1,000 (select participants can reach $5,000), not about $100. The Portfolio package, for startups tied to an Activate Provider with an Org ID, is now up to $200,000; it was $100,000 before June 2026. Credits can be used on Bedrock third-party models. AI startups ready to scale can talk to an account manager about more.",
+    "source_url": "https://aws.amazon.com/aws-startups/learn/applying-for-aws-activate-credits-a-step-by-step-guide/"
+   },
+   {
+    "provider": "AWS",
+    "item": "AWS Startups",
+    "correction": "Range is outdated. Current tiers are Activate Founders at $1,000 (up to $5,000 for select startups) and Activate Portfolio at up to $200,000 (raised from $100,000 in June 2026). The top of the range should read $200,000 for Portfolio, not $100,000+.",
+    "source_url": "https://aws.amazon.com/startups/credits/"
+   },
+   {
+    "provider": "Google Cloud",
+    "item": "Google Cloud Free Trial + always-free tier (Cloud SQL, BigQuery, Spanner)",
+    "correction": "Duration is wrong. The $300 Welcome credit is valid for 90 days from signup, not 60. Free-tier products do not draw down the credit. The trial billing account closes when the credit is spent or 90 days pass, whichever comes first.",
+    "source_url": "https://docs.cloud.google.com/free/docs/free-cloud-features"
+   },
+   {
+    "provider": "Google for Startups",
+    "item": "Google for Startups (Cloud)",
+    "correction": "Term length is wrong. Scale-tier credits are paid over two years: Year 1 is 100% of spend up to $100,000 (up to $250,000 for AI-first startups), and Year 2 is a 20% credit on spend up to an extra $100,000. The Start tier's $2,000 is valid for one year.",
+    "source_url": "https://cloud.google.com/startup/benefits"
+   },
+   {
+    "provider": "Microsoft",
+    "item": "Microsoft for Startups",
+    "correction": "Outdated. The 2025 investor-referral model was relaunched in June 2026. Startups now apply directly and get up to $200 in Startup credits immediately. Credits can grow to $150,000 through verified milestones: $5,000 after business verification, then $25,000 (5+ Azure workloads over about 60 days), $50,000 (7+ workloads), and $150,000 (10+ workloads plus about $3,000/month usage). No referral is needed for that path; investor-network startups get extra benefits.",
+    "source_url": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/getting-started-mfs"
+   },
+   {
+    "provider": "Fly.io",
+    "item": "Fly.io (Free trial)",
+    "correction": "Price is stale. The trial is 2 VM hours or 7 days, whichever comes first, and new organizations have no free tier. Pay-as-you-go has no platform fee, and the smallest always-on Machine (shared-cpu-1x, 256 MB) costs $2.19/month on the official pricing page, not from $1.",
+    "source_url": "https://fly.io/pricing/"
+   },
+   {
+    "provider": "Koyeb",
+    "item": "Koyeb (Startup program)",
+    "correction": "Free tier closed to new users (secondary source). AgentDeals (checked Sept 30, 2026) reports Koyeb has had no free plan for new users since February 2026; Pro starts at $29/month. The startup-program credit figures were not re-verified.",
+    "source_url": "https://agentdeals.dev/hosting-free-tier-comparison-2026"
+   },
+   {
+    "provider": "Render",
+    "item": "Render (Free web services)",
+    "correction": "Likely changed (secondary source). AgentDeals (checked Sept 30, 2026) reports that on Apr 23, 2026 free web services moved to 5 GB/month of bandwidth, then $0.15/GB, with 512 MB RAM and 0.1 CPU; free Postgres expires after 30 days. Re-check the 750 instance-hour figure against render.com/pricing.",
+    "source_url": "https://agentdeals.dev/hosting-free-tier-comparison-2026"
+   },
+   {
+    "provider": "Replit",
+    "item": "Replit (Starter free tier)",
+    "correction": "Starter plan is no longer listed on replit.com/pricing (read Oct 22, 2026 via a summarizing fetch). The page shows Core, Pro and Enterprise, with Free Mode (up to 30 hours of chat and 60 projects) under Core. The Starter figures (1,200 dev minutes, 100 AI completions, 0.5 vCPU / 1 GB) could not be confirmed.",
+    "source_url": "https://replit.com/pricing"
+   },
+   {
+    "provider": "Google (Gemini API)",
+    "item": "Google Gemini API (AI Studio) Free Tier",
+    "correction": "Partly stale. Google's pricing page now describes the free tier as limited access to certain models, with free input and output tokens. Free-tier RPM and RPD figures are no longer published; limits are shown in AI Studio. The Sept 2026 changelog limits 2.5-series access to users who used those models before and tells new projects to use 3.5 Flash-Lite or 3.8 Flash. Gemini 4 Argon is not on the free tier.",
+    "source_url": "https://ai.google.dev/gemini-api/docs/pricing"
+   },
+   {
+    "provider": "Google (Gemini API)",
+    "item": "Gemini API Free Tier (Google AI Studio)",
+    "correction": "Same change as the AI Studio entry. Free-tier limits are not published in Google's docs and 2.5-series access is restricted to returning users (changelog, Sept 2026).",
+    "source_url": "https://ai.google.dev/gemini-api/docs/changelog"
+   },
+   {
+    "provider": "Groq",
+    "item": "GroqCloud Free Plan",
+    "correction": "Model list and limits changed (secondary source). Llama 3.3 70B and Llama 3.1 8B left the free and Developer plans on Aug 16, 2026 and are Enterprise-only, which removes the 14,400 RPD Llama 8B figure. gpt-oss-120b and qwen-3.8-27b still show 30 RPM, 1K RPD, 8K TPM and 200K TPD. gpt-oss-safeguard-20b was cut to 3 RPM and 2K TPM effective Oct 6, 2026.",
+    "source_url": "https://agentdeals.dev/vendor/groq"
+   },
+   {
+    "provider": "Cerebras",
+    "item": "Cerebras Inference Free Trial",
+    "correction": "Renamed and restricted. The Free Trial was merged into one Developer tier in Sept-Oct 2026. The pricing page now describes that tier as for development, evaluation, and experimentation and not intended for production use, so production needs an Enterprise contract. The one-time $5 credit (needs a valid payment method, expires 30 days after activation) still matches.",
+    "source_url": "https://www.cerebras.ai/pricing"
+   },
+   {
+    "provider": "OpenAI",
+    "item": "OpenAI (ChatGPT / API)",
+    "correction": "Partly contradicted. OpenAI's rate-limit guide (developers.openai.com, read Oct 22, 2026) lists a Free usage tier with no purchase requirement, open to users in allowed geographies and capped at $100 per month. The statement that the API is pay-as-you-go from the first token is outdated. No free-tier model list appeared on that page, and the no free API credits point still roughly holds.",
+    "source_url": "https://developers.openai.com/api/docs/guides/rate-limits"
+   },
+   {
+    "provider": "Anthropic",
+    "item": "Anthropic Claude API",
+    "correction": "Caveat needed (secondary source). No general free API tier was found. Claude for Startups, expanded Oct 6, 2026, now includes a free year of Claude Team for qualifying startups and a one-time $1,000 API credit. Anthropic says it is over capacity on those offers and is re-reviewing applications. Confirm on anthropic.com.",
+    "source_url": "https://www.cloudroutehq.com/startup-credits/changes"
+   },
+   {
+    "provider": "Anthropic",
+    "item": "Claude for Startups (Anthropic)",
+    "correction": "Figures are misleading (secondary source). The up-to-$45K figure is partner-offer value in the Claude Startup Stack, not API credit. The direct API credit is a one-time $1,000. VC-backed startups in Anthropic's partner network may get up to $100K in API credits, claimed through their VC, and those credits cannot be used on Amazon Bedrock.",
+    "source_url": "https://www.cloudroutehq.com/startup-credits/changes"
+   }
+  ],
+  "missing": [
+   {
+    "name": "Vercel for Startups",
+    "why": "Credits program still active but its terms changed. Startups accepted on or after Aug 6, 2026 get credits as a Flexible Commitment Amount under Vercel's Enterprise terms, with a 50% monthly cap on AI Gateway. Dollar amounts were not verified; treat this as lower confidence on size.",
+    "url": "https://www.cloudroutehq.com/startup-credits/changes",
+    "front": "Frontend hosting, PaaS & app deployment"
+   }
+  ]
+ },
+ {
+  "missing": [
+   {
+    "name": "Fauna Cloud Community (free) plan",
+    "front": "Managed Databases & Data Platforms",
+    "why": "Fauna's hosted service was shut down on May 30, 2025. The company stopped new sign-ups and deleted accounts and data after that date, so no free plan is available.",
+    "url": "https://docs.fauna.com/fauna/current/eol-faq/"
+   },
+   {
+    "name": "Kitem",
+    "front": "Self-Hosted Open-Source SaaS Alternatives",
+    "why": "No provider or active offer named Kitem turned up in search. Results return Kit (ConvertKit) and unrelated Kite products. The upstream entry is already marked UNVERIFIED."
+   },
+   {
+    "name": "Kinto",
+    "front": "Self-Hosted Open-Source SaaS Alternatives",
+    "why": "No standing free to-do offer under this name. Matches are Kintone (a paid platform with a 30-day trial; its To Do app template is free only once you have an account on that platform), the Kinto HTTP API (open-source storage server), and KINTO (car rental). The upstream seed is ambiguous."
+   }
+  ],
+  "corrections": [
+   {
+    "provider": "Google Cloud Free Trial + always-free tier (Cloud SQL, BigQuery, Spanner)",
+    "item": "$300 credit for 60 days (200+ products)",
+    "correction": "The $300 Free Trial credit is valid for 90 days, not 60. Google's free-tier page describes 20+ free products; '200+ products' is not stated.",
+    "source_url": "https://cloud.google.com/signup-faqs"
+   },
+   {
+    "provider": "Google for Startups (Cloud)",
+    "item": "Up to ~$200,000 in GCP credits ... typically on 12-month terms",
+    "correction": "The $200,000 Scale-tier credit runs over 2 years: up to $100,000 in year 1 plus 20% (up to an additional $100,000) in year 2. The 12-month term applies to the $2,000 Start tier. AI startups can reach $350,000.",
+    "source_url": "https://cloud.google.com/startup/early-stage"
+   },
+   {
+    "provider": "AWS Activate (Amazon Bedrock)",
+    "item": "Up to ~$100K in AWS credits (Portfolio/Partner tier; ~$100 Founders self-serve)",
+    "correction": "The current official maximum is up to $200,000 for the Portfolio tier (requires a provider Org ID; pre-Series B). The Founders (self-funded) tier starts at $1,000, with up to $5,000 for select participants, not about $100.",
+    "source_url": "https://aws.amazon.com/startups/credits/"
+   },
+   {
+    "provider": "OpenAI (ChatGPT / API)",
+    "item": "No free API credits for developers; pay-as-you-go from the first token",
+    "correction": "OpenAI offers complimentary daily tokens to eligible organizations that opt in to sharing API traffic. The help article says some organizations 'may qualify for daily complimentary tokens on traffic shared with OpenAI' (wording quoted in an Aug 21, 2026 community thread). Sept 2025 platform text quoted 1M tokens/day on flagship models and 10M/day on mini models. The help page returned 403 to my fetch, so these quotes are secondhand.",
+    "source_url": "https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai"
+   },
+   {
+    "provider": "Anthropic Claude API",
+    "item": "No free API tier or developer credit program",
+    "correction": "Monthly API credits exist for subscribers: Max 5x gets $100/month, Max 20x gets $200/month, and Team gets $20 per Standard seat or $100 per Premium seat (pooled, capped at $500/month). Claude Startups members get a one-time $1,000 API credit, but applications were closed as of Oct 13, 2026.",
+    "source_url": "https://platform.claude.com/docs/en/about-claude/api-credits-for-subscribers"
+   },
+   {
+    "provider": "Claude for Startups (Anthropic)",
+    "item": "Up to $45K in Claude API credits/discounts",
+    "correction": "The $45,000 is partner discounts and credits for tools from companies building with Claude (the Claude Startup Stack), not Claude API credits. The Claude API credit is a one-time $1,000. Applications were closed as of Oct 13, 2026.",
+    "source_url": "https://claude.com/resources/articles/were-expanding-the-claude-startups-program-to-help-founders-build"
+   },
+   {
+    "provider": "Azure for Students",
+    "item": "$100 in Azure credits, 12 months of Visual Studio Pro",
+    "correction": "The $100 credit is valid for 12 months. Visual Studio Professional is not in the included product list, which names Visual Studio Code, Visual Studio Community, Visual Studio for Mac, Agents for Visual Studio, Remote Tools for Visual Studio and Visio Professional. The 12-month Cloud Academy benefit comes with paid Visual Studio Professional subscriptions, not Azure for Students.",
+    "source_url": "https://learn.microsoft.com/en-us/azure/education-hub/faq"
+   },
+   {
+    "provider": "Oracle Cloud Infrastructure Always Free",
+    "item": "4 ARM micro VMs (200 GB storage), 10 TB egress ...",
+    "correction": "The Always Free Ampere A1 allowance is one flexible pool of 1,500 OCPU-hours and 9,000 GB-hours per month, equal to 2 OCPUs and 12 GB RAM. It is not four ARM micro VMs. Always Free also includes up to two AMD VM.Standard.E2.1.Micro instances and 200 GB of block storage.",
+    "source_url": "https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm"
+   },
+   {
+    "provider": "DigitalOcean Free Trial",
+    "item": "Standing new-account credit is ~$5 for 90 days ...; the former $200/60-day ...",
+    "correction": "DigitalOcean's new-account promotion is $200 in credit for the first 60 days, new accounts only, per its promo text on community pages. The $5 for 90 days is a separate AI-inference trial. My homepage fetch showed no banner, so this rests on the community-page text and third-party listings.",
+    "source_url": "https://www.digitalocean.com/community/questions/signup-and-get-200-in-credit-for-your-first-60-days"
+   },
+   {
+    "provider": "GitHub Student Developer Pack (GitHub Education)",
+    "item": "Free GitHub Pro, 5,000 Actions minutes/mo, 50 GB Codespaces storage",
+    "correction": "GitHub's student page lists 3,000 Actions minutes per month and 20 GB Codespaces storage with GitHub Pro (also 180 Codespaces hours). The 5,000-minute and 50 GB figures are not supported. The list's own Codespaces entry already gives 20 GB for students.",
+    "source_url": "https://github.com/education/students"
+   },
+   {
+    "provider": "Ably",
+    "item": "Free (developer) tier: up to ~100,000 messages/mo, 2 apps",
+    "correction": "The free plan lists 6M messages per month, 200 concurrent connections and 500 messages per second. No app limit appears on the pricing page.",
+    "source_url": "https://ably.com/pricing"
+   },
+   {
+    "provider": "Kit (formerly ConvertKit)",
+    "item": "Free Creator plan: 10,000 subscribers, 1,000 emails/mo, 1 user",
+    "correction": "The free plan is the Newsletter Plan: up to 10,000 subscribers with unlimited email sends. Creator is a paid plan starting at $39/month for up to 1,000 subscribers. The 1,000 emails/month cap is not supported.",
+    "source_url": "https://help.kit.com/en/articles/9053602-the-kit-newsletter-plan"
+   },
+   {
+    "provider": "GroqCloud Free Plan",
+    "item": "No-card free plan: gpt-oss-120b & qwen-3.8-27b at 30 RPM / 1,000 RPD / 8K TPM / 200K TPD",
+    "correction": "Groq's rate-limit page shows these exact values under Developer Plan Limits and says the table gives the Developer plan's base limits. No free-plan table was captured, so the free-plan figures and the no-card claim are not supported by this page.",
+    "source_url": "https://console.groq.com/docs/rate-limits"
+   }
+  ]
+ },
+ {
+  "missing": [
+   {
+    "name": "Pinecone (Starter free plan)",
+    "front": "Managed Databases & Data Platforms",
+    "url": "https://www.pinecone.io/pricing/",
+    "why": "Permanent free Starter plan: 2 GB serverless storage, 5 serverless indexes, 1 project, 2 users, AWS us-east-1 only (official limits page); 2M write and 1M read units per month as reported by secondary trackers. The index has Qdrant, Chroma and Weaviate but no Pinecone entry."
+   },
+   {
+    "name": "Snowflake free trial ($400 credits, 30 days)",
+    "front": "Managed Databases & Data Platforms",
+    "url": "https://docs.snowflake.com/en/user-guide/admin-trial-account",
+    "why": "New accounts get $400 in free usage for 30 days with no payment information required. The trial ends at 30 days or when credits run out, and AI features stay off until a card is added. Snowflake is not in the index."
+   },
+   {
+    "name": "ElevenLabs (Free plan + Startup Grants Program)",
+    "front": "LLM & AI APIs — Free Tiers, Trial Credits & Startup/Student Offers",
+    "url": "https://elevenlabs.io/pricing",
+    "why": "Permanent free plan of 10,000 credits per month (about 10 minutes of TTS), no card for the API key; audio is non-commercial, with no voice cloning and no rollover. The Startup Grants Program offers 12 months free (33M characters) for startups building conversational agents. The index has no voice or audio API entry."
+   },
+   {
+    "name": "Together AI Startup Accelerator",
+    "front": "Startup Cloud-Credit Programs (VC / Accelerator Funded)",
+    "url": "https://www.together.ai/startup-accelerator",
+    "why": "Selection-based program with platform credits of up to $15K (under $5M raised), $30K ($5M-$10M) or $50K (over $10M), excluding reserved GPU clusters, plus forward-deployed engineering hours. Together AI has no general free trial (access requires a credit purchase), so this accelerator is its only credit route."
+   },
+   {
+    "name": "Google TPU Research Cloud (TRC)",
+    "front": "GPU, ML Training & Notebooks — Free Compute (2026-10-22)",
+    "url": "https://sites.research.google/trc/about/",
+    "why": "Free Cloud TPU access (more than 1,000 TPU devices) for accepted researchers, granted on a rolling basis after an interest form. Participants must share research and feedback, and other GCP costs such as small VMs and storage are not free. Related: the 2026 TPU Research and Education Awards (unrestricted gift up to $100K plus TPU access) had a June 30, 2026 deadline that has passed."
+   },
+   {
+    "name": "Mapbox (free tiers; full quota needs a payment method)",
+    "front": "APIs, Search &amp; CMS",
+    "url": "https://www.mapbox.com/pricing",
+    "why": "Pay-as-you-go free tiers of about 50,000 GL JS map loads, 25,000 mobile MAU and 100,000 Directions requests per month, plus 100,000 free temporary geocoding requests (official geocoding page). A card-free sign-up gets much smaller caps (for example 5,000 map loads per month); adding a payment method unlocks the full tiers. The index has Google Maps Platform and Nominatim but no Mapbox entry."
+   },
+   {
+    "name": "Streamlit Community Cloud",
+    "front": "Frontend hosting, PaaS & app deployment",
+    "url": "https://docs.streamlit.io/deploy/streamlit-community-cloud",
+    "why": "Free hosting for Streamlit apps deployed from public or private GitHub repos. Official limits (as of Feb 2024): 0.078 to 2 CPU cores, 690 MB to 2.7 GB RAM, up to 50 GB storage; free resource increases only on request for nonprofit or educational organizations. Third-party 2026 guides report sleep after 12 hours idle and one private app per account; those are unverified against official docs."
+   },
+   {
+    "name": "Tailscale Personal (free) and GitHub open-source plan",
+    "front": "Auth, Security, Product Analytics & Feature Flags",
+    "url": "https://tailscale.com/pricing",
+    "why": "Free indefinitely: up to 6 users, unlimited user devices, 50 tagged resources, 1,000 ephemeral minutes per month, MagicDNS, subnet routers and exit nodes (official pricing page). Also a free Community on GitHub plan for GitHub organizations running OSI-licensed open-source projects (apply via support), and a 50% discount on paid plans for accredited schools and registered nonprofits."
+   },
+   {
+    "name": "free-for.dev (ripienaar/free-for-dev)",
+    "front": "Aggregator directories (new front)",
+    "url": "https://free-for.dev/",
+    "why": "Canonical community list (about 127K GitHub stars, 1,600+ contributors) of as-a-Service offerings with a permanent free developer tier; time-limited tiers must last at least 12 months and self-hosted software is excluded. It is not in the index and should be used as a cross-check for missing dev-tool and infrastructure offers."
+   },
+   {
+    "name": "public-apis/public-apis",
+    "front": "APIs, Search &amp; CMS",
+    "url": "https://github.com/public-apis/public-apis/",
+    "why": "MIT-licensed community directory of free public APIs (about 490K GitHub stars) across 50+ categories. It is a breadth reference rather than a single offer, and the index has no public-API directory entry."
+   },
+   {
+    "name": "freellmcredits.com (free LLM and AI credits directory)",
+    "front": "LLM & AI APIs — Free Tiers, Trial Credits & Startup/Student Offers",
+    "url": "https://freellmcredits.com/",
+    "why": "Directory of free LLM and AI credits with dated re-verification (15 offers re-checked in September 2026), and it publicly corrected its own Cerebras listing. Useful as a cross-check for LLM entries, not a primary source."
+   },
+   {
+    "name": "Cronitor (free tier)",
+    "front": "Observability, Monitoring, Uptime & CDN — free offers for students & startups",
+    "url": "https://cronitor.io",
+    "why": "Free tier with five monitors for cron jobs, websites and APIs, per the free-for-dev daily tracker (July 2026). The vendor page was not fetched. Cronitor is not in the index."
+   },
+   {
+    "name": "Instatus (free status pages)",
+    "front": "Observability, Monitoring, Uptime & CDN — free offers for students & startups",
+    "url": "https://instatus.com",
+    "why": "Free-forever status-page plan with unlimited subscribers, per the free-for-dev daily tracker (July 2026). The vendor page was not fetched and the snippet was truncated, so exact limits are unconfirmed. Instatus is not in the index; the index covers Statuspage and Better Stack only."
+   }
+  ],
+  "corrections": [
+   {
+    "provider": "OpenAI (ChatGPT / API)",
+    "item": "outdated: 'No free API credits for developers' omits conditional complimentary daily tokens",
+    "correction": "Organizations that opt into sharing API inputs and outputs with OpenAI may get daily complimentary tokens on listed models. Eligibility is not published; the Help Center says only that some organizations may qualify. Limits have changed (1M and 10M tokens per day in 2025; 250K and 2.5M reported in March 2026). Reword the entry as conditional.",
+    "source_url": "https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai"
+   },
+   {
+    "provider": "DigitalOcean Free Trial; DigitalOcean (student + startup credits)",
+    "item": "conflicting: '$200 / 60-day' claim versus official 90-day signup-credit expiry",
+    "correction": "The official signup-credit doc (last verified 2026-07-15) says credits expire 90 days after signup and a payment method is needed before creating Droplets. The Free Trial entry says about $5 for 90 days, while the student/startup entry still says $200 for 60 days. The official excerpt read did not state an amount, so confirm it there. A secondary source (October 2026) says the GitHub Student Pack credit ended 2026-07-31; that is unverified and the $200 student claim needs re-checking.",
+    "source_url": "https://docs.digitalocean.com/platform/billing/signup-credit/"
+   },
+   {
+    "provider": "Fauna Cloud Community (free) plan",
+    "item": "no real free offer: hosted Fauna service ended 2025-05-30; no new accounts; accounts and data deleted",
+    "correction": "Remove the entry. Fauna's end-of-life FAQ says the service was turned off on May 30, 2025, accounts and data were deleted, and no new sign-ups are accepted. Only the open-sourced core remains, which is self-hosted rather than a free hosted plan.",
+    "source_url": "https://docs.fauna.com/fauna/current/eol-faq/"
+   },
+   {
+    "provider": "Hugging Face Spaces (Free)",
+    "item": "outdated: creating Gradio or Docker Spaces now needs a paid plan",
+    "correction": "A September 2026 secondary source says creating Gradio or Docker Spaces needs PRO ($9 per month) or Team, while free accounts can still host two ZeroGPU Spaces. Update the free-tier wording and verify on the Hugging Face pricing page before republishing.",
+    "source_url": "https://klymentiev.com/blog/huggingface-inference-api"
+   },
+   {
+    "provider": "Kitem",
+    "item": "no real free offer: entry self-flagged UNVERIFIED; no active offer confirmed",
+    "correction": "Remove the entry or verify it. Not re-checked in this pass because the search budget ran out."
+   },
+   {
+    "provider": "Kinto",
+    "item": "no real free offer: ambiguous seed; no verifiable offer for the To-Do app reading",
+    "correction": "Drop the entry or define the product being listed. Not re-checked in this pass because the search budget ran out."
+   }
+  ]
+ }
+]
