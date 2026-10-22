@@ -1,0 +1,2334 @@
+[
+ {
+  "front": "LLM & AI model APIs, inference and agent platforms",
+  "front_title": "LLM & AI APIs — Free Tiers, Trial Credits & Startup/Student Offers",
+  "entries": [
+   {
+    "name": "Google Gemini API (AI Studio) Free Tier",
+    "category": "LLM API free tier",
+    "offer": "Free input + output tokens on eligible models (Gemini 3.8/3.6 Flash, 3.5 & 3.1 Flash-Lite, Gemini Embedding 2, Gemma 4) with per-project RPM/TPM/RPD limits; no billing account or card required",
+    "audience": "free-for-all",
+    "url": "https://ai.google.dev/gemini-api/docs/pricing",
+    "notes": "Verified Oct 2026. Free tier covers Flash/Flash-Lite/embedding models; Gemini 3.1 Pro and image/video are paid-only. Paid tier now requires a $5 min prepay. Free-tier content may be used to improve Google products. Exact per-model limits shown in AI Studio, not published."
+   },
+   {
+    "name": "Google Cloud for Startups (AI startup program)",
+    "category": "startup credit program",
+    "offer": "Up to $200,000 GCP credits over 2 years (Scale tier); up to $350,000 for AI-first startups; $2,000 self-serve Start tier",
+    "audience": "startup",
+    "url": "https://cloud.google.com/startup",
+    "notes": "No equity taken. Start = pre-funded MVP; Scale = pre-seed to Series A VC-backed. Credits cover Gemini/Gemma; third-party models billed directly. AI-first ceiling raised to $350K (Y1 100% up to $250K + Y2 20% up to $100K) as of late 2026."
+   },
+   {
+    "name": "GroqCloud Free Plan",
+    "category": "inference platform free tier",
+    "offer": "No-card free plan: gpt-oss-120b & qwen-3.8-27b at 30 RPM / 1,000 RPD / 8K TPM / 200K TPD; smaller models like llama-3.1-8b reach ~14,400 RPD",
+    "audience": "free-for-all",
+    "url": "https://console.groq.com/docs/rate-limits",
+    "notes": "Limits are per organization. Free model list rotates (dropped/added models in 2026). Developer-tier upgrades were paused in 2026 due to demand. Confirm the current model list in the console."
+   },
+   {
+    "name": "Cohere Trial API key",
+    "category": "LLM API free tier",
+    "offer": "Auto-issued trial key: 1,000 free API calls/month across all endpoints (Chat 20 req/min; Embed 2,000 inputs/min), no card, non-commercial",
+    "audience": "free-for-all",
+    "url": "https://cohere.com/pricing",
+    "notes": "Trial keys are for prototyping/research, not production or commercial use. Some models (e.g. North Mini Code) are free on production keys too. Not offered in ~10 countries. Production keys are pay-as-you-go."
+   },
+   {
+    "name": "Mistral AI Studio (La Plateforme) Free Mode",
+    "category": "LLM API free tier",
+    "offer": "Free API mode on by default, no card; included monthly usage with rate caps shown only in the console Limits page",
+    "audience": "free-for-all",
+    "url": "https://mistral.ai/pricing",
+    "notes": "Mistral stopped publishing a fixed free amount; the '$10/mo API credit' line was removed from the pricing page on Oct 7 2026, so check your Limits page. Free requests may be used to train models unless you opt out in Admin > Privacy. Verified students get Mistral Pro at $5.99/mo."
+   },
+   {
+    "name": "Cerebras Inference Free Trial",
+    "category": "inference platform trial credit",
+    "offer": "$5 one-time trial credit granted after adding a payment method, expires in 30 days; Free Trial limits ~5 RPM and 1M tokens/day on gpt-oss-120b & qwen-3.8-27b",
+    "audience": "free-for-all",
+    "url": "https://www.cerebras.ai/pricing",
+    "notes": "Card required (adding is free). The old always-free '1M tokens/day, no card' tier ended 21 July 2026. After the trial, usage is pay-as-you-go on the Developer tier."
+   },
+   {
+    "name": "Hugging Face Inference Providers",
+    "category": "inference platform free tier",
+    "offer": "Former free-account monthly inference credit is now discontinued — free accounts get none; PRO ($9/mo) includes $2/mo of compute credits",
+    "audience": "free-for-all",
+    "url": "https://huggingface.co/docs/inference-providers/en/pricing",
+    "notes": "CHANGED 7 Oct 2026: free users lost the $0.10/mo credit and must buy credits (or route through a custom provider key, where that provider's own free tier applies). Free accounts still get ZeroGPU Spaces (~5 GPU-min/day) and free CPU Spaces. Use the changed-status note for the mega-index."
+   },
+   {
+    "name": "Replicate 'Try for Free' collection",
+    "category": "inference platform free tier",
+    "offer": "A limited number of free runs on selected models (e.g. FLUX, Imagen-4, Whisper, video upscaling) with no card; no published dollar amount",
+    "audience": "free-for-all",
+    "url": "https://replicate.com/collections/try-for-free",
+    "notes": "Widely-claimed '$5' or '$500' signup credits are not on any official Replicate page — official wording is 'free for a limited number of runs'. Acquired by Cloudflare Dec 2025. No startup program (replicate.com/startups returns 404); purchased credit is prepaid, valid 1 year."
+   },
+   {
+    "name": "OpenRouter Free Models",
+    "category": "inference router free tier",
+    "offer": "':free' model variants (openrouter/free router too): 20 RPM and 50 requests/day, rising to 1,000/day after a one-time $10 credit purchase; ~18 free models",
+    "audience": "free-for-all",
+    "url": "https://openrouter.ai/docs/api_reference/limits",
+    "notes": "No card needed to use free models. OpenRouter marks some free-model providers (NVIDIA, Thinking Machines) as ones that may train on your data — treat free models as public. The free-model list rotates and some entries have end dates."
+   },
+   {
+    "name": "Cloudflare Workers AI",
+    "category": "inference platform free tier",
+    "offer": "10,000 free Neurons/day on the Workers Free plan (resets 00:00 UTC) across ~80 models; above that, $0.011 per 1,000 Neurons on Workers Paid",
+    "audience": "free-for-all",
+    "url": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+    "notes": "No card needed for the free daily pool. Some frontier models require a paid billing method even within the pool. On the Paid plan, overage bills instead of failing — set usage monitoring. The pool is per account, shared across all Workers."
+   },
+   {
+    "name": "NVIDIA NIM / build.nvidia.com",
+    "category": "inference platform free tier",
+    "offer": "Free rate-limited hosted inference (~40 RPM, up to ~10,000 requests/day) via the free NVIDIA Developer Program; plus a free 90-day NVIDIA AI Enterprise trial",
+    "audience": "free-for-all",
+    "url": "https://build.nvidia.com",
+    "notes": "Hosted endpoints are free for prototyping/development only; production requires a paid NVIDIA AI Enterprise license. Downloadable NIM microservices are free for dev/test on up to 16 GPUs. Per-model limits vary and aren't a single published quota."
+   },
+   {
+    "name": "Microsoft for Startups",
+    "category": "startup credit program",
+    "offer": "Up to $150,000 Azure credits over time (investor-referred); without a referral, ~$200 starter + $4,000 credits; covers Microsoft Foundry / Azure OpenAI",
+    "audience": "startup",
+    "url": "https://www.microsoft.com/en-us/startups",
+    "notes": "Pre-seed to Series B B2B startups; Investor Network referral unlocks higher tiers. Program restructured 29 May 2026. Credits valid up to 2 years after activation; a card is required (not charged until credits run out)."
+   },
+   {
+    "name": "AWS Activate (Amazon Bedrock)",
+    "category": "startup credit program",
+    "offer": "Up to ~$100K in AWS credits (Portfolio/Partner tier; ~$100 Founders self-serve), usable on Amazon Bedrock including third-party models (Claude, Llama, Mistral)",
+    "audience": "startup",
+    "url": "https://aws.amazon.com/startups/",
+    "notes": "Amazon Bedrock itself has NO free token tier — it bills per token from the first call and runs down your AWS credits. New AWS accounts get up to $200 promotional credits (6 months). Larger Activate amounts need an investor/provider referral."
+   },
+   {
+    "name": "GitHub Copilot (Free & Student plans)",
+    "category": "dev tool / LLM access",
+    "offer": "Copilot Free: 2,000 code completions/month + a monthly AI-credit allowance, no subscription; Copilot Student: free for verified students with unlimited completions",
+    "audience": "free-for-all",
+    "url": "https://github.com/features/copilot/plans",
+    "notes": "Free plan is personal-use, auto model selection, no card. Student plan needs school verification. Copilot Pro is free for verified teachers and popular-OSS maintainers. AI credits = $0.01 each, reset monthly."
+   },
+   {
+    "name": "GitHub Student Developer Pack",
+    "category": "student program",
+    "offer": "Free bundle for verified students with dozens of partner offers: developer tools, cloud and API credits, and learning resources (GitHub, Microsoft Azure, Datadog, Deepnote, and more)",
+    "audience": "student",
+    "url": "https://education.github.com/pack",
+    "notes": "Verify with a school email. Individual partner offers and amounts change frequently — treat this as a directory and confirm each partner's current offer. Includes a GitHub free-month plus partner perks."
+   },
+   {
+    "name": "Azure for Students",
+    "category": "student offer",
+    "offer": "Verified students: $100 in Azure credits, 12 months of Visual Studio Pro, plus other dev-kit benefits (at no cost)",
+    "audience": "student",
+    "url": "https://azure.microsoft.com/en-us/pricing/students/",
+    "notes": "Long-standing free dev kit for verified students, distinct from the paid Microsoft for Startups program. Requires school verification (email, ID, or acceptance letter)."
+   },
+   {
+    "name": "xAI Grok API",
+    "category": "LLM API (no current free tier)",
+    "offer": "No standing free API tier; the old $25/month beta credit ended Dec 2024 and $150/month data-sharing claims are not on current billing docs — pay-as-you-go from first call",
+    "audience": "other",
+    "url": "https://docs.x.ai/developers/pricing",
+    "notes": "OpenAI-compatible at api.x.ai/v1; Grok 4.7 $2 in / $6 out per 1M. xAI now operates under 'SpaceXSI' branding (domains unchanged). Verify any promo code or account-specific credit in your console before relying on it."
+   },
+   {
+    "name": "OpenAI (ChatGPT / API)",
+    "category": "LLM API (no free API tier)",
+    "offer": "No free API credits for developers — the API is pay-as-you-go from the first token; a consumer ChatGPT Free plan (rate-limited) exists",
+    "audience": "other",
+    "url": "https://openai.com/policies/usage-policy",
+    "notes": "OpenAI GPT frontier models are not on any free tier. Free access to OpenAI models is possible indirectly via Hugging Face / Bedrock (which carry their own free credits) and GitHub Copilot free plan. Check console for any current promo."
+   },
+   {
+    "name": "Anthropic Claude API",
+    "category": "LLM API (no free API tier)",
+    "offer": "No free API tier or developer credit program; a consumer Claude (claude.ai) Free plan exists; Claude is reachable on Bedrock/Vertex via their credits",
+    "audience": "other",
+    "url": "https://www.anthropic.com/pricing",
+    "notes": "API is pay-as-you-go (Claude Haiku is the cheapest). Claude models appear free-ish through other platforms' free tiers/credits (e.g. Bedrock $200 credits), not from Anthropic itself."
+   },
+   {
+    "name": "Baseten (via Google Cloud Startup Perks)",
+    "category": "startup credit program",
+    "offer": "Up to $25,000 in credits for dedicated deployments/training and up to $2,500 for model APIs, as a Google for Startups ecosystem perk",
+    "audience": "startup",
+    "url": "https://cloud.google.com/startup/perks",
+    "notes": "Accessed through the Google for Startups Perks program, not Baseten self-serve. Baseten models are also available via Hugging Face Inference Providers and Amazon Bedrock."
+   }
+  ],
+  "front_id": "llm-apis"
+ },
+ {
+  "front": "GPU, ML training & notebooks — free tiers, trial credits, student offers and startup programs, verified against official pages (checked 2026-10-22). Verified live: Kaggle 30h/wk GPU quota, Colab free T4 (dynamic limits, 12h sessions), HF Spaces free ZeroGPU (5 min/day; as of July 2026 all new compute Spaces incl. CPU Basic are paywalled, free accounts keep only 2 ZeroGPU Spaces + free Static), Paperspace free M4000 notebooks, Modal $30/mo Starter, GCP $300/90d trial + e2-micro, Azure $200/30d + B1s 750h/mo x12mo, AWS new $200/6mo free plan (old p3 12h/mo free tier ended July 2025). NOT free (checked 2026-09/10, official pages show nothing free): TensorDock (no free credit), Vast.ai (no free credit), DataCrunch — now rebranded Verda (pure pay-as-you-go, no free tier/credit), Spheron (paid per-minute marketplace, H100 ~$2.98/hr; only sporadic community token giveaways), RunPod for ordinary users (no free tier; only a $1,000 startup-tier credit and enterprise/academic programs). Also closed: AWS SageMaker Studio Lab (free Jupyter+GPU) and Colab Pro for Education, both closed to new signups 2026-07-30. Lambda has no signup credit — only its competitive up-to-$5,000 Research Grant for academic researchers. Local open-source runtimes (Ollama, llama.cpp, LM Studio, GPUStack, SGLang) remain free-for-all on your own GPU.",
+  "front_title": "GPU, ML Training & Notebooks — Free Compute (2026-10-22)",
+  "entries": [
+   {
+    "name": "Kaggle Notebooks (Free GPU/TPU)",
+    "offer": "Free weekly quota ~30 GPU hours/week (P100 or 2xT4) + 20 TPU v3-8 hours/week, sessions max 12h GPU / 9h TPU, no credit card",
+    "audience": "free-for-all",
+    "url": "https://www.kaggle.com/docs/efficient-gpu-usage",
+    "category": "Notebooks",
+    "notes": "Quota published by Kaggle docs ('30 hours or sometimes higher depending on demand'). GPU/internet access requires one-time phone verification. P100 reportedly being retired in 2026, accelerator menu changes over time."
+   },
+   {
+    "name": "Google Colab Free Tier",
+    "offer": "Free browser Jupyter notebooks with T4 GPU (16GB) and TPU access; sessions up to 12h; no fixed published quota",
+    "audience": "free-for-all",
+    "url": "https://research.google.com/colaboratory/faq.html",
+    "category": "Notebooks",
+    "notes": "Google deliberately publishes no fixed free GPU hours — limits are dynamic (users report ~15-30 T4 h/week). Idle runtimes terminate. As of 2026 the free tier is explicitly 'prioritized for interactive programming'; SSH/remote-desktop banned on free runtimes. Colab Pro ($9.99/mo, 100 compute units) and Pro+ ($49.99/mo, 600 units) add guaranteed/premium GPUs."
+   },
+   {
+    "name": "Hugging Face Spaces — ZeroGPU",
+    "offer": "Free ZeroGPU inference (shared RTX PRO 6000 Blackwell, 48-96GB VRAM): 5 min/day quota on free accounts; free accounts may host up to 2 ZeroGPU Gradio Spaces; Static Spaces free for all",
+    "audience": "free-for-all",
+    "url": "https://huggingface.co/docs/hub/spaces-zerogpu",
+    "category": "Inference hosting",
+    "notes": "2026 change (Jul 2026): creating any compute Space (Gradio/Docker, incl. CPU Basic) now requires a paid plan; free personal accounts in good standing (verified email, >30 days old) keep up to 2 ZeroGPU Spaces. ZeroGPU hardware migrated from A100 to RTX PRO 6000 Blackwell with 5 min/day (was ~3.5 min). Gradio SDK only; demos, not training. Community GPU grants available for side-project Spaces."
+   },
+   {
+    "name": "Paperspace (DigitalOcean) — Gradient Free Plan",
+    "offer": "Free M4000 (8GB) GPU notebook on the free Gradient plan: notebook in private workspaces, 5GB storage, free sessions auto-shutdown after 12h",
+    "audience": "free-for-all",
+    "url": "https://www.paperspace.com/pricing",
+    "category": "Notebooks",
+    "notes": "Free machines are notebooks only (no VMs/SSH servers); capacity is shared and can queue. Paid plans from $8/mo unlock better GPUs; M4000 paid is $0.45/hr, H100 $5.95/hr. No dollar-denominated signup credit — this is a hardware free tier, not a credit."
+   },
+   {
+    "name": "Modal — Starter Plan",
+    "offer": "$30/month free compute credits on Starter plan (billed per second, T4 through H200/B300 GPUs; ~50 T4-hours or ~7-8 H100-hours); Team plan adds $100/mo",
+    "audience": "free-for-all",
+    "url": "https://modal.com/pricing",
+    "category": "Serverless GPU",
+    "notes": "No credit card needed to start; workloads stop when the $30 is exhausted unless billing is added. 2025-2026: the only major recurring monthly free GPU credit left among neoclouds (Beam's equivalent $30/mo was withdrawn by 2026-09)."
+   },
+   {
+    "name": "Modal — Academic Credits",
+    "offer": "Up to $10,000 in free compute credits for graduate students, labs and researchers; startup credit grants (tiered, up to >$1M VC-funded startups) separately",
+    "audience": "student",
+    "url": "https://modal.com/pricing",
+    "category": "Student/researcher grant",
+    "notes": "Applied via the Modal pricing/startups pages. Verified Oct 2026; amounts quoted on Modal's own pricing page."
+   },
+   {
+    "name": "RunPod Startup Program",
+    "offer": "Starter tier: $1,000 free credits for earlier-stage (pre-Series A) AI startups; Growth tier: $25k bonus credits on a $50k committed spend",
+    "audience": "startup",
+    "url": "https://www.runpod.io/startup-program",
+    "category": "Startup credits",
+    "notes": "Venture-backed startups targeted; self-serve Starter credits, no product restrictions. RunPod has no ordinary free tier or signup credit (checked 2026-09); community-cloud GPUs start ~$0.27/GPU-hr paid. A separate academic program (runpod.io/academic-research) gives lab/institution access, billed — not free."
+   },
+   {
+    "name": "Lambda Research Grant",
+    "offer": "Up to $5,000 in Lambda GPU cloud credits for qualifying academic AI/ML researchers (rolling, competitive), with mentoring",
+    "audience": "student",
+    "url": "https://lambda.ai/research",
+    "category": "Researcher grant",
+    "notes": "Institutional affiliation + research proposal required; not guaranteed at the max. 2026: no general signup credit, no free trial, and no public 'Lambda student access' offer — this grant is the only free path. Expanded at CVPR 2026 to fund whole research groups. Card required on the Cloud account even when credits cover usage."
+   },
+   {
+    "name": "Lightning AI Studios (Free plan)",
+    "offer": "1 free active Studio + up to 30 free credits/month (~80 T4-equivalent GPU-hours on interruptible machines), 50GB storage; no credit card",
+    "audience": "free-for-all",
+    "url": "https://lightning.ai/pricing/",
+    "category": "Notebooks/IDE",
+    "notes": "Phone verification required. Free Studios auto-restart on a 4-hour cycle; 'free hours' differ per GPU tier (T4 ~75h, A100 40GB ~10h, H100 ~5h per 15-30 credits). Verify current credit amount at checkout — details have shifted between 2025 and 2026."
+   },
+   {
+    "name": "Google Cloud Free Trial + Free Tier",
+    "offer": "$300 credit for 90 days (new users, card required) + Always-Free tier incl. one e2-micro VM/month in 3 US regions (30GB disk, no charge for external IP)",
+    "audience": "free-for-all",
+    "url": "https://cloud.google.com/free",
+    "category": "Cloud trial",
+    "notes": "GPUs and TPUs are NOT included in the Free Trial or Free Tier — you cannot add a GPU accelerator to a VM during trial and free VMs are e2-micro only (seed said e2-small; e2-small is paid ~$12/mo). Spend the credit on Vertex AI (Gemini) instead. Trial account closes at day 90 or when credit runs out."
+   },
+   {
+    "name": "Azure Free Account (free VMs)",
+    "offer": "$200 credit for 30 days + 750 hrs/month of B1s/B2pts v2/B2ats v2 VMs for 12 months + 65+ always-free services",
+    "audience": "free-for-all",
+    "url": "https://azure.microsoft.com/en-us/pricing/free-services",
+    "category": "Cloud trial",
+    "notes": "No free GPU VMs: Azure's GPU families (NC/ND/NV) start at zero quota on trial subscriptions with no increases possible — use the credit on Azure OpenAI, not GPU instances. Spend the credit on Azure OpenAI instead."
+   },
+   {
+    "name": "AWS Free Plan (2025 revamp)",
+    "offer": "New accounts: $100 signup credit + up to $100 more (explore key services), account closes after 6 months or when credits run out; 30+ services free within monthly limits",
+    "audience": "free-for-all",
+    "url": "https://aws.amazon.com/free/",
+    "category": "Cloud trial",
+    "notes": "The old '12 months free tier with 750h p2/p3' is gone: the p3 12h/mo free offer ended in July 2025, and accounts created after that date get the new $200/6-month plan instead. GPU instances are not on the free list — spend credits on SageMaker/Bedrock managed AI."
+   },
+   {
+    "name": "Thunder Compute — Student Credits",
+    "offer": "$20 free credit for US students, usable on RTX A6000 and L40 GPU instances (~57 A6000-hours or ~25 L40-hours)",
+    "audience": "student",
+    "url": "https://thundercompute.com/",
+    "category": "Student credits",
+    "notes": "Verified 2026-08-21 as the only student GPU credit that actually buys GPU time at a dedicated GPU cloud. Scoped to A6000/L40 only; newer cards excluded. Check the current claim page before relying on it."
+   },
+   {
+    "name": "Camber — GPU Hours via GitHub Student Developer Pack",
+    "offer": "Free student plan: 5 GPU hours/month + 40 CPU hours + 50GB storage, claimed through the GitHub Student Developer Pack",
+    "audience": "student",
+    "url": "https://education.github.com/pack",
+    "category": "Student credits",
+    "notes": "The pack also bundles $100 Azure credit for students 18+. Camber's offer is recurring (monthly GPU hours), useful for small LLM experiments; verify exact amounts in the current pack listing — DigitalOcean/Paperspace offers that used to be in the pack no longer appear on the page as of Sep 2026."
+   },
+   {
+    "name": "OVHcloud Free Trial",
+    "offer": "US$200 trial credit for 1 month on Public Cloud; the official docs illustrate using it on GPU notebooks/AI training",
+    "audience": "free-for-all",
+    "url": "https://www.ovhcloud.com/en/public-cloud/pricing/",
+    "category": "Cloud trial",
+    "notes": "One of only three credits (with Modal and Thunder) that has an official GPU path as of Aug 2026. ~35 hours of an AI1-1-GPU notebook per OVH's own example. Card required; EU-based, so useful for EU data residency."
+   },
+   {
+    "name": "Baseten Startup Program",
+    "offer": "Up to $25,000 credits for Dedicated Inference/Training plus up to $2,500 for Model APIs; new accounts also get unannounced signup credits",
+    "audience": "startup",
+    "url": "https://baseten.co/",
+    "category": "Startup credits",
+    "notes": "Application-based for eligible startups. Baseten is GPU inference/training cloud, so credits buy real GPU time (not just API tokens)."
+   },
+   {
+    "name": "Ollama",
+    "offer": "Free, open-source (Apache-2.0) local LLM runtime — run Llama, Qwen, Mistral, Gemma etc. at $0 on your own CPU/GPU",
+    "audience": "free-for-all",
+    "url": "https://ollama.com",
+    "category": "Local inference",
+    "notes": "The 'free tier' is the software: no card, no quota, no API cost — only your hardware. Works on macOS/Linux/Windows; best paired with a used consumer GPU. 2026: default models list keeps expanding; no cloud free tier exists on ollama.com."
+   },
+   {
+    "name": "llama.cpp",
+    "offer": "Free, MIT-licensed local inference/training in C/C++ — run quantized LLMs with $0 licensing on CPU or GPU (CUDA/ROCm/Vulkan/Metal backends)",
+    "audience": "free-for-all",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "category": "Local inference",
+    "notes": "Underpins much of the local-LLM ecosystem (GGUF format). No quotas; performance scales with your hardware. 2025-2026: added Vulkan and ROCm support, so AMD/Intel GPUs are first-class, not just NVIDIA."
+   },
+   {
+    "name": "LM Studio",
+    "offer": "Free desktop app (macOS/Windows/Linux) with built-in model store and OpenAI-compatible local server — unlimited local inference at $0",
+    "audience": "free-for-all",
+    "url": "https://lmstudio.ai",
+    "category": "Local inference",
+    "notes": "Best no-code route: download a quantized model, serve locally, zero licensing cost. Free tier is the whole product; optional cloud API (LM API) is paid and separate."
+   },
+   {
+    "name": "GPUStack",
+    "offer": "Free, open-source (MIT) self-hosted AI runtime — one-line install that bundles Ollama-style serving, CUDA/Metal/ROCm support, and a local web UI for free",
+    "audience": "free-for-all",
+    "url": "https://gpustack.co",
+    "category": "Local inference",
+    "notes": "2026 note: repositioned itself as a 'local AI runtime' (formerly GPU cluster manager). No cloud free tier; value is running your own GPU fleet at $0 marginal cost."
+   },
+   {
+    "name": "SGLang",
+    "offer": "Free, Apache-2.0 inference engine (RadixAttention, structured generation, speculative decoding) — run your own high-throughput LLM serving at $0 on any GPU",
+    "audience": "free-for-all",
+    "url": "https://github.com/sgl-project/sglang",
+    "category": "Local/cluster inference engine",
+    "notes": "Actively sponsored for compute (e.g., by Verda/DataCrunch) in 2026; the license remains free. Complementary, not competing, with Ollama/llama.cpp — SGLang targets high-throughput serving and RL training workloads."
+   },
+   {
+    "name": "NVIDIA Inception Program",
+    "offer": "Free program: cloud-credits from NVIDIA and partners (AWS/Azure/GCP etc., amounts vary by partner) plus data access for early-stage AI startups",
+    "audience": "startup",
+    "url": "https://www.nvidia.com/en-us/ai-catalog/inception/",
+    "category": "Startup credits",
+    "notes": "2026 note: most Inception credit value now flows through partner hyperscaler grants (e.g., Google for Startups AI up to $350K, AWS Activate up to $200K, Microsoft for Startups up to $150K) rather than direct NVIDIA credits. Verify current offer amounts in the program portal before claiming."
+   }
+  ],
+  "front_id": "gpu-ml"
+ },
+ {
+  "front": "Email, SMS, push & chat APIs",
+  "front_title": "Email, SMS, Push &amp; Chat APIs — Free Tiers &amp; Trials",
+  "entries": [
+   {
+    "name": "Brevo",
+    "offer": "Free forever: 300 emails/day + up to 100,000 contacts, no card, no time limit",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://www.brevo.com/pricing/",
+    "notes": "Formerly Sendinblue. Verified 2025-10 against brevo.com. SMS/WhatsApp/push & multi-channel add-ons; 'Sent with Brevo' footer on free; paid Starter from ~$9/mo."
+   },
+   {
+    "name": "Twilio SendGrid",
+    "offer": "60-day timed trial: 100 emails/day (Email API + Marketing), then paid from $19.95/mo",
+    "audience": "other",
+    "category": "email",
+    "url": "https://www.twilio.com/docs/sendgrid/ui/account-and-settings/upgrading-your-plan",
+    "notes": "MAJOR CHANGE: permanent free-forever plan retired. New signups moved to timed trial in Mar 2025; free plans formally retired May 27 2025 (sending stops after 60 days). Trial is one-time only. Verified 2025-10."
+   },
+   {
+    "name": "Mailgun (Sinch)",
+    "offer": "Free plan: 100 emails/day (~3,000/mo), 1 custom domain, 2 API keys, no card",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://www.mailgun.com/pricing/",
+    "notes": "The old 'sandbox' is now the Free plan. Verified 2025-10. Paid Basic from $15/mo (10K/mo, no daily cap); Flex pay-as-you-go largely hidden/removed."
+   },
+   {
+    "name": "Resend",
+    "offer": "Free: 3,000 emails/mo (100/day), 3 verified domains + 1,000 marketing contacts",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://resend.com/pricing/",
+    "notes": "Developer-first (maker of React Email). Verified 2025-10. Paid Pro from $20/mo (50K/mo); daily quota resets UTC."
+   },
+   {
+    "name": "Amazon SES",
+    "offer": "3,000 emails/mo free for the first 12 months of a new AWS account; then $0.10/1K",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://aws.amazon.com/ses/pricing/",
+    "notes": "Lowest per-email cost at scale; new accounts start in sandbox until production access requested; DIY setup (bounces/complaints via SNS). Long-standing AWS free tier."
+   },
+   {
+    "name": "Mailjet",
+    "offer": "Free: 6,000 emails/mo (capped 200/day), 1,500 contacts",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://www.mailjet.com/pricing/",
+    "notes": "Marketing + transactional, EU-based. Free plan adds Mailjet branding. Numbers confirmed via provider comparison (2025)."
+   },
+   {
+    "name": "MailerLite",
+    "offer": "Free: 1,000 subscribers, up to 12,000 emails/mo",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://www.mailerlite.com/pricing/",
+    "notes": "Marketing-focused; card-free; generous free automation & 3 automations. Widely cited as best-value marketing free tier."
+   },
+   {
+    "name": "Mailchimp",
+    "offer": "Free: 500 contacts, up to 1,000 emails/mo",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://mailchimp.com/pricing/",
+    "notes": "Cut from 2,000 free subscribers to 500 contacts (2023); free tier capped at 3 audience segments & 1 user. Most user-friendly free plan."
+   },
+   {
+    "name": "Kit (formerly ConvertKit)",
+    "offer": "Free Creator plan: 10,000 subscribers, 1,000 emails/mo, 1 user",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://kit.com/pricing/",
+    "notes": "Creator/brand-oriented marketing email; automation included on free. Rebranded ConvertKit→Kit (2023)."
+   },
+   {
+    "name": "SendPulse",
+    "offer": "Free: 15,000 subscribers, 150 emails/day (15,000/mo), 1 user",
+    "audience": "free-for-all",
+    "category": "multi-channel",
+    "url": "https://sendpulse.com/pricing/",
+    "notes": "Bundles email + SMS + push + live chat + WhatsApp on one free plan; one of the largest free contact counts."
+   },
+   {
+    "name": "Loops",
+    "offer": "Free tier for new accounts: limited subscribers + limited emails/mo",
+    "audience": "free-for-all",
+    "category": "email",
+    "url": "https://loops.com/pricing/",
+    "notes": "Creator email (ex-ConvertKit team). HEDGED: exact free limits not re-verified this run (web-search budget exhausted) — confirm current caps before citing."
+   },
+   {
+    "name": "Postmark",
+    "offer": "Time-boxed trial server: historically 100,000 emails/mo free for ~6 months, no card",
+    "audience": "other",
+    "category": "email",
+    "url": "https://postmark.com/pricing",
+    "notes": "Transactional-only (refuses bulk marketing) for clean IP reputation; no permanent free tier. HEDGED: verify current trial length/terms."
+   },
+   {
+    "name": "Twilio (SMS/Voice)",
+    "offer": "Free trial account with trial phone numbers; SMS only to pre-verified numbers",
+    "audience": "other",
+    "category": "sms",
+    "url": "https://www.twilio.com/en-us/try-twilio",
+    "notes": "Not a production free tier — trial is for testing; live SMS/voice is pay-per-use. Verify trial number limits."
+   },
+   {
+    "name": "Vonage (Nexmo)",
+    "offer": "Free trial / testing access for SMS, Voice & Chat (Nexmo)",
+    "audience": "other",
+    "category": "sms",
+    "url": "https://www.vonage.com/en-us/pricing/",
+    "notes": "Vonage acquired Nexmo (messaging) & Nexmo Chat. HEDGED: verify current trial quota — historically free dev/testing sandbox."
+   },
+   {
+    "name": "Firebase Cloud Messaging (FCM)",
+    "offer": "Free forever: unlimited push notifications",
+    "audience": "free-for-all",
+    "category": "push",
+    "url": "https://firebase.google.com/docs/cloud-messaging",
+    "notes": "Google; no send caps; requires a Firebase project (Android/iOS/Web). De-facto standard mobile push."
+   },
+   {
+    "name": "OneSignal",
+    "offer": "Free (Starter) plan: up to 10,000 MAU, unlimited app messages",
+    "audience": "free-for-all",
+    "category": "push",
+    "url": "https://onesignal.com/pricing/",
+    "notes": "Web/app push + email + SMS on one platform; free tier. HEDGED: re-confirm the 10K MAU free cap (raised from 2.5K in 2024)."
+   },
+   {
+    "name": "Airship",
+    "offer": "Free tier: 100 MAU (Engage)",
+    "audience": "free-for-all",
+    "category": "push",
+    "url": "https://www.airship.com/pricing/",
+    "notes": "Multichannel messaging (push/SMS/email). HEDGED: verify current free MAU."
+   },
+   {
+    "name": "Pusher",
+    "offer": "Free (Realtime) plan: ~5,000 channel pushes/mo, ~100 concurrent connections",
+    "audience": "free-for-all",
+    "category": "realtime",
+    "url": "https://pusher.com/pricing/",
+    "notes": "Realtime pub/sub & push; company now under Ably. HEDGED: verify current free limits."
+   },
+   {
+    "name": "Ably",
+    "offer": "Free (developer) tier: up to ~100,000 messages/mo, 2 apps",
+    "audience": "free-for-all",
+    "category": "realtime",
+    "url": "https://ably.com/pricing/",
+    "notes": "Realtime messaging over sockets (also owns Pusher). HEDGED: verify current free tier."
+   },
+   {
+    "name": "Stream Chat",
+    "offer": "Free (developer) tier: up to 50K MAU, 1M messages/mo",
+    "audience": "free-for-all",
+    "category": "chat",
+    "url": "https://getstream.io/chat/pricing/",
+    "notes": "Chat API + hosted UI (Chat Messaging, also AI Agents/Feeds). HEDGED: verify current free limits & whether a card is required to go to production."
+   },
+   {
+    "name": "Sendbird",
+    "offer": "Free (developer) tier: up to 10K MAU, 2 apps, no card",
+    "audience": "free-for-all",
+    "category": "chat",
+    "url": "https://www.sendbird.com/pricing/",
+    "notes": "Group/1:1 messaging SDKs (open-source clients). HEDGED: verify current free limits."
+   },
+   {
+    "name": "Tawk.to",
+    "offer": "Free unlimited live-chat for one domain",
+    "audience": "free-for-all",
+    "category": "chat",
+    "url": "https://www.tawk.me/",
+    "notes": "Self-hosted web live chat; 100% free, unlimited agents/conversations. Bonus addition (rebranded tawk.to → tawk.me)."
+   }
+  ],
+  "front_id": "email-messaging"
+ },
+ {
+  "entries": [
+   {
+    "audience": "free-for-all",
+    "category": "monitoring",
+    "name": "Datadog Free Plan",
+    "notes": "2026: no platform-wide freemium — the free tier covers Infrastructure Monitoring only; the 14-day trial is a distinct thing. Paid starts $15/host (annual).",
+    "offer": "Free Infrastructure Monitoring up to 5 hosts with 1-day metric retention, unlimited users; separate 14-day full-platform trial (no credit card)",
+    "url": "https://www.datadoghq.com/pricing/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "monitoring",
+    "name": "New Relic Free Tier",
+    "notes": "Genuinely permanent (not a trial) — strong for solo devs/small teams; ingest bills $0.40/GB above 100GB. 50+ capabilities included.",
+    "offer": "Perpetual free tier: 100 GB data ingest/month, 1 full-platform user, unlimited basic users, 500 synthetic checks; no credit card, no expiry",
+    "url": "https://newrelic.com/pricing"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "monitoring",
+    "name": "Grafana Cloud Free",
+    "notes": "Most generous managed-observability free tier; community support only. Managed LGTM stack (metrics, Loki logs, Tempo traces).",
+    "offer": "10K active metric series + 50 GB logs + 50 GB traces/month, 14-day retention, 100K k6 executions; free forever, no credit card",
+    "url": "https://grafana.com/products/cloud/free-tier/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "error-tracking",
+    "name": "Sentry Developer Plan (Free)",
+    "notes": "2025-08-27 change cut included spans 10M→5M and added 5GB logs to all plans; free stays 1 user. Separate 'Sentry for Open Source' program gives OSS maintainers a free plan with Business features.",
+    "offer": "5K errors + 5M spans + 50 session replays + 5 GB logs/month, 1 user; free forever",
+    "url": "https://sentry.io/pricing/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "monitoring",
+    "name": "AWS CloudWatch Free Tier",
+    "notes": "Free tier, part of AWS Free Tier. Application Signals/X-Ray free for 3 months or until volume caps. Auto metrics from AWS services are free.",
+    "offer": "1M API requests, 10 custom metrics, 5 GB log data, 100 Synthetics canary runs, 3 dashboards, 10 alarms/month; plus 100K X-Ray traces free",
+    "url": "https://aws.amazon.com/cloudwatch/pricing/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "tracing",
+    "name": "Honeycomb Free Plan",
+    "notes": "2026-07-01 new Pro pricing ($3/M events); the free 20M-event tier is unchanged. Also runs a 'Honeycomb for Builders' startup discount program.",
+    "offer": "20M events/month (up to 100M metrics data points), 2 triggers, 60-day retention; free forever",
+    "url": "https://www.honeycomb.io/pricing"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "synthetic-monitoring",
+    "name": "Checkly Hobby Plan (Free)",
+    "notes": "Developer-first 'monitoring as code' (Playwright). Also offers 30% off for startups. Agentic Checks deprecated (stop 2026-12-01).",
+    "offer": "10 uptime monitors + 1K browser/Playwright runs + 10K API runs/month, 6 global locations; free forever, no credit card",
+    "url": "https://www.checklyhq.com/pricing/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "uptime",
+    "name": "Better Stack Free Plan",
+    "notes": "Rebranded from Better Uptime + Logtail. Bundles uptime, status page, incident mgmt, logs, error tracking at $0. Paid Responder $29-34/seat/mo; 30% off for startups.",
+    "offer": "10 monitors & heartbeats + 1 status page (custom domain), 100K exceptions, 5K session replays, 3 GB logs / 30 GB metrics; free for personal projects",
+    "url": "https://betterstack.com/pricing"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "uptime",
+    "name": "UptimeRobot Free Plan",
+    "notes": "2025 ToS change: free plan now personal/non-commercial use only — running a paying SaaS technically requires paid. Paid from ~$9/mo (Solo).",
+    "offer": "50 monitors, 5-minute checks, 1 basic status page, 3-month log retention; free",
+    "url": "https://uptimerobot.com/pricing/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "status-page",
+    "name": "Statuspage Free Plan",
+    "notes": "Atlassian-owned (ex-Atlassian/Microsoft). Free tier; paid for white-label/custom domain. Many teams instead use Better Stack/StatusCake free status pages.",
+    "offer": "1 free public status page with components and subscriber limits; white-label, custom domain and extra features paid",
+    "url": "https://statuspage.io/pricing"
+   },
+   {
+    "audience": "student",
+    "category": "uptime",
+    "name": "Uptime Kuma (Self-hosted)",
+    "notes": "The de-facto free option for anyone with a VPS. Fully open source; no free tier from the vendor since you self-host. 20-second check intervals, 90+ notification services.",
+    "offer": "Open source (MIT) uptime monitor — unlimited monitors, multiple status pages, no vendor caps; free, you host on your own VPS",
+    "url": "https://github.com/louislam/uptime-kuma"
+   },
+   {
+    "audience": "student",
+    "category": "monitoring",
+    "name": "Prometheus (Self-hosted)",
+    "notes": "Industry-standard OSS time-series DB; the basis of Grafana Cloud / Mimir. Zero licensing cost; you run the storage yourself.",
+    "offer": "Open source metrics server — free and unlimited; pairs with Grafana for dashboards and Alertmanager",
+    "url": "https://prometheus.io/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "monitoring",
+    "name": "SigNoz",
+    "notes": "Full open source under AGPL; free self-hosted. Managed cloud has a free trial then paid. Popular as a Datadog alternative.",
+    "offer": "Open-source Observability (OpenTelemetry-native: metrics+traces+logs) self-hosted free; SigNoz Cloud free trial (~50 GB ingest, 30 days)",
+    "url": "https://signoz.io/pricing"
+   },
+   {
+    "audience": "student",
+    "category": "analytics",
+    "name": "Metabase Community Edition",
+    "notes": "OSS dashboard/SQL-explorer you can host for free; useful for visualizing telemetry/Postgres. Cloud has a free entry tier.",
+    "offer": "Open source BI/analytics self-hosted free and unlimited; Metabase Cloud free tier (limited questions/users)",
+    "url": "https://www.metabase.com/pricing/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "CDN",
+    "name": "Cloudflare (Free Plan)",
+    "notes": "The main CDN option in this front with a genuinely free tier. Free includes CDN, WAF, basic analytics. Workers/Free usage-based tiers.",
+    "offer": "Free CDN + global DDoS protection + 100+ global network; Cloudflare Workers free tier (~1M requests/day) — $0 cost",
+    "url": "https://www.cloudflare.com/plans/"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "observability",
+    "name": "PostHog Free Plan",
+    "notes": "Bundle with observability (errors, logs, traces, RUM/session replay). Free tier generous; 1M events/mo. Startup/early-stage friendly.",
+    "offer": "Free error tracking, session replay & logs up to 1M events/month; product/feature analytics free tier; no credit card",
+    "url": "https://posthog.com/pricing"
+   },
+   {
+    "audience": "free-for-all",
+    "category": "logging",
+    "name": "Axiom Free Plan",
+    "notes": "Logs/metrics/analytics platform; free tier of 5GB ingest/month plus a one-time $10 credit. Usage-based beyond that.",
+    "offer": "5 GB ingest/month free + $10 signup credit; log & metric analytics with fast querying",
+    "url": "https://axiom.co/pricing"
+   },
+   {
+    "audience": "verified-company",
+    "category": "logging",
+    "name": "Elastic Observability",
+    "notes": "Trial via Elastic Cloud; the OSS self-hosted stack (Elasticsearch + Logstash + Kibana + Beats) is free under AGPL. Startup credits available on request.",
+    "offer": "14-day free trial of Elastic Cloud Observability; open-source self-hosted ELK (Elasticsearch/Logstash/Kibana) free",
+    "url": "https://www.elastic.co/observability/pricing"
+   },
+   {
+    "audience": "student",
+    "category": "logging",
+    "name": "OpenObserve (Self-hosted)",
+    "notes": "Lightweight OSS all-in-one (logs+metrics+traces+alerts); free self-hosted, single binary. Managed tier has a free start.",
+    "offer": "Open source log/metric/trace (Rust) platform — self-hosted free; managed cloud has a free starter tier",
+    "url": "https://openobserve.ai/pricing"
+   },
+   {
+    "audience": "student",
+    "category": "uptime",
+    "name": "Healthchecks.io Free Plan",
+    "notes": "Open source (AGPL); self-host free and unlimited. Hosted free tier for personal use. Fits well with CI/cron observability.",
+    "offer": "Free cron/heartbeat monitoring (OSS) — unlimited checks on your own infrastructure, alerts if a scheduled job stops checking in; hosted has a free tier",
+    "url": "https://healthchecks.io/pricing"
+   }
+  ],
+  "front": "Observability, monitoring, uptime & CDN",
+  "front_title": "Observability, Monitoring, Uptime & CDN — free offers for students & startups",
+  "front_id": "observability"
+ },
+ {
+  "front": "Payments & fintech dev tools",
+  "front_title": "Payments & Fintech Dev Tools",
+  "entries": [
+   {
+    "name": "Stripe (Payments & Sandbox)",
+    "offer": "No setup or monthly fees; free sandbox/test mode and free API docs; pay-per-transaction (2.9% + 30c per successful domestic card txn, 1.5% international).",
+    "audience": "free-for-all",
+    "url": "https://stripe.com/pricing",
+    "notes": "Base offer is free to develop against; monetization is per-transaction. Pair with the two startup programs below. 2025-2026: Billing pay-as-you-go is 0.7% of billing volume; Managed Payments (merchant-of-record) adds 3.5%."
+   },
+   {
+    "name": "Stripe Startups",
+    "offer": "Credits to offset Stripe fees for 12 months for venture-backed early-stage startups, plus an exclusive Stripe Invoicing cap starting at 0.4% (up to $10/invoice); no equity taken.",
+    "audience": "startup",
+    "url": "https://stripe.com/startups",
+    "notes": "Apply from the Stripe dashboard; requires proof of institutional/venture funding and an account on standard pricing; review ~2-3 business days. Credit amount not publicly published (est. ~$500-$2,000 depending on source). 2026: Invoicing cap explicitly 'starting at 0.4% up to $10 per invoice'."
+   },
+   {
+    "name": "Stripe Atlas",
+    "offer": "$2,500 in Stripe product credits for the first year + over $50,000 in partner discounts (AWS, Google, Xero, etc.); Delaware C-Corp/LLC formation. Fee $500 one-time, refunded with a $5,000 Stripe Treasury deposit within 90 days; then $100/year.",
+    "audience": "startup",
+    "url": "https://stripe.com/atlas",
+    "notes": "2026 current structure: $500 + $100/yr, $2,500 credits, $50K+ partner perks. A retracted 2026-08-28 change record claimed AWS/GitHub/AWS-5k items that never existed on the page — do not rely on third-party 'restructured' claims."
+   },
+   {
+    "name": "Mollie",
+    "offer": "Free Mollie account with no monthly fees and no lock-in; free test-mode API keys (no transaction fees in test); pay-per-transaction on live; 35+ payment methods.",
+    "audience": "free-for-all",
+    "url": "https://www.mollie.com/pricing",
+    "notes": "Test API key isolates you from live data with zero fees; switch to a Live key to process real payments. Mollie also lists a 'For Startups' segment in its portal. Europe-centric (iDEAL, Bancontact, Klarna, etc.)."
+   },
+   {
+    "name": "Plaid",
+    "offer": "Free Sandbox (mock data, unlimited test Items) + free Trial plan for new US/CA teams: up to 10 live Production Items with real bank data, no credit card.",
+    "audience": "free-for-all",
+    "url": "https://plaid.com/pricing/",
+    "notes": "2026 change: Trial plan (8 products incl. Transactions, Balance, Auth, Investments) is auto-approved for teams created on/after 2026-04-15 and REPLACES Limited Production for new signups; Limited Production (200 free live calls/product) is now legacy/existing-customer only. Beyond 10 Items or for extra products, you upgrade to paid Pay-as-you-go."
+   },
+   {
+    "name": "Tink (Visa)",
+    "offer": "Free developer Console account + sandbox with a Demo Bank of simulated banks (18 countries, test data) to build/prototype; production access is Enterprise custom pricing.",
+    "audience": "free-for-all",
+    "url": "https://tink.com/pricing/",
+    "notes": "Tink (Stockholm) is now 'a Visa solution' (Visa acquired it in 2022). 3,400-6,000+ bank connections, 250M+ customers; pay-per-consented-user/call on production. Free sandbox is the developer entry point; no self-serve paid developer plan — production needs a sales contract."
+   },
+   {
+    "name": "Paystack",
+    "offer": "Free to integrate — zero integration fee, zero maintenance fee, no monthly/minimum fees; free test-mode account with test keys; pay-per-transaction only.",
+    "audience": "free-for-all",
+    "url": "https://paystack.com/pricing",
+    "notes": "Fees: local cards 1.5% + NGN100 (capped NGN2,000; NGN100 waived under NGN2,500); international 3.9% + NGN100; transfers NGN10-50; virtual accounts 1% capped NGN300. Paystack is 'a Stripe company' (Stripe-backed, YC alumni). Africa-focused (NGN, ZAR)."
+   },
+   {
+    "name": "Flutterwave",
+    "offer": "Free developer account + free sandbox/test environment (mock data, test cards, webhook simulation; test data retained 30 days); live fees are per-transaction.",
+    "audience": "free-for-all",
+    "url": "https://developer.flutterwave.com/",
+    "notes": "Sandbox is free for dev/testing before KYC; live processing (US) ~2.9% local cards / 3.8% international, 30+ currencies, 15+ payment options, 20M+ API calls/day capacity. Africa-first PSP (Verve, M-Pesa, USSD)."
+   },
+   {
+    "name": "Wise API (Wise Business)",
+    "offer": "Free API access — no subscription or API fee; free sandbox pre-funded with £1,000,000 of test credit; you pay only per-transfer fees (route-specific fixed + %).",
+    "audience": "free-for-all",
+    "url": "https://wise.com/us/business/api",
+    "notes": "Business account opening fee ~$31 (US) / £45 (UK); API + sandbox free. Partner/platform integrations (client ID/secret, Developer Hub) are sales-led; SMBs use free personal API tokens. 2026: 56+ currencies, batch payments included."
+   },
+   {
+    "name": "Airwallex",
+    "offer": "Free sandbox (instant, no production account, no real money) + free Explore plan: $0/user/month (US) if you deposit ≥$10K/month or hold ≥$10K; free API in sandbox; multi-currency cards/20+ currencies.",
+    "audience": "startup",
+    "url": "https://www.airwallex.com/en-us/pricing",
+    "notes": "2026: US 'Explore' is $0/mo under the deposit/balance condition, else paid; 'Grow' adds platform fee by team size. Platform API / Embedded Finance / high-volume are custom (sales). Sandbox rate limit 20 req/s vs 100 req/s production."
+   },
+   {
+    "name": "Paddle",
+    "offer": "No monthly or setup/migration fees; Pay-as-you-go at 5% + 50c per Checkout transaction (Paddle is merchant of record: payments, tax filing, fraud, support); free developer sandbox.",
+    "audience": "free-for-all",
+    "url": "https://www.paddle.com/pricing",
+    "notes": "The only free element is the sandbox for testing — there is no free commercial tier. 2026: standard 5% + 50c; custom pricing for high-volume / sub-$10-value transactions. Good for SaaS/global tax compliance offload."
+   },
+   {
+    "name": "Lemon Squeezy",
+    "offer": "Free to start: $0/month base, no card, no trial/contract; 5% + 50c per transaction; API, VAT/sales-tax collection & merchant-of-record included; email marketing free up to 500 subscribers.",
+    "audience": "free-for-all",
+    "url": "https://www.lemonsqueezy.com/pricing",
+    "notes": "Lemon Squeezy is 'a Stripe company' (Stripe acquired 2023). Developer/API access included at the $0 base with no separate paid dev tier. Handles global tax (SaaS/digital goods, 95 currencies)."
+   },
+   {
+    "name": "Razorpay",
+    "offer": "0 setup fee, 0 AMC, 0 integration fee; REST API, official SDKs, webhooks and integration support at no extra cost; pay-per-transaction (2% domestic, up to 3% international).",
+    "audience": "free-for-all",
+    "url": "https://razorpay.com/pricing/",
+    "notes": "India-centric; 18% GST on the fee; UPI QR 0.99%, Smart Collect 1% or Rs10; virtual multi-currency accounts 1% on Standard. Free developer account (sandbox) to test; go-live after KYC. 135 currencies / 180+ countries."
+   },
+   {
+    "name": "Moov",
+    "offer": "No genuine free tier: standard plan is pay-as-you-go with a $500 monthly minimum (Interchange++ + 0.60% + 15c card; ACH same-day 40c; wallet 50c/mo); free test/sandbox environment and free payment links on standard.",
+    "audience": "other",
+    "url": "https://www.moov.io/pricing/",
+    "notes": "Include for completeness of the seed list, but flag it is NOT free-for-all — the $500/month minimum disqualifies it as a free/dev-tier offer. US consumer/enterprise payments & wallets; custom plan for high volume."
+   },
+   {
+    "name": "Adyen",
+    "offer": "Free test/sandbox environment and free API testing in test mode (no fees, no real money); production pricing is enterprise/contract-based (interchange++ + fee, no API monthly minimum).",
+    "audience": "verified-company",
+    "url": "https://docs.adyen.com/",
+    "notes": "Adyen's commercial pricing is not publicly published (sales-led, enterprise/global). The free element for developers is the test account + test mode; the API itself carries no setup/monthly fee. 2026: enterprise onboarding; Tink is listed among Adyen's partners."
+   },
+   {
+    "name": "Chargebee",
+    "offer": "Growth Starter is $0 and CPQ Lite is free for the first 50 quotes (both require an active paid Billing plan); base Billing is paid (Flow: $0 + 0.80% usage, ~$66K breakeven; or $99 + 0.65% higher tiers).",
+    "audience": "startup",
+    "url": "https://www.chargebee.com/pricing/",
+    "notes": "No standalone free billing tier — the '$0' tiers are gated behind a paid Chargebee Billing subscription. 2026: includes 100M usage events/month on Flow; plugs into 40+ gateways (often on top of Stripe/Paystack)."
+   },
+   {
+    "name": "Square (Developer)",
+    "offer": "Free developer sandbox/test mode and no monthly or annual fees; pay-per-transaction on live (2.9% + 30c per card via Square's payments APIs; ACH per transfer).",
+    "audience": "free-for-all",
+    "url": "https://developer.squareup.com/",
+    "notes": "Expansion beyond the seed list (added as a well-known payments-API dev tool). Free sandbox; monetization is per-transaction. 2026: Square has an official MCP server. Verify current rates on Square's pricing page before relying on them."
+   }
+  ],
+  "front_id": "payments-fintech"
+ },
+ {
+  "front": "Startup cloud-credit programs (VC / accelerator funded)",
+  "front_title": "Startup Cloud-Credit Programs (VC / Accelerator Funded)",
+  "entries": [
+   {
+    "name": "AWS Activate",
+    "offer": "Up to $200,000 in AWS Activate credits (Portfolio tier, VC/accelerator-backed, pre-Series B); self-funded Founders tier $1,000 (up to $5,000); invite-only 'AWS Credits for AI Startups' adds $200K+. Credits now redeemable on Amazon Bedrock third-party models.",
+    "audience": "startup",
+    "url": "https://aws.amazon.com/startups/credits/",
+    "category": "Cloud credits",
+    "notes": "2026 change: cap raised to $200K (was ~$100K) and reorganized into Founders/Portfolio tiers; the old 'AWS Cloud Credit for Startups' seed is folded into this program. AWS is an Activate Provider for YC, a16z, Sequoia, Brex, Carta, Greylock, etc. 7-10 business-day review."
+   },
+   {
+    "name": "Google for Startups Cloud Program",
+    "offer": "Start tier: $2,000 GCP credits (pre-funded, working MVP). Scale tier: up to $200,000 over 2 years (VC-funded, pre-seed to Series A); up to $350,000 for AI-first startups. Includes 12-month free Workspace Business Plus.",
+    "audience": "startup",
+    "url": "https://cloud.google.com/startup/benefits",
+    "category": "Cloud credits",
+    "notes": "2026: restructured into Start/Scale tiers; AI-first bump to $350K (Yr1 up to $250K). YC companies can stack more via the YC partnership. Third-party model spend is billed separately. Discretionary approval."
+   },
+   {
+    "name": "Microsoft for Startups (formerly Azure for Startups)",
+    "offer": "Up to $150,000 in Azure 'Startup credits' unlocked by milestones ($200 -> $5K -> $25K -> $50K -> $150K); start immediately with $200. Microsoft for Startups Investor Network referral code unlocks higher tiers faster.",
+    "audience": "startup",
+    "url": "https://www.microsoft.com/en/startups",
+    "category": "Cloud credits",
+    "notes": "MAJOR 2026 change: rebuilt/renamed from 'Azure for Startups Founders' to milestone-based 'Microsoft for Startups' (May 29, 2026). Lifetime free-credit cap now $350K; must not be past Series C; privately held B2B. Also powers the YC track (up to $150K + AI Foundry + GPUs)."
+   },
+   {
+    "name": "IBM Startup with IBM (IBM Cloud)",
+    "offer": "Flagship 'Startup with IBM' historically up to $120,000 in IBM Cloud credits (Builder $1,000/mo + Premium $10,000/mo, 12 months). As of late 2026 the program appears wound down; current public offer is a $200 new-account credit plus always-free IBM Cloud services.",
+    "audience": "startup",
+    "url": "https://developer.ibm.com/startups/",
+    "category": "Cloud credits",
+    "notes": "UNCERTAIN/2026: developer.ibm.com/startups now 301-redirects to the IBM Build community group and no live public $120K page remains; a $120K figure still circulates in IBM forums (Feb 2026) but is not officially posted. Treat as historical until IBM republishes; cross-check before relying on it."
+   },
+   {
+    "name": "Oracle Startup Growth Engine",
+    "offer": "Up to $60,000 in Oracle Cloud Infrastructure (OCI) credits (program rules allow $5,000-$100,000 at Oracle's discretion) for VC-backed, high-growth startups with a validated product; launched June 2026 for Brazil/Argentina/Colombia with LatAm expansion planned.",
+    "audience": "startup",
+    "url": "https://www.oracle.com/cloud/oracle-for-startups/",
+    "category": "Cloud credits",
+    "notes": "2026 change: old global 'Oracle for Startups' sign-up retired and replaced by 'Oracle Startup Growth Engine' under the enhanced Oracle PartnerNetwork (eOPN). Excludes existing OCI customers; alternative is up to $60K assessment funding. GTM/customer introductions are 'illustrative,' not guaranteed."
+   },
+   {
+    "name": "Y Combinator",
+    "offer": "YC companies stack ~$350K+ across partners: AWS up to ~$500K, OpenAI up to $500K (or $2M via SAFE), Anthropic up to $500K, plus GCP/Azure/Gemini credits. A separate YC AI Stack gives students >$20K in cloud + >$5K in GPT/Claude/Grok credits.",
+    "audience": "startup",
+    "url": "https://www.ycombinator.com/blog/the-yc-ai-student-starter-pack/",
+    "category": "Accelerator/VC credits",
+    "notes": "2026 'credit war': OpenAI pitched $2M/uncapped-SAFE to the 2026 cohort, then moved to $500K no-equity + optional $1.5M equity tranche; Anthropic raised its YC offer ~16x to $500K no-equity. YC is an AWS Activate Provider. YC AI Stack (Fall 2025+) is the student angle. YC also offers ~$25K Startup School compute credits."
+   },
+   {
+    "name": "Techstars",
+    "offer": "$220,000 invested at acceptance ($200K uncapped MFN SAFE + $20K for ~5% equity) plus $1M+ in partner credits: AWS $100K, DigitalOcean $100K, Google Cloud $100K (~24 mo each), plus $250K+ AI/API credits.",
+    "audience": "startup",
+    "url": "https://www.techstars.com/capital",
+    "category": "Accelerator/VC credits",
+    "notes": "2026: standard deal is $200K uncapped MFN SAFE + 5% for $20K (previously ~$120-180K for 6%). Credits are accessed via Techstars' partner Org IDs; actual per-founder amounts vary by partner/program. Also runs AWS Impact Bootcamps partnership."
+   },
+   {
+    "name": "Cloudflare for Startups",
+    "offer": "Up to $350,000 in Cloudflare credits across 3 tiers ($10K self-funded / $100K / $350K, by funding amount & partner backing), valid 12 months; includes free CDN, DDoS, WAF (1,000 rules), DNS on all tiers.",
+    "audience": "startup",
+    "url": "https://www.cloudflare.com/startups/",
+    "category": "Cloud credits",
+    "notes": "2026: top tier cap is $350K (some third-party guides still say $250K). Requires <=Series B (funded <=12 mo), founded <=10 yrs, live site + LinkedIn/X/GitHub presence, first-time applicants only. AI spend capped at $50K within the credits; 48-hour review."
+   },
+   {
+    "name": "AWS Impact Bootcamps (with Techstars)",
+    "offer": "$5,000 in AWS credits for underrepresented founders; top participants can win up to $50,000 in unrestricted grant funding plus an extra $15,000 in AWS credits at the AWS Founder Retreat.",
+    "audience": "startup",
+    "url": "https://startups.aws.com/lp/aws-impact-bootcamps",
+    "category": "Cloud credits",
+    "notes": "Part of AWS's $30M commitment to Black/Women/Latino/LGBTQIA+ founders (2022). Rolling 2-day cities (Tokyo Mar 2026, Berlin Apr 2026). Eligible: self-funded, angel, or up to Series A founders. Distinct from the standard AWS Activate program."
+   },
+   {
+    "name": "DigitalOcean for Startups",
+    "offer": "Up to $100,000 in DigitalOcean credits over 24 months (Hatch / H100 GPU pool), typically accessed through partner programs such as Techstars.",
+    "audience": "startup",
+    "url": "https://www.digitalocean.com/community/solutions/digitalocean-for-startups",
+    "category": "Cloud credits",
+    "notes": "Figure cross-checked via Techstars capital page ($100K/24 mo). NOT re-verified directly this run (WebSearch budget exhausted); DO's exact public URL/limits may have changed - confirm on digitalocean.com before citing."
+   },
+   {
+    "name": "500 Global (500 Startups)",
+    "offer": "Accelerator investment (historically ~$50K-$100K for ~5-7% equity) bundled with ~$50K in partner tech/cloud credits (AWS, GCP, OpenAI, etc.) for demo-day companies.",
+    "audience": "startup",
+    "url": "https://www.500global.com/",
+    "category": "Accelerator/VC credits",
+    "notes": "NOT re-verified this run (WebSearch budget exhausted). 500 Global (ex-500 Startups) runs 500 Global + 500 Capital; specific 2026 credit caps change cohort to cohort - confirm on 500global.com before relying on a figure."
+   },
+   {
+    "name": "a16z / Andreessen Horowitz",
+    "offer": "No standalone credit program; a16z is an AWS Activate Provider and a Microsoft for Startups Investor Network member, so a16z-backed startups apply for AWS (up to $200K) / Azure (up to $150K) credits using a16z's referral/Org ID.",
+    "audience": "verified-company",
+    "url": "https://a16z.com/",
+    "category": "Accelerator/VC credits",
+    "notes": "NOT re-verified this run. The benefit flows through the cloud providers' programs (AWS/GCP/Microsoft), not a direct a16z grant. The 'a16z Speedrun' accelerator also confers portfolio perks. 'verified-company' = needs confirmed a16z affiliation with the fund."
+   },
+   {
+    "name": "Startup Grad (YC + Microsoft)",
+    "offer": "Historical program that granted YC companies ~$50,000 in Azure credits; effectively superseded in 2026 by the Microsoft for Startups / YC partnership (up to $150K + AI Foundry + GPUs).",
+    "audience": "startup",
+    "url": "https://www.microsoft.com/en/startups",
+    "category": "Accelerator/VC credits",
+    "notes": "Likely defunct under this name as of 2026 - NOT re-verified this run (WebSearch budget exhausted). If a 'Startup Grad' offer still appears it is a legacy label for the Microsoft-for-Startups YC track; verify before citing."
+   },
+   {
+    "name": "AWS Free Tier (new customers)",
+    "offer": "Up to $200 in credits ($100 at sign-up + up to $100 earned by exploring services) plus free usage of select services; 6-month free plan.",
+    "audience": "free-for-all",
+    "url": "https://aws.amazon.com/free/",
+    "category": "Free tier",
+    "notes": "2026 overhaul: AWS moved to a credit-based free tier (up to $200, 6-month window) replacing the old 12-month free tier. Baseline offer for any new customer, including students/startups, before AWS Activate kicks in."
+   }
+  ],
+  "front_id": "cloud-credits"
+ },
+ {
+  "front_title": "Frontend hosting, PaaS & app deployment",
+  "front": "Frontend/edge hosting and app-deployment PaaS that, as of 2026-10-22, has a genuine free tier, free-trial credit, student offer, or startup credit program — verified against official pages. 2025–26 shifts worth knowing: Netlify moved all new accounts to credit-based plans (Sep 4, 2025; Free = 300 credits/mo, thin ~15 GB); Railway restored a permanent $1/mo Free plan (Aug 27, 2025) after running it down in 2024; Render flattened Pro to $25/mo with unlimited seats and cut Hobby bandwidth from 100 GB to 5 GB (Apr 23, 2026); Koyeb (now under Mistral AI, Feb 2026) closed its free Starter plan to new users; Vercel's Hobby is strictly non-commercial. Defunct / no genuine free offer in this front: Glitch (stopped hosting projects Jul 8, 2025 under Fastly), Heroku (no free tier since Nov 2022; from $5/mo \"Eco\" dyno), Cyclic (cyclic.sh redirects to GitHub; effectively down), Deta (Hugging Face–acquired; deta.space unreachable), and Kinsta / Pantheon / Pika / Cloudron (no perpetual free tier for new users). Entries 13–16 are from secondary 2026 comparisons (Northflank, Val Town, Puter, HF Spaces) — confirm on the vendor page before relying on them.",
+  "entries": [
+   {
+    "name": "Vercel (Hobby plan)",
+    "offer": "$0/mo Hobby: 100 GB transfer, 1M edge requests + 1M function invocations/mo, 4 CPU-hrs, 360 GB-hrs memory, 200 projects, unlimited deploys; no card",
+    "audience": "free-for-all",
+    "url": "https://vercel.com/pricing",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Non-commercial personal use only — commercial revenue requires Pro ($20/seat). 2025-26: Pro moved to a $20 credit-based model (Sep 2025); Hobby now keeps only the 3 most recent production deployments (Sep 2026). No built-in DB on free tier."
+   },
+   {
+    "name": "Netlify (Free plan)",
+    "offer": "$0/mo: 300 credits/mo (~15 GB bandwidth at 20 cr/GB, or ~20 production deploys), unlimited deploy previews, functions + edge functions, no card",
+    "audience": "free-for-all",
+    "url": "https://netlify.com/pricing",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Sep 4, 2025: new accounts on credit-based plans; Free hard limit = 300 credits/mo and projects PAUSE when exhausted. Legacy Free was 100 GB + 300 build min. Personal $9/mo; Pro $20/mo (unlimited seats). No container option; serverless only."
+   },
+   {
+    "name": "Cloudflare Pages (Free)",
+    "offer": "$0/mo: unlimited static requests/bandwidth, 500 builds/mo, up to 100 projects, 100 custom domains/project, 20,000 files; no card",
+    "audience": "free-for-all",
+    "url": "https://developers.cloudflare.com/pages/platform/limits/",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Static serving is free and unlimited; dynamic Pages Functions draw on the Workers free quota. 2026: Cloudflare is steering new projects toward Workers rather than Pages."
+   },
+   {
+    "name": "Cloudflare Workers (Free plan)",
+    "offer": "$0/mo: 100,000 requests/day, 10 ms CPU/request, up to 100 Worker scripts; static assets free & unlimited; paid starts at $5/mo",
+    "audience": "free-for-all",
+    "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Daily cap applies account-wide across all Workers. Free also includes KV + container minutes. Paid: 10M requests/mo + 30M CPU-ms, max 5-min CPU/request. Great edge serverless alternative to Vercel/Netlify functions."
+   },
+   {
+    "name": "GitHub Pages",
+    "offer": "$0/mo: 1 user/org site + unlimited project sites, 1 GB site, 100 GB/mo soft bandwidth, 10 builds/hr; free on public repos (GitHub Free plan)",
+    "audience": "free-for-all",
+    "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Static only — no serverless functions or runtime. Private-repo Pages requires a paid GitHub plan. Not permitted for commercial/e-commerce use. Soft limits (rate-limit 429s), not a hard pause, and no billing."
+   },
+   {
+    "name": "Render (Free web services)",
+    "offer": "$0/mo: free web services (512 MB / 0.1 CPU) with 750 instance-hours/mo, free Postgres (expires 30d), free static sites; no card",
+    "audience": "free-for-all",
+    "url": "https://render.com/docs/free",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Free web services spin down after 15 min idle (~1 min wake); free Postgres expires 30d + 14d grace. 2026: Pro flat $25/mo unlimited seats (was $19/seat), Hobby $0 workspace now includes only 5 GB bandwidth (cut from 100 GB, Apr 23, 2026). Good Heroku-style alternative."
+   },
+   {
+    "name": "Railway (Free plan + trial)",
+    "offer": "$0/mo permanent Free plan ($1/mo usage credit) + one-time $5 trial credit for 30 days; no card for free tiers",
+    "audience": "free-for-all",
+    "url": "https://railway.com/pricing",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Free plan restored Aug 27, 2025 after being removed in 2024. Usage meters: $20/vCPU-mo, $10/GB-RAM-mo, $0.05/GB egress. Hobby $5/mo, Pro $20/mo per workspace (unlimited seats). Always-on (no forced sleep unless opt-in)."
+   },
+   {
+    "name": "Fly.io (Free trial)",
+    "offer": "Free trial: 2 VM hours or 7 days of access (whichever first), no card; then pay-as-you-go from $1 (smallest always-on app ~$2.19/mo)",
+    "audience": "free-for-all",
+    "url": "https://docs.fly.io/about/free-trial",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Legacy free allowances (3 shared-cpu-1x VMs + $5 credit) were discontinued for new signups on Oct 7, 2024 — only pre-cutoff accounts keep them. Adding a payment card ends the trial and starts billing immediately. Container/microVM PaaS, global multi-region."
+   },
+   {
+    "name": "Koyeb (Startup program)",
+    "offer": "Startup program: up to $30,000 in credits for early-stage companies; free Starter (1x 512 MB service) grandfathered to existing orgs only",
+    "audience": "startup",
+    "url": "https://www.koyeb.com/pricing",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Feb 17, 2026: Koyeb joined Mistral AI; free Starter closed to new users (Feb 2026). New signups default to Pro $29/mo (+$10 compute) with a required card ($29 pre-auth hold). Roadmap now AI/inference-focused."
+   },
+   {
+    "name": "Replit (Starter free tier)",
+    "offer": "$0/mo Starter: 1,200 dev min/mo (~40/day), 100 AI completions, 0.5 vCPU / 1 GB RAM / 2 GB storage, 1 published app; no card",
+    "audience": "free-for-all",
+    "url": "https://replit.com/pricing",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Browser IDE + deploy. Free tier is public-only, adds a 'Made with Replit' badge, 1 published app. 2026: Core dropped $25 -> $20/mo (Feb 2026); Pro $100/mo; Free Mode (daily Agent cap) added Aug 2026."
+   },
+   {
+    "name": "Replit for Students",
+    "offer": "50% off Replit Core (~$10/mo vs $20) with a verified .edu email; Starter free tier remains available",
+    "audience": "student",
+    "url": "https://replit.com/edu/students",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Legacy Teams-for-Education (free for public-school teachers / 80% off classrooms) has been discontinued; the current student benefit is the .edu discount on Core. Verify eligibility on replit.com/education."
+   },
+   {
+    "name": "Deno Deploy (Free plan)",
+    "offer": "$0/mo: 1M inbound requests/mo, 10 active CPU-hours, 20 GiB egress, 10 GiB revision storage, 10 concurrent apps",
+    "audience": "free-for-all",
+    "url": "https://deno.com/deploy/pricing",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Edge serverless built on Deno. Pro $20/mo (5M requests, 50 CPU-hrs); Builder $200/mo. 1-day log/traces retention on free. Good Vercel/Workers alternative for JS/TS edge apps."
+   },
+   {
+    "name": "Northflank (Free Sandbox plan)",
+    "offer": "Free 'Sandbox' plan: up to 2 compute services + 1 database, always-on (no 15-min sleep); card verified at signup",
+    "audience": "free-for-all",
+    "url": "https://northflank.com/pricing",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Koyeb fork marketed as an always-on free PaaS (its main appeal vs Render). Free-tier build minutes/storage not fully published — verify on the official pricing page. Secondary-source verified (2026 comparison)."
+   },
+   {
+    "name": "Val Town (Free)",
+    "offer": "$0/mo: deploy serverless JS/TS 'vals' to a subdomain with one-click forking; user-pays model for built-in AI",
+    "audience": "free-for-all",
+    "url": "https://val.town",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Closest cultural successor to Glitch's remix-and-share workflow. AI inside vals is billed to the end user, so the host's bill doesn't scale with your audience. Secondary-source verified (2026)."
+   },
+   {
+    "name": "Puter (Free, user-pays)",
+    "offer": "$0/mo: in-browser IDE + instant live URL + Puter.js (400+ AI models, cloud storage, KV DB, auth) under a user-pays model, no API keys",
+    "audience": "free-for-all",
+    "url": "https://puter.com",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "Open-source (AGPL) 'internet OS'; end-users of your app cover their own AI/cloud usage. Self-hosted build still alpha. No persistent Node server for your app — use static/client code + Serverless Workers. Secondary-source verified (2026)."
+   },
+   {
+    "name": "Hugging Face Spaces (Free)",
+    "offer": "$0/mo: unlimited free static Spaces + free ZeroGPU demos; no card for basic use",
+    "audience": "free-for-all",
+    "url": "https://huggingface.co/spaces",
+    "category": "Frontend hosting, PaaS & app deployment",
+    "notes": "2026: creating new Gradio or Docker Spaces requires a paid plan; static + ZeroGPU stay free. Idle spaces sleep after ~48h. Good for ML/demo app deployment. Secondary-source verified; confirm current policy."
+   }
+  ],
+  "front_id": "hosting-paas"
+ },
+ {
+  "entries": [
+   {
+    "name": "Microsoft for Students (Azure for Students)",
+    "offer": "$100 Azure credit over 12 months (no credit card) + free monthly allowances on 25+ services; free Visual Studio, Office 365, GitHub credits via school verification",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://azure.microsoft.com/en-us/free/students",
+    "notes": "2025 change: credit is now a $100 lump sum (was $25/month); renews annually while enrolled; 'Azure for Students Starter' sub-offer (no card) added; free monthly quotas on 65+ always-free services"
+   },
+   {
+    "name": "Microsoft for Startups (Founders Hub)",
+    "offer": "Up to $150k in Azure credits + partner credits (OpenAI, LinkedIn, GitHub Enterprise); self-serve 'Azure for Startups' gives $1,000 instantly, up to $5,000 post-verification, no application",
+    "audience": "startup",
+    "category": "Startup & Credit Programs",
+    "url": "https://www.microsoft.com/startups",
+    "notes": "Founders Hub releases credits in tiers (from $1,000, milestones unlock more); Azure for Startups is instant self-serve (90-day initial / 180-day post-verification credit windows)"
+   },
+   {
+    "name": "GitHub Student Developer Pack (GitHub Education)",
+    "offer": "Free GitHub Pro, 5,000 Actions minutes/mo, 50 GB Codespaces storage + 100+ partner perks (e.g., $200 DigitalOcean, Namecheap domain, JetBrains, Notion offers)",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://education.github.com/pack",
+    "notes": "Renewable while enrolled; partner list refreshes periodically; includes GitHub Models LLM access"
+   },
+   {
+    "name": "Autodesk Education",
+    "offer": "Free 1-year professional licenses (AutoCAD, Maya, Fusion 360, 75+ products), renewable while enrolled, for students and educators",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://www.autodesk.com/products/education-software/overview",
+    "notes": "Verify via institutional email or school documents; non-commercial use only"
+   },
+   {
+    "name": "Unity Personal / Unity Student",
+    "offer": "Unity Personal plan free (engine, cloud, Asset Store) for individuals/small teams under $200K revenue+funding; free Unity Student plan for students and educators",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://unity.com/products",
+    "notes": "2024-25: Personal cap raised from $100K to $200K (revenue AND funding); 2026: Pro priced +5% at $210/mo ($2,310/yr); no runtime fee on Personal; free educational grants for institutions"
+   },
+   {
+    "name": "Adobe Creative Cloud for Students",
+    "offer": "74% off Creative Cloud Pro for students/teachers (20+ apps incl. Firefly AI); free trial; free Adobe Express and Student Spaces",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://www.adobe.com/education.html",
+    "notes": "2025 change: discount increased from 66% to 74%; region pricing varies (US ~first-year discounted annual; verify local price)"
+   },
+   {
+    "name": "Canva Pro for Students",
+    "offer": "~50% off Canva Pro first year for verified students (~$49.99/yr vs $99.99) via .edu or national student verification",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://www.canva.com/education/students/",
+    "notes": "Renews at full price; exact first-year price varies by region — verify current offer"
+   },
+   {
+    "name": "GCP for Education / Google Cloud for Students",
+    "offer": "$300 credit for new GCP accounts (90 days) + 20+ always-free services; up to $100 GCP credits per course for participating course instructors; 200 free Google Skills lab credits for students",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://cloud.google.com/edu/students",
+    "notes": "Institutional credits delivered per course via GCP for Education; free tier expanded 2025-26 with monthly quotas on newer products; credit card needed for the $300 trial"
+   },
+   {
+    "name": "AWS Free Plan & AWS Educate",
+    "offer": "Up to $200 in AWS credits over 6 months for new customers ($100 immediate + up to $100 earned) + 30+ always-free services; AWS Educate free self-paced curriculum",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://aws.amazon.com/free/",
+    "notes": "Oct 2025 revamp: legacy 12-month Free Tier replaced by 6-month Free Plan with credits; a low-cost 'Free Plan Pro' (devs, ~$10, tied to Stripe public apps) exists — verify terms; AWS Academy historically adds $100 student credits in some regions"
+   },
+   {
+    "name": "Zoho Catalyst & Zoho Classes",
+    "offer": "Zoho Catalyst full-stack hosting (functions, DBs, AI tooling) 100% free for student non-commercial projects ($250 usage allowance / 6 months, extensible); Zoho Classes free for teachers up to 100 students",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://catalyst.zoho.com/students/",
+    "notes": "2026: Catalyst student free program launched Sept 2026; Zoho Classes 2.0 (Jul 2026) free for Indian government institutions; classic Zoho Education free seats (50+) still available"
+   },
+   {
+    "name": "JetBrains Student Pack",
+    "offer": "All JetBrains IDEs free for students/teachers (1-year, renewable, non-commercial) + 40% graduation discount for 2 years; several IDEs free for anyone (non-commercial)",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://www.jetbrains.com/shop/eform/students/",
+    "notes": "CLion/Rider/RubyMine/RustRover/WebStorm free for non-commercial use; IntelliJ IDEA & PyCharm Community free for all; 2026: Teacher Pack for Bootcamps sunsets Oct 1, 2026 (retires Apr 2027)"
+   },
+   {
+    "name": "Figma for Education",
+    "offer": "Figma Pro free for classrooms, students, and educators; free-for-all individual plan",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://www.figma.com/education/",
+    "notes": "Education accounts include classroom management and unlimited class files; free tier covers non-education individual use"
+   },
+   {
+    "name": "Notion for Education",
+    "offer": "Free Notion plan for students/teachers + institutional plans; historically Notion Pro via GitHub Student Developer Pack",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://www.notion.com/education",
+    "notes": "2024-25: Notion Pro free tier rolled out for all users (storage-capped); education program sold per school; verify current Pro-via-pack offer"
+   },
+   {
+    "name": "Discord Nitro (UNiDAYS student offer)",
+    "offer": "1 month of Discord Nitro free via UNiDAYS student verification (auto-renews at $9.99/mo; new-to-Nitro accounts only)",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://support.discord.com/hc/en-us/articles/41334348698135-Unidays-x-Discord-Nitro",
+    "notes": "No standing 50% student discount: promo runs Jul 9 2026 - Jul 9 2027 (redeem by Aug 8 2027); Orbs reward system (2025) lets users earn Nitro time; cancel before day 30 to avoid charge"
+   },
+   {
+    "name": "MathWorks MATLAB (student access)",
+    "offer": "MATLAB & Simulink free via 2,400+ campus-wide (TAH) licenses with school email; free MATLAB Online basic tier (20 hrs/mo) for everyone; individual student licenses paid (~$675/yr)",
+    "audience": "student",
+    "category": "Education & Student Programs",
+    "url": "https://www.mathworks.com/products/matlab/student.html",
+    "notes": "No free desktop license for individual students — access is institutional; MathWorks also offers startup licensing tiers (verify)"
+   },
+   {
+    "name": "Blender",
+    "offer": "Blender 3D suite is 100% free and open source (no license cost, any use)",
+    "audience": "free-for-all",
+    "category": "Education & Student Programs",
+    "url": "https://www.blender.org/",
+    "notes": "Seed item; no student-specific program — included because it is universally free"
+   },
+   {
+    "name": "Coursera (free audit)",
+    "offer": "Audit most courses for free (lecture videos/text, no certificate); paid certificates/capstones; financial aid available",
+    "audience": "free-for-all",
+    "category": "Education & Student Programs",
+    "url": "https://www.coursera.org/",
+    "notes": "Free audit persists; some Specializations and all capstones require paid subscription; verify course-by-course audit availability"
+   },
+   {
+    "name": "edX / Google Cloud for Education",
+    "offer": "edX courses free to audit; free Google Cloud certification paths and 200 free Google Skills lab credits for students",
+    "audience": "free-for-all",
+    "category": "Education & Student Programs",
+    "url": "https://www.edx.org/",
+    "notes": "2025-26: Google Cloud (acquired 2X) sunset the original edX platform and relaunched as Google Cloud for Education/Skills — legacy audit access and new cloud-focused curriculum; verify course availability"
+   },
+   {
+    "name": "DigitalOcean (student + startup credits)",
+    "offer": "$200/60-day trial credit for new accounts; $200 credit via GitHub Student Developer Pack; DO Startups up to $250K in credits for startups",
+    "audience": "student",
+    "category": "Startup & Credit Programs",
+    "url": "https://www.digitalocean.com/free-trial/",
+    "notes": "Trial historically required card; startup tiers ($1K/$25K/$250K) via accelerator association — verify current tiers"
+   },
+   {
+    "name": "Cloudflare (free plan + startup credits)",
+    "offer": "Always-free developer plan (Workers, R2, D1, KV, Pages) + $5 startup credit via Cloudflare startup program",
+    "audience": "free-for-all",
+    "category": "Startup & Credit Programs",
+    "url": "https://www.cloudflare.com/plans/developers/",
+    "notes": "Free plan is permanently free for all accounts; $5 credit is partner-gated — verify current program terms"
+   },
+   {
+    "name": "Oracle Cloud Infrastructure Always Free",
+    "offer": "Always-free: 4 ARM micro VMs (200 GB storage), 10 TB egress, free Autonomous DB (50 GB, select regions); 30-day full trial",
+    "audience": "free-for-all",
+    "category": "Startup & Credit Programs",
+    "url": "https://www.oracle.com/cloud/free/",
+    "notes": "Among the most generous standing free tiers; always-free regions occasionally re-scoped — verify current region list"
+   },
+   {
+    "name": "Google for Startups Cloud Program",
+    "offer": "Up to $350K in GCP credits for early-stage startups via approved accelerators/VCs",
+    "audience": "startup",
+    "category": "Startup & Credit Programs",
+    "url": "https://cloud.google.com/startup/",
+    "notes": "2025-26: cap raised to $350K (was $200K); requires association with an approved partner and typically pre-Series A stage"
+   },
+   {
+    "name": "Claude for Startups (Anthropic)",
+    "offer": "Up to $45K in Claude API credits/discounts; up to $100K more for founders backed by a partner-network VC",
+    "audience": "startup",
+    "category": "Startup & Credit Programs",
+    "url": "https://claude.com/programs/startups",
+    "notes": "Cohort-based; not accepting new applications at check time (Oct 2026); credits are first-party API only (not AWS/GCP/Azure marketplaces); program moved from anthropic.com to claude.com in 2026"
+   },
+   {
+    "name": "Gemini API Free Tier (Google AI Studio)",
+    "offer": "Free tier of Gemini models (rate-limited) in Google AI Studio + Vertex AI free quotas; separate $300 GCP trial",
+    "audience": "free-for-all",
+    "category": "Startup & Credit Programs",
+    "url": "https://ai.google.dev/",
+    "notes": "Free tier stable since 2024; model lineup and rate limits change quarterly — verify current free-model list"
+   },
+   {
+    "name": "GitHub Models (free LLM access)",
+    "offer": "Free access to frontier LLMs (Claude Sonnet, GPT-4o mini, Llama, others) via GitHub Models API/VS Code, rate-limited, no paid API key required",
+    "audience": "free-for-all",
+    "category": "Startup & Credit Programs",
+    "url": "https://github.com/features/models",
+    "notes": "Rate limits per user/day; model availability and limits rotate — verify current list"
+   }
+  ],
+  "front": "Verification pass run 2026-10-22 against official pages. Verified this run: Azure for Students, GCP free/education, Unity, Discord UNiDAYS offer, JetBrains, MATLAB, Zoho, AWS Free Plan, Adobe, Claude for Startups. The session's shared WebSearch budget was exhausted mid-run, so remaining items are compiled from known programs and marked 'verify' where limits may have shifted. Major 2025-2026 changes flagged in notes (Azure $100 lump-sum credit; Unity $200K threshold; Adobe 74%; AWS Free Plan revamp Oct 2025; Discord has no permanent student discount; edX sunset into Google Cloud; JetBrains bootcamp sunset Oct 1 2026; Zoho Catalyst free for students Sept 2026; Google for Startups raised to $350K).",
+  "front_title": "University & education-only programs (.edu / student email)",
+  "front_id": "student-only"
+ },
+ {
+  "front": "API marketplaces, free public APIs, search & CMS — genuinely free tiers, no-card trials, and open-source self-host options available to students and startups as of 2026-10-22.",
+  "front_title": "APIs, Search &amp; CMS",
+  "entries": [
+   {
+    "name": "RapidAPI (Nokia API Hub)",
+    "offer": "Thousands of free public APIs: no credit card, free listings capped at 1,000 requests/hour and 500,000 requests/month",
+    "audience": "free-for-all",
+    "url": "https://rapidapi.com/collection/list-of-free-apis",
+    "category": "API marketplace",
+    "notes": "Free-tier limits verified against RapidAPI docs (2026-10). Nokia acquired RapidAPI in Nov 2024; hub is now branded 'Nokia API Hub' (rapidapi.com still operates). Warning: 'freemium' listings still require a card and bill overages — check each listing's card requirement."
+   },
+   {
+    "name": "Data.gov (US Federal Open Data API)",
+    "offer": "Free open data APIs and 10,000+ datasets from US federal agencies; many datasets need no key, free API keys for the rest",
+    "audience": "free-for-all",
+    "url": "https://www.data.gov",
+    "category": "Public/gov data API",
+    "notes": "Stable government program; no rate-limit concerns for normal use; no card, no account required for most APIs."
+   },
+   {
+    "name": "data.gov.uk / UK Open Data (ODI & National Data Hub)",
+    "offer": "Free UK government open data: ODI API (30,000+ datasets) plus the National Data Hub open data API",
+    "audience": "free-for-all",
+    "url": "https://data.gov.uk",
+    "category": "Public/gov data API",
+    "notes": "Stable government program; most endpoints open without a key."
+   },
+   {
+    "name": "Nominatim (OpenStreetMap geocoding)",
+    "offer": "Free public geocoding/search API over OSM data; public server policy: max ~1 request/second, short-term caching only, no commercial bulk use",
+    "audience": "free-for-all",
+    "url": "https://nominatim.openstreetmap.org",
+    "category": "Public/gov data API",
+    "notes": "Usage policy at https://operations.osma.org/articles/nominatim-policy/ (DNS failure at fetch; rules stable since ~2021). Self-hosting Nominatim is free; commercial/bulk use needs your own data infrastructure or an OSA arrangement."
+   },
+   {
+    "name": "Google Maps Platform",
+    "offer": "Per-SKU monthly free usage caps: 10K calls (Essentials), 5K (Pro), 1K (Enterprise) per SKU/month; Maps Demo Key needs no credit card (daily caps); $300 / 90-day Google Cloud trial also applies",
+    "audience": "free-for-all",
+    "url": "https://developers.google.com/maps/billing-and-pricing/faq",
+    "category": "Map/location API",
+    "notes": "Major 2025 change: the old $200 monthly credit was REPLACED on 2025-03-01 by the Essentials/Pro/Enterprise free-usage model (verified 2026-10). Places/Directions/Distance Matrix APIs moved to Legacy status in Mar 2025. Paid subscription plans: Starter $100/mo, Essentials $275/mo, Pro $1,200/mo."
+   },
+   {
+    "name": "Algolia Free Plan",
+    "offer": "Free: 10K search requests/month, 50K records, 5K recommendation requests, 5K crawls; no credit card required",
+    "audience": "free-for-all",
+    "url": "https://www.algolia.com/pricing/free-plan",
+    "notes": "Verified 2026-10 against the official Free Plan T&C: the cap is now 50K records — a significant reduction from the 1 million free records offered under the 2023-2025 'Build' plan. Paid entry is pay-as-you-go (Grow: $0.50/1K requests + $0.40/1K records after 100K included).",
+    "category": "Search"
+   },
+   {
+    "name": "Meilisearch (self-hosted)",
+    "offer": "Open source (MIT) self-hosted = unlimited, free; Meilisearch Cloud has a 14-day free trial, no card, but no permanent free hosted tier",
+    "audience": "free-for-all",
+    "url": "https://www.meilisearch.com/pricing",
+    "category": "Search",
+    "notes": "Verified 2026-10: the old free cloud tier (100K docs / 10K searches) is gone; resource-based pricing introduced 2025-10; cloud starts ~$20-30/mo. Self-hosting remains the free path."
+   },
+   {
+    "name": "Typesense",
+    "offer": "Open source (Apache 2.0) self-hosted = free; managed Typesense SaaS free-to-start trial (no credit card)",
+    "audience": "free-for-all",
+    "url": "https://typesense.org/pricing/",
+    "category": "Search",
+    "notes": "Not re-verified this session (web budget exhausted); license is stable, SaaS trial terms at the URL."
+   },
+   {
+    "name": "Contentful Free Plan",
+    "offer": "Free: ~20M content API requests/month, 10K assets, 3 authors, 15-day trials of paid plans; no credit card",
+    "audience": "free-for-all",
+    "url": "https://www.contentful.com/pricing/",
+    "category": "Headless CMS",
+    "notes": "PAGE RATE-LIMITED at fetch (2026-10) — numbers are from the long-standing Free plan and should be re-confirmed on the pricing page before publishing exact caps."
+   },
+   {
+    "name": "Storyblok",
+    "offer": "Permanent free Starter plan: 1 space, up to 2 seats, 100K API calls/month, 100GB traffic, no card; plus a 45-day free trial of the paid Growth Plus plan",
+    "audience": "free-for-all",
+    "url": "https://www.storyblok.com/pricing",
+    "category": "Headless CMS",
+    "notes": "Verified 2026-10 on the pricing page: Starter tier is always-free (a 14-day trial is NOT the only free path — the Starter plan persists after trial end)."
+   },
+   {
+    "name": "Decap CMS",
+    "offer": "Open source (MIT) Git-based headless CMS: 100% free, no usage limits, no hosting fees",
+    "audience": "free-for-all",
+    "url": "https://decapcms.org",
+    "category": "Headless CMS",
+    "notes": "Stable; formerly Netlify CMS; pairs naturally with GitHub/GitLab/Netlify as the backend."
+   },
+   {
+    "name": "Payload (self-hosted)",
+    "offer": "Open source (MIT) headless CMS + app framework: free self-hosting with no usage limits",
+    "audience": "free-for-all",
+    "url": "https://payloadcms.com",
+    "category": "Headless CMS",
+    "notes": "Optional managed 'Payload Cloud'; not re-verified this session — MIT license stable."
+   },
+   {
+    "name": "Keystone",
+    "offer": "Open source (MIT) headless CMS and API builder: free self-hosting, unlimited content/models",
+    "audience": "free-for-all",
+    "url": "https://keystonejs.com",
+    "category": "Headless CMS",
+    "notes": "Node.js/GraphQL based; license stable, not re-verified this session."
+   },
+   {
+    "name": "Directus",
+    "offer": "Open source (Apache 2.0) headless CMS: free self-hosting; Directus Cloud trial available",
+    "audience": "free-for-all",
+    "url": "https://directus.io",
+    "category": "Headless CMS",
+    "notes": "Open-core model: some advanced/AI features live on Cloud; not re-verified this session."
+   },
+   {
+    "name": "Ghost (self-hosted)",
+    "offer": "Self-hosted Ghost is free (MIT) with no member limits; Ghost hosting has NO free plan — entry Starter is $18/mo billed yearly (1K members, unlimited emails) with a free trial",
+    "audience": "free-for-all",
+    "url": "https://ghost.org/pricing/",
+    "category": "Headless CMS",
+    "notes": "Verified 2026-10 on ghost.org/pricing: four paid tiers only, no perpetual free hosting tier (note: Ghost previously offered a free personal tier — it is gone)."
+   },
+   {
+    "name": "Strapi (self-hosted)",
+    "offer": "Open source (MIT) headless CMS: free self-hosting, no license fees or per-content charges",
+    "audience": "free-for-all",
+    "url": "https://strapi.io/pricing",
+    "category": "Headless CMS",
+    "notes": "Managed 'Strapi Cloud' / enterprise features are paid; not re-verified this session — MIT core is stable."
+   },
+   {
+    "name": "Airtable (Free + Education)",
+    "offer": "Free plan: no card, ~1,000 total records, ~200 automation runs/month, API access; plus free Airtable Education offers (Airtable Classrooms for teachers, student plans) for verified educators/students",
+    "audience": "student",
+    "url": "https://airtable.com/pricing",
+    "category": "SaaS / work suite",
+    "notes": "Airtable cut the free record cap from 5,000 to ~1,000 (2024). The education landing URL 404'd at fetch (2026-10) — check airtable.com for the current program name; free-plan caps should also be re-confirmed on the pricing table."
+   },
+   {
+    "name": "Zoho CRM Free Edition",
+    "offer": "Zoho CRM Free: free forever for up to 3 users, 5,000 API calls/day, 10 email templates; Zoho also runs free tiers in several other products (Creator, Analytics, Projects, Desk, Writer)",
+    "audience": "free-for-all",
+    "url": "https://www.zoho.com/crm/pricing.html",
+    "category": "SaaS / work suite",
+    "notes": "CRM Free Edition verified 2026-10 on the pricing page (no record/storage caps stated there). No active general Zoho startup credit program found this session."
+   }
+  ],
+  "front_id": "apis-data"
+ },
+ {
+  "front": "As of 2026-10-22, the perpetual-free leaders for servers are Oracle Cloud (Always Free: up to 2 AMD micro VMs + a trimmed 2 OCPU/12 GB ARM slice, 200 GB block, 10 TB/mo egress) and Google Cloud (always-free e2-micro VM + 30 GB disk, us-* regions). The big clouds otherwise run time-boxed trial credits: since 2025-07-15 AWS no longer gives new accounts a 12-month EC2 free tier — it's now a $100+up-to-$100 credit \"Free Plan\" that closes at 6 months; Google gives $300/90 days; Azure $200/30 days. Second-tier VPS providers (Vultr, Linode/Akamai, OVHcloud, Hetzner, UpCloud, Kamatera) run $100–$200 trial credits or a $200/2-month no-commitment trial; note that Vultr's and Linode's trial amounts are now promo-code-dependent and no longer fixed in official docs, and DigitalOcean's old $200/60-day trial has been wound down to a ~$5/90-day standing credit. Startup credit programs (AWS Startups, Azure for Startups, Google for Startups, DigitalOcean Startups, Scaleway) add five-figure credits. Seeds with NO genuine free offer were excluded: Contabo, RackNerd, Aeza, Netcup, ExoScale, Kimsufi; IONOS offers only short trials. Several figures here (OVHcloud, Scaleway, UpCloud, IONOS, Kamatera, Azure/Google startup caps) are marked \"verify in-console\" because their marketing pages are JS-gated and could not be live-fetched this pass.",
+  "front_title": "VPS, bare-metal & dedicated servers — free tiers, trials, and startup credits",
+  "entries": [
+   {
+    "name": "Oracle Cloud Always Free",
+    "offer": "Perpetual Always Free tier: up to 2 AMD micro VMs (1/8 OCPU/1 GB each) + up to 2 OCPU/12 GB ARM Ampere A1; 200 GB block, ~20 GB object, 10 TB/mo egress, 2 Autonomous DBs (20 GB each); plus a one-time $300 / 30-day trial credit.",
+    "audience": "free-for-all",
+    "category": "VPS / bare-metal",
+    "url": "https://www.oracle.com/cloud/free/",
+    "notes": "The most generous perpetual free tier among the major clouds; a card is required at signup but is not charged while the account stays in 'Always Free' mode. 2025 change: Oracle trimmed the Always-Free ARM allowance (docs moved from 4 OCPU/24 GB to 2 OCPU/12 GB) — confirm current limits in-console. Free ARM capacity is frequently sold out in popular regions; idle instances can be reclaimed."
+   },
+   {
+    "name": "AWS Free Plan (ex-EC2 12-month free tier)",
+    "offer": "New accounts: $100 credit at signup + up to $100 more by exploring services (up to $200 total) on a Free Plan that auto-closes at 6 months; no perpetual free EC2 for new accounts.",
+    "audience": "free-for-all",
+    "category": "VPS / cloud VM",
+    "url": "https://aws.amazon.com/free/",
+    "notes": "Verify-2026: for accounts created on/after 2025-07-15 the classic 12-month EC2 free tier (750 hrs/mo of t2/t3.micro) was removed and replaced by this credit-based Free/Paid plan model; legacy accounts keep the old 12-month tier. 30+ 'Always Free' services (Lambda, DynamoDB, etc.) remain, but EC2 has no perpetual free allowance. The Free Plan account is deleted ~90 days after it closes."
+   },
+   {
+    "name": "AWS Startups",
+    "offer": "$1,000 to $100,000+ in AWS credits for qualifying early-stage startups (amount set by program tier / funding stage).",
+    "audience": "startup",
+    "category": "VPS / startup credits",
+    "url": "https://aws.amazon.com/startups/",
+    "notes": "Formerly 'AWS Activate'; apply via the program or a partner VC/incubator. Credits apply broadly (EC2 and beyond). Verify the current tier amounts on the program page."
+   },
+   {
+    "name": "Microsoft Azure Free Trial",
+    "offer": "$200 Azure credit for 30 days for new accounts; plus 12 months of free usage on ~25 services + $100 credit.",
+    "audience": "free-for-all",
+    "category": "VPS / cloud VM",
+    "url": "https://azure.microsoft.com/en-us/free/",
+    "notes": "The subscription auto-disables when the $200 is exhausted (no surprise bill). No perpetual free VM; the free tier is time-boxed. Some 'free forever' allowances (e.g., Cosmos DB, select VM hours) still apply. Verify the current $200/30d in-console."
+   },
+   {
+    "name": "Azure for Startups",
+    "offer": "Up to ~$100,000 in Azure credits for qualifying early-stage startups.",
+    "audience": "startup",
+    "category": "VPS / startup credits",
+    "url": "https://azure.microsoft.com/en-us/startups/",
+    "notes": "Apply through the program or a partner VC/accelerator; credits apply broadly incl. Azure VMs. Amounts vary by stage (historically ~$50k-$150k bands) — verify the current cap."
+   },
+   {
+    "name": "Google Cloud Free Trial",
+    "offer": "$300 GCP credit for 90 days for new customers; plus per-service Always-Free tier incl. 1 e2-micro VM (us-* regions) + 30 GB disk and 1 TB egress/mo.",
+    "audience": "free-for-all",
+    "category": "VPS / cloud VM",
+    "url": "https://cloud.google.com/free",
+    "notes": "The trial billing account closes automatically at 90 days or when the $300 is used (no charge unless you opt into paid). One $300 trial per person/ID. The always-free e2-micro makes GCP one of the only big clouds with a perpetual free VM (alongside Oracle's Always Free)."
+   },
+   {
+    "name": "Google for Startups (Cloud)",
+    "offer": "Up to ~$200,000 in GCP credits for qualifying (mostly US) startups, typically on 12-month terms.",
+    "audience": "startup",
+    "category": "VPS / startup credits",
+    "url": "https://startup.google.com/",
+    "notes": "Apply via the program or a partner; credits apply to GCP compute and more. Verify the current amount and country eligibility — the figure has moved over time."
+   },
+   {
+    "name": "Vultr Free Trial",
+    "offer": "Trial credits for new accounts — commonly $100, with current promos listing up to $200-$300 — valid up to 30 days; plus ~$5 credit for students via a .edu email.",
+    "audience": "free-for-all",
+    "category": "VPS / bare-metal",
+    "url": "https://www.vultr.com/promo/try100/",
+    "notes": "Amount is promo-code dependent and no longer fixed in Vultr's official docs (they state only 'free credits for up to 30 days') — confirm the exact credit and eligible products in-console. Some products excluded; a payment method is required (a 0-deposit card link works)."
+   },
+   {
+    "name": "DigitalOcean Free Trial",
+    "offer": "Standing new-account credit is ~$5 for 90 days (auto-applied to the first team); the former $200/60-day trial has been wound down as of 2026. Also 3 free static App Platform sites and $5/mo for 250 GB Spaces.",
+    "audience": "free-for-all",
+    "category": "VPS",
+    "url": "https://www.digitalocean.com/pricing/",
+    "notes": "CONFLICT - verify in-console: several 2026 sources say the $200/60-day promo ended and is replaced by a $5/90-day credit, while other 2026 sources still cite $200/60 days (region/channel dependent). Card or PayPal required; a powered-off Droplet still bills."
+   },
+   {
+    "name": "DigitalOcean Startups",
+    "offer": "DigitalOcean Startups: up to $10,000/month in credits for 12 months for product startups that raised $10M or less (AI-native prioritized).",
+    "audience": "startup",
+    "category": "VPS / startup credits",
+    "url": "https://www.digitalocean.com/startups/",
+    "notes": "Apply via an accelerator/incubator/VC partner; service-based businesses not eligible. Since 2026-05-13 the credits exclude GPU Droplets, H100, Bare Metal GPUs, Dedicated/Serverless Inference, third-party AI models, Paperspace and Cloudways; includes 15 months of free Standard support."
+   },
+   {
+    "name": "Hetzner Cloud Free Trial",
+    "offer": "~EUR 20 cloud trial credit for new Hetzner Cloud customers (often via promo code; no card needed to start the trial).",
+    "audience": "free-for-all",
+    "category": "VPS",
+    "url": "https://www.hetzner.com/cloud/trial",
+    "notes": "No perpetual free tier; cheapest VPS (CX/ARM) from ~EUR 4-6/mo, EU plans cheaper than US. The /cloud/trial page currently redirects to pricing, so the EUR 20 trial is offered via promo code - confirm the current amount in-console."
+   },
+   {
+    "name": "Linode (Akamai) Free Trial",
+    "offer": "~$100 trial credit, ~30-60 days, via signup/promo link (not always published in official docs).",
+    "audience": "free-for-all",
+    "category": "VPS",
+    "url": "https://www.linode.com/pricing/",
+    "notes": "Now 'Linode by Akamai.' The $100 figure is promo-dependent and absent from official docs as of 2026 (same pattern as Vultr) - confirm in-console. Cheapest plan 'Nanode' (1 vCPU/1 GB) from $5/mo after trial; card required."
+   },
+   {
+    "name": "OVHcloud Free Trial",
+    "offer": "US$200 free trial credit on new dedicated servers & VPS, 2-month, no commitment (refundable).",
+    "audience": "free-for-all",
+    "category": "VPS / dedicated",
+    "url": "https://www.ovhcloud.com/en/free-trial/",
+    "notes": "Apply the $200 to your first order; stop within the 2-month window and the charge is refunded (the trial period is non-cancelable but refundable). OVHcloud also runs a startup/credit program. Kimsufi (OVH's budget brand) is month-to-month, not free. Verify the current $200/2-month terms in-console."
+   },
+   {
+    "name": "Scaleway Startup / Free Trial",
+    "offer": "Free trial credit on new accounts; 'Scaleway for Startups' grants multi-thousand-euro cloud credits to qualifying startups.",
+    "audience": "free-for-all",
+    "category": "VPS / dedicated / startup credits",
+    "url": "https://www.scaleway.com/en/cloud-startup/",
+    "notes": "French provider (EU data centers). Trial-credit and startup-program amounts vary by stage and change frequently; the marketing pages are JS-gated - confirm the exact current figures in-console or via the startup application."
+   },
+   {
+    "name": "UpCloud Free Trial",
+    "offer": "Small free trial credit for new users (commonly ~$25) over a short window; no card required for the trial.",
+    "audience": "free-for-all",
+    "category": "VPS",
+    "url": "https://upcloud.com/try/",
+    "notes": "Finnish provider. Trial amount and duration vary (commonly ~$25 / up to a few weeks) - confirm in-console. Cheapest general-optimised VPS starts at a few euros/mo."
+   },
+   {
+    "name": "Kamatera Free Trial",
+    "offer": "$100 free VPS trial (30 days), fully custom-configurable (CPU/RAM/storage); card required.",
+    "audience": "free-for-all",
+    "category": "VPS",
+    "url": "https://www.kamatera.com/free-trial/",
+    "notes": "Customizable cloud VPS; 30-day $100 trial. 2026 trackers list 'Kamatera $100 Free Credit for 30 Days'."
+   },
+   {
+    "name": "IONOS Free Trial",
+    "offer": "Free 30-day trials on VPS/web hosting, plus rotating promos (e.g., a free 1-year VPS with a purchase); no perpetual free tier.",
+    "audience": "free-for-all",
+    "category": "VPS",
+    "url": "https://ionos.com/cloud/vps/",
+    "notes": "Trial-based, not a standing free tier; the 'free 1-year VPS'-style promos rotate - verify the current trial length/promo in-console."
+   }
+  ],
+  "front_id": "vps-servers"
+ },
+ {
+  "front": "Managed databases & data platforms: free tiers, trial credits, student and startup programs across Postgres/MySQL/NoSQL, vector DBs, search, time-series, and hyperscaler database offers. As of 2026-10-22.",
+  "front_title": "Managed Databases & Data Platforms",
+  "entries": [
+   {
+    "name": "Supabase Free Plan",
+    "offer": "Free forever: 500 MB Postgres per project, 1 GB file storage, 5 GB egress, 50K MAU, 500K Edge Function invocations/mo, 2 active projects",
+    "audience": "free-for-all",
+    "url": "https://supabase.com/pricing",
+    "category": "managed-db",
+    "notes": "Free projects pause after 1 week inactivity. Limits verified on pricing page 2026-10."
+   },
+   {
+    "name": "Neon Free Plan (Databricks Neon)",
+    "offer": "Free forever: 100 projects, 10 branches/project, 100 CU-hrs compute/project (max 2 CU), 1 GB storage/project (20 GB account), 5 GB egress/project, auto-pause after 5 min",
+    "audience": "free-for-all",
+    "url": "https://neon.com/pricing",
+    "category": "managed-db",
+    "notes": "Neon acquired by Databricks (announced May 2025; page now brands it 'Neon from Databricks'). Free plan limits expanded (100 projects, 20 GB total) vs the old 0.5 GB cap — verified 2026-10."
+   },
+   {
+    "name": "MongoDB Atlas Free Tier (M0)",
+    "offer": "Free forever M0 cluster: 512 MB storage, shared vCPU/RAM, up to 100 ops/s, free egress; no backups, single node",
+    "audience": "free-for-all",
+    "url": "https://www.mongodb.com/pricing",
+    "category": "managed-db",
+    "notes": "M2 paid tier starts $9/mo for 2 GB. Verified on live pricing page (2026 copyright)."
+   },
+   {
+    "name": "Firebase Spark (Google Firebase free plan)",
+    "offer": "Free forever: Cloud Firestore 1 GB + 20K writes/day + 50K reads/day, Realtime DB 1 GB / 100 concurrent connections, Hosting 10 GB + 360 MB/day, Auth 50K MAUs; plus $300 GCP credit if you enable Blaze",
+    "audience": "free-for-all",
+    "url": "https://firebase.google.com/pricing",
+    "category": "managed-db",
+    "notes": "Gemini in Firebase is included free on Spark. 2026 change: Google Cloud trial is now $300 for 60 days (was 90 days)."
+   },
+   {
+    "name": "Google Cloud Free Trial + always-free tier (Cloud SQL, BigQuery, Spanner)",
+    "offer": "$300 credit for 60 days (200+ products); always-free: Cloud SQL 750 h/mo C2D + 20 GB storage + 10 GB backup + 200 GB egress (limited regions), BigQuery 10 GB + 1 TB queries + 100K slot-hrs/mo, Cloud Spanner 1 free 96 GB node (us-west1)",
+    "audience": "free-for-all",
+    "url": "https://cloud.google.com/free",
+    "category": "hyperscaler-free-tier",
+    "notes": "2025 change: GCP relaunched a Cloud SQL always-free tier (previously none; trial-only). AlloyDB has no permanent free tier — trial credits only."
+   },
+   {
+    "name": "Google Cloud for Startups",
+    "offer": "Up to $200,000 in GCP credits for early-stage startups",
+    "audience": "startup",
+    "url": "https://cloud.google.com/programs/startups",
+    "category": "startup-credits",
+    "notes": "Renamed from GCP Cloud Startups; credit cap raised to $200K. Apply via the program form; amounts unverified against official page this session."
+   },
+   {
+    "name": "AWS Free Tier Credits (incl. RDS, Aurora, DynamoDB)",
+    "offer": "New accounts: $100 credit on signup + up to $100 more via service exploration = up to $200 over 6 months; free plan includes RDS, Aurora Serverless and DynamoDB with monthly limits; account auto-closes at 6 months or when credits run out",
+    "audience": "free-for-all",
+    "url": "https://aws.amazon.com/free/",
+    "category": "hyperscaler-free-tier",
+    "notes": "2025 change: legacy 12-month RDS free tier (750 h/mo db.t4g.micro + 20 GB) was replaced for accounts created after 2025-07-15 by the credit-based model; always-free services (e.g. DynamoDB 25 GB) remain."
+   },
+   {
+    "name": "AWS Activate",
+    "offer": "Startup credits ranging ~$5K (self-serve) up to $100K (VC-backed track), plus training and support",
+    "audience": "startup",
+    "url": "https://aws.amazon.com/startups/",
+    "category": "startup-credits",
+    "notes": "Long-running program; specific credit brackets unverified this session — check aws.amazon.com/startups."
+   },
+   {
+    "name": "Azure Always Free + 12-month free (SQL Serverless, Cosmos DB)",
+    "offer": "Always free: Azure SQL Database serverless 100,000 vCore-seconds/mo + 32 GB storage; Cosmos DB 25 GB storage + RU allowance; new customers: $200 credit for 30 days + 12-month free allowances",
+    "audience": "free-for-all",
+    "url": "https://azure.microsoft.com/en-us/free/",
+    "category": "hyperscaler-free-tier",
+    "notes": "2025 change: SQL Serverless always-free restructured to vCore-second allowance (100K vCore-s/mo ≈ 21 h of 1 vCore) + 32 GB storage, replacing the old 750 h B1s provisioned tier. Cosmos 'always' tier: up to 1,000 RU/s provisioned, 25 GB."
+   },
+   {
+    "name": "Azure for Startups",
+    "offer": "Up to $150,000 in Azure credits plus technical assistance for eligible startups",
+    "audience": "startup",
+    "url": "https://azure.microsoft.com/en-us/for-startups/",
+    "category": "startup-credits",
+    "notes": "Long-standing program; dollar cap unverified this session — confirm at the for-startups page."
+   },
+   {
+    "name": "Azure for Students",
+    "offer": "$100 Azure credit (12 months) + access to all Azure Free services and Azure DevOps Basic",
+    "audience": "student",
+    "url": "https://azure.microsoft.com/en-us/free/students/",
+    "category": "student-credits",
+    "notes": "Requires school email/verification. Unverified this session but stable program; amounts may have changed."
+   },
+   {
+    "name": "PlanetScale",
+    "offer": "No free tier; free trial only — paid plans from $5/mo (Postgres single node, 10 GB storage + 100 GB bandwidth included)",
+    "audience": "other",
+    "url": "https://planetscale.com/pricing",
+    "category": "managed-db",
+    "notes": "2024-2025 change: the old free Developer/Hobby plan was removed; all databases now require a paid subscription (Base from $5/mo, Metal from $50/mo; BYOC is enterprise-only). Postgres engine GA Sept 2025. Keep in index as 'trial-only' — formerly a free tier."
+   },
+   {
+    "name": "Turso Free Plan",
+    "offer": "Free forever: up to 100 databases, 9 GB total database storage, 1 GB egress, 5 regions",
+    "audience": "free-for-all",
+    "url": "https://turso.io/pricing",
+    "category": "managed-db",
+    "notes": "Limits from 2025 knowledge — turso.io was unreachable from this sandbox (DNS blocked for .io), so re-verify on the pricing page before publishing."
+   },
+   {
+    "name": "Xata (branch-native Postgres)",
+    "offer": "Free Postgres plan / trial: managed vanilla PostgreSQL with instant branching; no hard quotas published on homepage ('Start free trial' CTA)",
+    "audience": "free-for-all",
+    "url": "https://xata.io",
+    "category": "managed-db",
+    "notes": "Rebranded/evolved as 'branch native Postgres platform' (2025-26). Exact free-plan quotas not visible on fetched page — check xata.io pricing for current 5 GB-class free allowance."
+   },
+   {
+    "name": "Fauna Cloud Community (free) plan",
+    "offer": "Free shared FaunaDB (document DB): ~1 GB storage, ~1M requests/mo",
+    "audience": "free-for-all",
+    "url": "https://fauna.com/pricing",
+    "category": "managed-db",
+    "notes": "UNVERIFIED: fauna.com refused connections from this sandbox. Limits predate 2026 and Fauna rebrand may have changed the offer — confirm before publishing."
+   },
+   {
+    "name": "InfluxData InfluxDB Cloud (Serverless) free",
+    "offer": "Free serverless plan (limited ingestion rates, 30-day retention, multi-tenant, quotas apply) + $250 free credit for first 30 days on new accounts; InfluxDB 3 Core OSS free forever to self-host",
+    "audience": "free-for-all",
+    "url": "https://www.influxdata.com/pricing/",
+    "category": "time-series-db",
+    "notes": "Verified on pricing page 2026-10. Paid usage: data in $0.0025/MB, queries $0.012/100, storage $0.002/GB-hr."
+   },
+   {
+    "name": "Databricks Lakebase (serverless Postgres, ex-Timescale)",
+    "offer": "Try-for-free usage-based serverless Postgres (scale-to-zero); 'Free Edition' of Databricks data & AI tools; no published perpetual free quota",
+    "audience": "free-for-all",
+    "url": "https://www.databricks.com/product/lakebase",
+    "category": "managed-db",
+    "notes": "2025 change: Databricks acquired Timescale (June 2025) and runs Postgres as Lakebase; timescale.com now redirects away. Timescale's old 2 GB free Cloud tier was replaced — check Lakebase/DBSQL trial terms (14-day Databricks trial, DBSQL serverless free capacity) for current numbers."
+   },
+   {
+    "name": "ScyllaDB Cloud trials",
+    "offer": "30-day developer trial on small instances (e.g. t3.micro) + 48-hour production-grade evaluation; no permanent free tier",
+    "audience": "other",
+    "url": "https://www.scylladb.com/cloud/pricing/",
+    "category": "managed-db",
+    "notes": "Verified on ScyllaDB cloud pricing page 2026-10 — offers are time-boxed trials, not a free plan (the old '10 GB free forever' free tier is not listed)."
+   },
+   {
+    "name": "Aiven Free Plan",
+    "offer": "Always-free plan covering PostgreSQL, MySQL, Kafka, OpenSearch and Valkey — no credit card, no time limit (services power off after long inactivity)",
+    "audience": "free-for-all",
+    "url": "https://aiven.io",
+    "category": "managed-db",
+    "notes": "2025-26 change: Aiven now publishes a no-card, no-time-limit free plan (previously 30-day paid trials). Paid Developer tier from $5/mo (1 CPU/1 GB/8 GB)."
+   },
+   {
+    "name": "Aiven Startup Program",
+    "offer": "Up to $100,000 in Aiven credits over 12 months for eligible startups, plus technical expert access",
+    "audience": "startup",
+    "url": "https://aiven.io",
+    "category": "startup-credits",
+    "notes": "Listed under Aiven Solutions page 2026-10."
+   },
+   {
+    "name": "Qdrant Cloud Free Tier",
+    "offer": "Free forever: 1-node cluster, 0.5 vCPU / 1 GB RAM / 4 GB disk (≈1M vectors @ 768 dims), no credit card; free cloud-inference models + up to 5M inference tokens/mo on paid models",
+    "audience": "free-for-all",
+    "url": "https://qdrant.tech/pricing/",
+    "category": "vector-db",
+    "notes": "Verified on pricing + docs 2026-10. Free clusters suspend after 1 week inactivity, delete after 4 weeks. Competes with Pinecone by starting at $0 with no minimum."
+   },
+   {
+    "name": "Chroma Cloud Starter (ChromaDB)",
+    "offer": "$0/mo plan: 10 databases (collections), 10 team members, $5 free usage credits, then metered (writes $2.50/GiB, storage $0.33/GiB/mo, queries $0.0075/TiB)",
+    "audience": "free-for-all",
+    "url": "https://trychroma.com/pricing",
+    "category": "vector-db",
+    "notes": "Persistent free plan (credits don't expire); no hard vector caps — everything beyond credits is metered. 2026 change: free tier is credit-based, not a fixed vector allowance."
+   },
+   {
+    "name": "Weaviate Cloud Free Tier",
+    "offer": "Always free (no card): 1 cluster/user with 100K objects, 1 GB memory, 10 GB disk, 1 collection (≤3 tenants), Weaviate Embeddings 2,000 req/day, Query Agent 1,000 req/mo",
+    "audience": "free-for-all",
+    "url": "https://weaviate.io/pricing",
+    "category": "vector-db",
+    "notes": "2026 change (announced 2026-06-17): the old 14-day sandbox trial was replaced by this permanent free tier. Free clusters suspend after 7 days inactivity, delete after 30 days total inactivity; AWS-only, cost-optimized HFresh index."
+   },
+   {
+    "name": "Meilisearch Cloud trial",
+    "offer": "14-day free trial, no credit card; paid plans from $20/mo (resource-based) or ~$30/mo (usage-based Build: 50K searches + 100K docs); open-source MIT build is free to self-host",
+    "audience": "other",
+    "url": "https://www.meilisearch.com/pricing",
+    "category": "search-engine",
+    "notes": "2025 change: the permanent free Cloud plan was retired when resource-based pricing launched (Oct 2025); only the 14-day trial + self-hosted OSS remain free."
+   },
+   {
+    "name": "ClickHouse Cloud trial",
+    "offer": "$300 free credit over 30 days, no credit card (Basic plan, up to 1 TB storage, 8-12 GiB RAM, 1 AZ, 24h backups); open-source ClickHouse free forever",
+    "audience": "free-for-all",
+    "url": "https://www.clickhouse.com/pricing",
+    "category": "broad-data",
+    "notes": "Trial converts to pay-as-you-go after 30 days or credit exhaustion. Verified 2026-10; no permanent free tier."
+   },
+   {
+    "name": "CockroachDB Cloud trial",
+    "offer": "30-day free trial with $400 in credits for new Cloud organizations (Standard edition needs no credit card)",
+    "audience": "free-for-all",
+    "url": "https://cockroachlabs.com/pricing/",
+    "category": "managed-db",
+    "notes": "Rebranded to Cockroach Continuum (2026); after trial, clusters pause with a 30-day grace period. The old '20 GB free forever' tier is no longer listed."
+   },
+   {
+    "name": "Upstash (Redis/Postgres/Kafka) free tier",
+    "offer": "Free serverless Redis: ~500K commands/mo with 256 MB data; Postgres and Kafka metered tiers also free to start",
+    "audience": "free-for-all",
+    "url": "https://upstash.com/redis/pricing",
+    "category": "managed-db",
+    "notes": "Limits from third-party 2026 check; Upstash homepage confirms 'start free, pay per request' but the pricing page 404'd during fetch — verify exact command caps."
+   },
+   {
+    "name": "Redis Cloud Free tier",
+    "offer": "Always free: up to 30 MB single DB, shared RAM+SSD deployment, no time limit (best-effort SLA, community support)",
+    "audience": "free-for-all",
+    "url": "https://redis.io/pricing/",
+    "category": "managed-db",
+    "notes": "2025 change: Redis (now part of AWS after the 2025 deal) shrank the permanent free tier from the older 128 MB dev tier to 30 MB. Essentials starts ~$5/mo."
+   }
+  ],
+  "front_id": "databases"
+ },
+ {
+  "front": "auth-security-analytics-flags",
+  "front_title": "Auth, Security, Product Analytics & Feature Flags",
+  "entries": [
+   {
+    "name": "Auth0 Free Plan",
+    "offer": "$0/mo free plan: up to 25,000 MAU, 5 organizations, 1 custom domain, 1 enterprise SSO connection, unlimited social connections, no card required",
+    "audience": "free-for-all",
+    "url": "https://auth0.com/pricing",
+    "category": "authentication",
+    "notes": "Free tier raised 7,500 to 25,000 MAU on 2024-09-24 (Okta/\"Auth0 plans got an upgrade\"); B2C Essentials paid from $35/mo, B2B from $150/mo. Custom domain on Free needs a card on file for verification only. Auth0 for Startups program also exists for early-stage companies; separate startup entry not needed since the free plan is the main hook. Verified at auth0.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Clerk Hobby Plan",
+    "offer": "Free Hobby plan: 50,000 monthly retained users (MRU) per app, unlimited apps, up to 3 dashboard seats, no card required",
+    "audience": "free-for-all",
+    "url": "https://clerk.com/pricing",
+    "category": "authentication",
+    "notes": "Clerk reworked pricing 2026-02-05: free tier jumped 10,000 to 50,000 MRU and billing switched from MAU to MRU (\"first day free\" — one-time signups never billed); MFA/passkeys/SSO now Pro-only ($25/mo, $20 annual). Verified at clerk.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Firebase Authentication",
+    "offer": "Spark plan: up to 50,000 MAU free for standard auth methods (email, social, magic link, etc.), 50 MAU free for SAML/OIDC; no card required",
+    "audience": "free-for-all",
+    "url": "https://firebase.google.com/pricing",
+    "category": "authentication",
+    "notes": "Google widened free auth to 50K MAU in 2024 (from 10K). Phone Auth is never free — billed per SMS via Identity Platform. Overflow bills at Google Cloud Identity Platform rates. Verified at firebase.google.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Supabase Auth (Free Plan)",
+    "offer": "Free: 50,000 MAU auth included plus 500MB Postgres, 1GB storage, 500k edge function invocations; projects pause after 1 week idle, max 2 active",
+    "audience": "free-for-all",
+    "url": "https://supabase.com/pricing",
+    "category": "authentication",
+    "notes": "Open-source (Apache-2.0 platform) — can also self-host for free. Pro $25/mo raises included auth to 100,000 MAU (then $0.00325/MAU) and never pauses. Supabase runs regular startup/developer credits and a free \"Demos\" tier. Verified at supabase.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Keycloak (self-hosted)",
+    "offer": "Open-source Apache-2.0 identity provider: free to self-host, no MAU/feature limits; enterprise features paid via Red Hat",
+    "audience": "free-for-all",
+    "url": "https://www.keycloak.org",
+    "category": "authentication",
+    "notes": "The standard self-hosted answer for SSO/OIDC/SAML when you outgrow free cloud tiers (Auth0's 25K MAU, etc.). No per-user licensing, but you own the ops. (WebSearch budget exhausted this session; entry based on well-known licensing, not re-verified today.)"
+   },
+   {
+    "name": "WorkOS AuthKit",
+    "offer": "First 1,000,000 MAU free (user management); $2,500/mo per additional 1M MAU above the free cap",
+    "audience": "free-for-all",
+    "url": "https://workos.com/pricing",
+    "category": "authentication",
+    "notes": "The largest free auth tier in the category — but note WorkOS bills enterprise SSO connections separately (~$125/mo per connection per third-party comparisons), so the 1M MAU win is for user management, not SSO. Verified at workos.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Sentry Developer Plan (Free)",
+    "offer": "Free Developer plan: 1 user, 5,000 errors/mo, 5M spans, 50 session replays, 5GB logs, 10 custom dashboards; Team plan from $26/mo",
+    "audience": "free-for-all",
+    "url": "https://sentry.io/pricing",
+    "category": "error-monitoring",
+    "notes": "2025-08-27 pricing overhaul introduced 5GB logs quotas and cut base spans 10M to 5M; 2026-09 legacy Developer plans migrated to the current free Developer plan (still free, spans-based tracing). 1-user cap is the real limit. Verified at sentry.io/pricing 2026-10-22."
+   },
+   {
+    "name": "LogRocket",
+    "offer": "14-day free trial of all features, no credit card; paid starts ~$176/mo (annual) with unlimited error/log/analytics events, sized by monthly sessions",
+    "audience": "free-for-all",
+    "url": "https://logrocket.com",
+    "category": "error-monitoring",
+    "notes": "No perpetual free tier; the hook is the card-free 14-day trial. Discounts advertised for students, startups (<$50M raised), non-profits, and open-source. Verified at logrocket.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Mixpanel Free Plan",
+    "offer": "1,000,000 events/mo free forever, unlimited seats, 10k session replays/mo, 5 saved reports per user; Experiments/Flags available on Free (1,000 MEU, 10 active flags)",
+    "audience": "free-for-all",
+    "url": "https://mixpanel.com/pricing",
+    "category": "product-analytics",
+    "notes": "Big 2025 change: in 2025-01 Mixpanel slashed the free tier from 20M to 1M events and moved to freemium; the paid Growth tier (renamed \"Startup Plan\" in 2025) includes the first 1M events free, so the effective ceiling for non-payers stays at 1M. Over the cap, ingestion stops until month rollover or upgrade. Verified via mixpanel docs/pricing 2026-10-22."
+   },
+   {
+    "name": "Amplitude Free Plan",
+    "offer": "2M events/mo free forever, 10k monthly session replays, plus AI feedback and agent session allowances; paid Plus starts at $0 for the first 2M events",
+    "audience": "free-for-all",
+    "url": "https://amplitude.com/pricing",
+    "category": "product-analytics",
+    "notes": "Replaced the old 50,000-MAU Starter plan with events-based pricing (2M EV free) — a much bigger allowance than the MAU-based era. Verified at amplitude.com/pricing 2026-10-22."
+   },
+   {
+    "name": "PostHog Free Tier",
+    "offer": "Monthly free allowances on every product: 1M analytics events, 5,000 session recordings, 1M feature-flag requests, 100k error exceptions, 10GB logs — no card, resets monthly",
+    "audience": "free-for-all",
+    "url": "https://posthog.com/pricing",
+    "category": "product-analytics",
+    "notes": "Note the 5M-figure in older indexes is stale; PostHog's current published free tier is 1M events/mo. Also has a Startup Program: $50,000 in credits/merch for companies under 2 years old and pre-Series B — the largest startup credit in this category. Open-source (MIT) self-hosting also free."
+   },
+   {
+    "name": "Plausible (self-hosted)",
+    "offer": "Open-source AGPL web analytics: free to self-host the community edition, unlimited sites/visitors; paid Plausible Cloud from ~€9/mo/site, no free cloud tier",
+    "audience": "free-for-all",
+    "url": "https://plausible.io",
+    "category": "web-analytics",
+    "notes": "The genuinely-free path is self-hosting (GDPR-friendly, single JS snippet). Cloud is paid-only. (Pricing page returned 404 during verification this session; based on known AGPL licensing — confirm cloud prices before publishing.)"
+   },
+   {
+    "name": "Simple Analytics Free Plan",
+    "offer": "Free Hobby plan: 1 user, up to 5 websites, 1 month of history, no credit card; paid self-serve from €20/mo usage-based",
+    "audience": "free-for-all",
+    "url": "https://www.simpleanalytics.com/pricing/",
+    "category": "web-analytics",
+    "notes": "New free Hobby tier (added 2025-26) for small personal sites — previously Simple Analytics was paid-only with trials. 14-day self-serve trial unlocks advanced features; enterprise gets a free 30-day POC. Verified at simpleanalytics.com/pricing 2026-10-22."
+   },
+   {
+    "name": "OpenReplay (Open-Source)",
+    "offer": "Free open-source self-hosted session replay + analytics + error tracking (no hard event caps); hosted Dedicated starts at $199/mo with a 7-day trial",
+    "audience": "free-for-all",
+    "url": "https://openreplay.com/pricing",
+    "category": "product-analytics",
+    "notes": "Unlike Sentry/PostHog the hosted offering has no published free event tier — the free value is self-hosting. Verified at openreplay.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Countly (self-hosted)",
+    "offer": "Open-source product analytics: free to self-host the OSS core (AGPL/enterprise-edition split); cloud/enterprise plans paid",
+    "audience": "free-for-all",
+    "url": "https://www.count.ly",
+    "category": "product-analytics",
+    "notes": "One of the older OSS analytics platforms; strong self-hosted fit but commercial-grade dashboards/heatmaps sit in paid EE. (Licensing-based entry; not re-verified today because the WebSearch budget was exhausted — confirm current EE boundary before publishing.)"
+   },
+   {
+    "name": "LaunchDarkly Developer Plan (free)",
+    "offer": "Free Developer plan (renamed from \"Personal Use\"): unlimited feature flags, 1 project, 3 environments, 5 service connections, 1k client-side MAU, 100k experiment MAU, plus 5k errors/replays and 10M logs included",
+    "audience": "free-for-all",
+    "url": "https://launchdarkly.com/pricing",
+    "category": "feature-flags",
+    "notes": "The free plan was rebranded Personal Use -> Developer as LaunchDarkly repositioned around AI observability (AI runs, logs, traces quotas now visible). Paid is now metered pay-as-you-go (Foundation ~$10/service connection + $8.33/1k client MAU annual). Verified at launchdarkly.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Statsig Developer Tier (free)",
+    "offer": "2M events/mo free, unlimited flag & config checks, 50,000 session replays/mo, unlimited seats, no card; Pro $150/mo (5M events, then $0.05/1k)",
+    "audience": "free-for-all",
+    "url": "https://www.statsig.com/pricing",
+    "category": "feature-flags",
+    "notes": "Warehouse-native option lets you run Statsig on your own Snowflake/BigQuery for free (only managed compute costs elsewhere). Exceeding 2M events prompts card/upgrade. Verified at statsig.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Flagsmith Free Plan",
+    "offer": "Free: 50,000 API requests/mo, unlimited feature flags/environments, 1 team member; Start-Up tier $45/mo ($40 billed yearly, 1M requests, 3 members)",
+    "audience": "free-for-all",
+    "url": "https://flagsmith.com/pricing",
+    "category": "feature-flags",
+    "notes": "Also open-source (LGPLv3) and free to self-host, which removes the 50k-request cap. Overage on cloud starts at $50/M requests. Verified at flagsmith.com/pricing 2026-10-22."
+   },
+   {
+    "name": "Unleash (open source)",
+    "offer": "Open-source (Apache-2.0) feature-toggle server: free to self-host with unlimited toggles/environments; Unleash Cloud has a free Personal Use tier, paid tiers start ~$99/mo",
+    "audience": "free-for-all",
+    "url": "https://www.unleash.io",
+    "category": "feature-flags",
+    "notes": "The guaranteed-free path is self-hosting; the cloud Personal Use tier existed historically with small request/user caps — the pricing page failed to fetch this session (SSL error), so treat exact cloud free caps as unverified."
+   }
+  ],
+  "front_id": "auth-analytics"
+ },
+ {
+  "front": "Dev tools, IDEs, Git & CI/CD front of the free-offers mega-index (offers verified against official pages as of 2026-10-22; web search budget was exhausted partway, so a few lower-confidence entries are flagged in notes).",
+  "front_title": "Dev Tools, IDEs, Git & CI/CD",
+  "entries": [
+   {
+    "name": "GitHub Student Developer Pack",
+    "offer": "Free verified-student pack: includes free GitHub Pro (3,000 Actions min/mo, 180 Codespaces core-hrs/mo, 2GB Packages, 20GB Codespaces storage), free GitHub Copilot, plus dozens of partner offers (JetBrains, Datadog, Notion, VS Code, GitKraken 6-mo offer, 1Password 2 years, etc.)",
+    "audience": "student",
+    "url": "https://education.github.com/pack",
+    "notes": "Eligibility: 13+, degree/diploma-granting enrollment, school email or proof of enrollment. 2025-2026 churn tracked in the official SDP changelog: DigitalOcean's $200 credit exited after 2026-07-31; Bump.sh removed Dec 2025; 1Password extended to 2 years Oct 2026; Appwrite education plan changed Feb 2026; Clerk, Requestly, LocalStack, Boot.dev added 2025-26."
+   },
+   {
+    "name": "GitHub Copilot",
+    "offer": "Copilot Free: up to 2,000 completions + AI-credit allowance for all accounts; Copilot Student: unlimited completions + AI credits, free for verified students/teachers; Copilot Pro ($10/mo list) free for verified teachers and popular-OSS maintainers",
+    "audience": "free-for-all",
+    "url": "https://docs.github.com/en/copilot/concepts/billing/individual-plans",
+    "notes": "Plan tiers as of 2026: Free / Student / Pro / Pro+ / Max, with 'GitHub AI Credits' allowances replacing the old 300-premium-request limit; chat/agent usage on free+student is limited to auto model selection."
+   },
+   {
+    "name": "GitHub Actions",
+    "offer": "Free: 2,000 CI/CD minutes/mo + 500MB artifact storage for private repos; unlimited standard-runner minutes in public repos; self-hosted runners free",
+    "audience": "free-for-all",
+    "url": "https://docs.github.com/en/billing/concepts/product-billing/github-actions",
+    "notes": "2026-01-01: hosted-runner per-minute prices cut up to 39% (Linux 2-core $0.006/min, macOS $0.062). The $0.002/min self-hosted 'platform charge' announced Dec 2025 was postponed pending re-evaluation; free quotas unchanged."
+   },
+   {
+    "name": "GitHub Codespaces",
+    "offer": "Free accounts: 120 core-hours/mo + 15GB storage; students: 180 core-hours/mo + 20GB storage; Pro paid tiers start at $0.18/hr compute, $0.07/GB storage",
+    "audience": "student",
+    "url": "https://docs.github.com/en/billing/reference/product-usage-included",
+    "notes": "Student allowance is equivalent to GitHub Pro and is part of the Student Developer Pack; Classroom assignment usage bills to the owning org instead of the student."
+   },
+   {
+    "name": "JetBrains Student Pack",
+    "offer": "Free full IDEs (IntelliJ IDEA, PyCharm, WebStorm, CLion, GoLand, etc.) for students/teachers as long as enrolled, verified via university email, GitHub Student Developer Pack, or official docs; AI tools available via trial/AI Free plan",
+    "audience": "student",
+    "url": "https://www.jetbrains.com/academy/student-pack/",
+    "notes": "Annual re-verification required; 40% graduation discount for 2 years after student license expires. Bootcamp/coupon program retired - no new coupons issued after 2026-10-01."
+   },
+   {
+    "name": "Cursor",
+    "offer": "Free plan ($0/mo) with limited AI usage, limited agent requests and limited chat requests; paid tiers usage-based",
+    "audience": "free-for-all",
+    "url": "https://cursor.com/pricing",
+    "notes": "Pricing page links a 'Students' education page (details not shown on pricing page as of 2026-10). Legacy 'Hobby'/'Hobby+' plan names are gone - plans restructured; free tier now just caps agent/chat requests."
+   },
+   {
+    "name": "Windsurf",
+    "offer": "Free plan with monthly AI credits (~$10/mo credit allowance historically; agent 'Cascade' usage limits apply)",
+    "audience": "free-for-all",
+    "url": "https://devin.ai/pricing",
+    "notes": "LOW CONFIDENCE: windsurf.com now 308-redirects to devin.ai (Cognition's rebrand after the 2025 acquisition) and devin.ai/pricing was unfetchable in-session, so current free-tier limits are unverified. Treat numbers as approximate until checked."
+   },
+   {
+    "name": "Docker",
+    "offer": "Personal plan free: Docker Desktop (Engine+Kubernetes), Docker Hub, Scout & Debug for 1 user; Team plan $16/user/mo covers small teams up to 100 users",
+    "audience": "free-for-all",
+    "url": "https://www.docker.com/pricing/",
+    "notes": "CHANGE: the old 'Docker free for small teams' (under 3 devs / <$10M revenue) was eliminated in the Dec 2024 plan revamp - free tier is now individual-only, so small commercial teams pay for Team."
+   },
+   {
+    "name": "Datadog",
+    "offer": "Infrastructure monitoring free for up to 5 hosts (1-day metric retention, 100 custom metrics + 500 custom events per host); 40K LLM spans/mo free for Agent Observability; trials for logs/APM etc.",
+    "audience": "free-for-all",
+    "url": "https://www.datadoghq.com/pricing/",
+    "notes": "The older 'Dev Tier' (35GB logs, 100K traces, 5 APM hosts) branding has been folded into the current per-product pricing; free 5-host infra tier is the stable entry offer. Paid infra starts at $15/host/mo."
+   },
+   {
+    "name": "Postman",
+    "offer": "Free plan: 1 user, 100 AI credits/mo, unlimited collection runs and unlimited mock servers (cloud and local), 1,000 API monitoring requests/mo",
+    "audience": "free-for-all",
+    "url": "https://www.postman.com/pricing/",
+    "notes": "CHANGE March 1, 2026: plan lineup restructured to Free/Solo/Team/Enterprise; Basic & Professional discontinued; collection runs and mock calls became unlimited on all tiers; Free shrank to a single user (old 3-user free teams gone). Solo $9/mo, Team $19/user/mo."
+   },
+   {
+    "name": "Figma Education",
+    "offer": "Figma/FigJam 100% free for verified students and educators; higher-ed and bootcamps get free Professional tier, K-12 districts get Enterprise tier; full access to Figma's AI toolkit",
+    "audience": "student",
+    "url": "https://www.figma.com/education/",
+    "notes": "Includes classroom add-ons (Google Classroom, SAML SSO), free training/PD sessions and an education template library. No '1 month free Professional' or per-seat cap published on the page."
+   },
+   {
+    "name": "Microsoft for Students",
+    "offer": "Free 1-year bundle worth $199: Office/Microsoft 365, Visio, Project, MATLAB; plus $99 credit toward the $649 1-year bundle (Windows 11 + Office + Visual Studio + Team); $100 Azure credit for Students + 12 months of Azure for Students always-free services",
+    "audience": "student",
+    "url": "https://www.microsoft.com/en-us/education/products/for-students",
+    "notes": "Core bundle values and $100 Azure credit are long-standing; exact current SKU mix could not be re-verified in-session (localized page returned), so treat as 'confirm before publishing'."
+   },
+   {
+    "name": "CircleCI",
+    "offer": "Free plan: 30,000 credits/mo (= up to 6,000 build min on small Docker class), 5 active users, 30x concurrency, 2GB storage + 1GB network; free open-source build pool up to 400,000 credits/mo on Linux",
+    "audience": "free-for-all",
+    "url": "https://circleci.com/pricing/",
+    "notes": "Credit-based pricing since the 2025/2026 plan revamp (Free/Performance/Scale). Free-plan credits expire monthly; paid Performance starts at $15/mo with 30,000 credits included."
+   },
+   {
+    "name": "Azure DevOps",
+    "offer": "Free: 1 Microsoft-hosted job with 1,800 build minutes/mo (plus unlimited self-hosted), first 5 users free, 2GB artifacts free; extra MS-hosted job $40/mo, extra users $6/mo",
+    "audience": "free-for-all",
+    "url": "https://azure.microsoft.com/en-us/pricing/details/devops/",
+    "notes": "Read from the official 2026 pricing page; note the free tier has been restructured from the old '2 minutes x 1,800 min' to 1 hosted job - verify against the live page when finalizing. 30-day free trials exist for Test Plans ($52/user/mo tier)."
+   },
+   {
+    "name": "GitLab",
+    "offer": "GitLab.com Free: 400 CI/CD compute minutes/mo per group, 10GiB storage/project, 5 users per private group; GitLab for Startups/Education: free Ultimate license + 50,000 compute minutes/mo",
+    "audience": "startup",
+    "url": "https://about.gitlab.com/pricing/",
+    "notes": "Self-managed GitLab is free/unlimited (bring your own runners & storage), making it the self-host escape hatch alongside Gitea. Open-source projects also get the free Ultimate + 50K minutes offer."
+   },
+   {
+    "name": "Gitea",
+    "offer": "Open-source (MIT) self-hosted Git platform: unlimited free with your own VPS; try.gitea.io free hosted instances for evaluation",
+    "audience": "free-for-all",
+    "url": "https://gitea.io/gitea/",
+    "notes": "No free tier cap since it's self-hosted - pairs cheaply with any $3-5 VPS (e.g. via cloud startup-credit programs)."
+   },
+   {
+    "name": "Replit",
+    "offer": "Starter plan free: daily Agent credits (Free Mode) up to a monthly cap, monthly cloud credits, 1 free published app (goes offline after 30 days, 'Made with Replit' badge)",
+    "audience": "free-for-all",
+    "url": "https://replit.com/pricing",
+    "notes": "Aug 18, 2026: 'Free Mode' launched - no-cost Agent usage (GPT-5.6 Luna) on all plans; Core $20/mo adds $20 credits + up to 30h Free Mode chat. Education program with student/educator discounts at replit.com/education."
+   },
+   {
+    "name": "Linear",
+    "offer": "Free plan: unlimited members, 2 teams, 250 issues, 10MB uploads; paid Basic $10/user/mo",
+    "audience": "free-for-all",
+    "url": "https://linear.app/pricing",
+    "notes": "No separate student/education offer found on the pricing page; the unlimited-collaborator free tier is the de-facto small-team offer."
+   },
+   {
+    "name": "Retool",
+    "offer": "Free plan: unlimited web & mobile apps, up to 5 users, 500 workflow runs/mo, 5GB storage, 20 agent-hours + 250 AI credits/mo (cloud); self-hosted free with same 5-user cap",
+    "audience": "free-for-all",
+    "url": "https://retool.com/pricing",
+    "notes": "Historically '5 free apps'; now unlimited apps with 5 free users. AI/agent allowances are new 2025-26 additions."
+   },
+   {
+    "name": "Tally",
+    "offer": "Free plan: unlimited form submissions, conditional logic, file uploads, payment collection, integrations (Google Sheets, Notion, Airtable, Zapier, Make, Webhooks) under fair-usage guidelines",
+    "audience": "free-for-all",
+    "url": "https://tally.so/pricing",
+    "notes": "Form builder (Typeform alternative); free tier has no stated numeric response cap - throttled only under 'fair usage.' Pro from ~$20/mo adds advanced integrations."
+   },
+   {
+    "name": "Airplane",
+    "offer": "Free plan: 5 free 'Airplane' internal tools (serverless UI/API functions) with unlimited users",
+    "audience": "free-for-all",
+    "url": "https://www.airplane.dev/pricing",
+    "notes": "LOW CONFIDENCE: airplane.dev was unfetchable from this environment (DNS failure), so the 5-tool free limit is from pre-session knowledge - re-verify the page before publishing."
+   }
+  ],
+  "front_id": "devtools"
+ },
+ {
+  "front": "Self-hosted open-source alternatives that replace paid SaaS — free community/self-hosted editions, vendor free cloud plans, and startup credit programs across the dev stack (workflow automation, internal tools, e-signature, CMS, docs, scheduling, analytics, observability, monitoring, web servers, publishing, surveys). Offers checked 2026-10-22 against official pages.",
+  "front_title": "Self-Hosted Open-Source SaaS Alternatives",
+  "entries": [
+   {
+    "name": "n8n",
+    "offer": "Self-hosted Community Edition is free with unlimited workflow executions; n8n Cloud free 14-day trial (1,000 executions, no card); Start-up Plan gives 50% off Business for companies under 20 employees",
+    "audience": "free-for-all",
+    "category": "Workflow automation (replaces Zapier/Make)",
+    "url": "https://n8n.io/pricing/",
+    "notes": "Aug 2025 repricing removed active-workflow limits from all plans; paid cloud from 20€/mo (2,500 executions, 5 concurrent); Community edition is source-available (Sustainable Use License), not OSI open source. Cloud trial expunges data if not upgraded."
+   },
+   {
+    "name": "Windmill",
+    "offer": "Self-hosted open-source edition free: unlimited executions, up to 3 workspaces, 50 users, 10-user SSO, 10 GiB object storage",
+    "audience": "free-for-all",
+    "category": "Internal tools / workflow automation (replaces Retool/Frontend)",
+    "url": "https://www.windmill.dev/pricing/",
+    "notes": "Enterprise tier from ~$120/mo (builder seats $20, workers $100/CU pair, per-page examples). Free tier caps email triggers at 100/day."
+   },
+   {
+    "name": "DocuSeal",
+    "offer": "Fully free self-hosted e-signature platform (AGPL-3.0), replaces paid DocuSign/PandaDoc; no vendor caps",
+    "audience": "free-for-all",
+    "category": "E-signature (replaces DocuSign)",
+    "url": "https://github.com/docusealco/docuseal",
+    "notes": "Active project (repo pushed 2026-10, ~18.8k stars, org docusealco). No free hosted tier — you run your own instance."
+   },
+   {
+    "name": "Appsmith",
+    "offer": "Self-hosted Community Edition free; Cloud Free plan: up to 5 users, 5 workspaces, 10 apps, public apps only; 15-day free trial of Appsmith Business",
+    "audience": "free-for-all",
+    "category": "Internal app builder (replaces Retool/Glide)",
+    "url": "https://appsmith.com/pricing/",
+    "notes": "Paid cloud from $15/user/mo (Business); free tier excludes workflows, reusable packages, audit logs, brand removal. Self-hosted edition is AGPL."
+   },
+   {
+    "name": "ToolJet",
+    "offer": "Self-hosted Community Edition free; Cloud Free plan: 2 builders, 50 end users, 10 apps, 100 AI credits",
+    "audience": "free-for-all",
+    "category": "Internal app builder (replaces Retool)",
+    "url": "https://tooljet.com/pricing/",
+    "notes": "Paid cloud from $23/builder/mo; self-hosted Team license from $199/builder; fully offline/air-gapped operation is an Enterprise add-on."
+   },
+   {
+    "name": "Directus",
+    "offer": "Self-hosted free; Directus Cloud Core $0: 3 seats, 25 collections, 5 flows; Open Innovation Grant gives full commercial access at no cost to orgs under $5M revenue and 50 employees",
+    "audience": "free-for-all",
+    "category": "Headless CMS / data platform (replaces Airtable/Sanity/Contentful)",
+    "url": "https://directus.com/pricing/",
+    "notes": "Cloud hosting add-on $99/mo; paid Team $499/mo; grant removes feature caps for qualifying small orgs."
+   },
+   {
+    "name": "Keystone",
+    "offer": "Free self-hosted headless CMS framework (MIT) with GraphQL + React admin; no paid cloud tier",
+    "audience": "free-for-all",
+    "category": "Headless CMS (replaces Sanity/Contentful paid tiers)",
+    "url": "https://keystonejs.com/",
+    "notes": "Active project (~10k stars, pushed 2026-10). Node.js/TypeScript; bring your own hosting."
+   },
+   {
+    "name": "Payload",
+    "offer": "Free self-hosted (MIT) full-stack CMS/admin framework on Next.js; no cloud requirement",
+    "audience": "free-for-all",
+    "category": "Headless CMS (replaces Contentful/Dato/Sanity paid tiers)",
+    "url": "https://payload.com/",
+    "notes": "Active, ~45k stars (repo payloadcms/payload, pushed 2026-10). Payload 3.0 made the framework fully open source."
+   },
+   {
+    "name": "Outline",
+    "offer": "Free self-hosted knowledge base for personal/internal use; replaces paid Notion/Guru seats",
+    "audience": "free-for-all",
+    "category": "Knowledge base / wiki (replaces Notion/Guru/Confluence)",
+    "url": "https://www.getoutline.com/",
+    "notes": "BUSL-1.1 (source-available, not OSI): may not offer it as a hosted service to third parties; each release converts to Apache-2.0 after 4 years. ~41k stars, active (repo outline/outline)."
+   },
+   {
+    "name": "AppFlowy",
+    "offer": "Free self-hosted (AGPL-3.0); cloud Personal plan $0: 1 workspace owner, 100 MB storage, unlimited guest editors, 1 form + 1 chart",
+    "audience": "free-for-all",
+    "category": "Productivity workspace (replaces Notion)",
+    "url": "https://appflowy.com/pricing/",
+    "notes": "Pro $12/member/mo annual; same tiers for self-hosted. ~78k stars; AppFlowy-Cloud repo archived 2026 but hosted service continues."
+   },
+   {
+    "name": "Cal.com",
+    "offer": "Free self-hosted (AGPLv3); Cloud Free individual plan: unlimited event types, calendars and bookings; Platform Starter (API for builders) free up to 25 bookings/mo, $0.99 overage",
+    "audience": "free-for-all",
+    "category": "Scheduling (replaces Calendly/SavvyCal)",
+    "url": "https://cal.com/pricing/",
+    "notes": "Teams $12/user/mo annual, 14-day trial; free plan includes Stripe/PayPal payments and two-way Salesforce/HubSpot sync; rebranded from Calendso in 2022."
+   },
+   {
+    "name": "PostHog",
+    "offer": "Free self-hosted open source; Cloud free tier: 1M events/mo, 5K session recordings, 100K error exceptions, 1,500 survey responses, 10K workflow messages (no card, renews monthly); PostHog for Startups: $50,000 credits for 12 months (<2 yrs old, <$5M raised) plus $12K partner perks",
+    "audience": "startup",
+    "category": "Product analytics / observability (replaces Mixpanel/Amplitude + GA4 + Sentry)",
+    "url": "https://posthog.com/startups/",
+    "notes": "2026 change (Sep 14): startup credits no longer apply to AI tools (PostHog AI, Desktop, Slack app, Replay Vision, Inbox). YC teams get $50k/yr while <$25M raised. Self-hosted core is MIT licensed."
+   },
+   {
+    "name": "SigNoz",
+    "offer": "Self-hosted Community edition free (all features, no caps); SigNoz Cloud: 30-day free trial, no credit card; Teams plan from $49/mo including $49 of usage",
+    "audience": "free-for-all",
+    "category": "Observability (replaces Datadog/Grafana Cloud)",
+    "url": "https://signoz.io/pricing/",
+    "notes": "May 2025 change: cloud minimum cut from $199 to $49/mo; usage $0.30/GB logs+traces, $0.10/mn metric samples. Third parties report a startup deal (~$19/mo first 12 months, <3 yrs old, <30 employees, <$6M raised) — verify on vendor site."
+   },
+   {
+    "name": "Uptime Kuma",
+    "offer": "Completely free self-hosted monitoring (MIT), unlimited monitors, no tier limits",
+    "audience": "free-for-all",
+    "category": "Uptime monitoring (replaces Pingdom/Better Uptime)",
+    "url": "https://uptimekuma.io/",
+    "notes": "~92.7k stars, pushed 2026-10-22. Official domain is uptimekuma.io (uptimekuma.com did not resolve from this environment); any hosted 'Kuma Cloud' status unverified here."
+   },
+   {
+    "name": "Caddy",
+    "offer": "Free, open-source web server (Apache-2.0) with automatic HTTPS built in; no paid plans at all",
+    "audience": "free-for-all",
+    "category": "Web server / TLS termination (replaces Nginx + cert tooling)",
+    "url": "https://caddyserver.com/",
+    "notes": "Community project; no commercial offering or cloud service to attach a free tier to — the product itself is the free offer."
+   },
+   {
+    "name": "Nginx",
+    "offer": "Nginx OSS free (2-clause BSD); F5 also offers a free annual 'Nginx Plus for Development' license (confirm current availability at F5)",
+    "audience": "free-for-all",
+    "category": "Web server / load balancer (replaces commercial edge stacks)",
+    "url": "https://nginx.org/",
+    "notes": "Nginx Plus/NGINX One is commercial (F5); nginx.com product pages now redirect to f5.com/products/nginx. Developer license terms not restated on that page in 2026 — verify before indexing."
+   },
+   {
+    "name": "Ghost",
+    "offer": "Self-hosted Community Edition free (MIT), no member caps or revenue share; Ghost(Pro) hosted plans start at $18/mo with free trials",
+    "audience": "free-for-all",
+    "category": "Newsletter/publishing (replaces Substack/Beehiiv)",
+    "url": "https://ghost.org/pricing/",
+    "notes": "Ghost(Pro): Starter $18, Publisher $29 (both 1,000 members), Business $199 (10,000 members); no payment fees, cancel anytime."
+   },
+   {
+    "name": "BookStack",
+    "offer": "Completely free self-hosted documentation/wiki (MIT), no cloud service and no limits",
+    "audience": "free-for-all",
+    "category": "Docs/wiki (replaces Confluence/Notion docs)",
+    "url": "https://www.bookstackapp.com/",
+    "notes": "PHP/Laravel; books-chapters-pages structure; the go-to lightweight self-hosted Confluence alternative."
+   },
+   {
+    "name": "Documenso",
+    "offer": "Free self-hosted e-signature (AGPL); Cloud Free: 5 documents/month, up to 10 recipients per document, free forever",
+    "audience": "free-for-all",
+    "category": "E-signature (replaces DocuSign)",
+    "url": "https://documenso.com/pricing/",
+    "notes": "Paid: Individual $25/mo, Teams $40/user/mo, Platform $250/mo; self-hosted enterprise licensing available for unlimited signatures."
+   },
+   {
+    "name": "Formbricks",
+    "offer": "Free self-hosted open-source surveys/feedback; Cloud Hobby free: 1 workspace, 250 responses/month, full API (incl. MCP) access",
+    "audience": "free-for-all",
+    "category": "Surveys & feedback (replaces Typeform/Intercom Surveys)",
+    "url": "https://formbricks.com/pricing/",
+    "notes": "Cloud hosted in Frankfurt; Pro $74/mo (2,000 responses); self-hosted edition has no response limits."
+   },
+   {
+    "name": "Kitem",
+    "offer": "UNVERIFIED — could not confirm a currently active offer as of 2026-10-22",
+    "audience": "other",
+    "category": "Project management (replaces Linear) — status unknown",
+    "url": "https://kitem.io/",
+    "notes": "kitem.io, kitem.app and kitem.dev all unresolvable from this environment and no Kitem GitHub repo was found in GitHub search. Likely discontinued, renamed, or private. Re-check manually before keeping this seed in the index."
+   },
+   {
+    "name": "Kinto",
+    "offer": "AMBIGUOUS SEED — no verifiable active offer found for the To-Do app interpretation",
+    "audience": "other",
+    "category": "To-do / task manager (replaces Todoist) or JSON document store",
+    "url": "https://github.com/Kinto/kinto",
+    "notes": "kinto.app (To-Do app) has lapsed and is parked for sale; no active Kinto to-do repo found. Active candidates: Mozilla Kinto — self-hostable JSON document store with sync (~4.4k stars, pushed 2026-10, free to self-host) — or rbreaves/kinto, a Mac-style keyboard-shortcuts app (GPL-2.0). Clarify which product the seed meant."
+   },
+   {
+    "name": "Gitea",
+    "offer": "Completely free self-hosted Git (MIT) with issues, PRs and CI — replaces paid GitLab/GitHub tiers",
+    "audience": "free-for-all",
+    "category": "Git hosting (replaces GitHub/GitLab paid features)",
+    "url": "https://gitea.io/",
+    "notes": "Expansion entry (not a seed). Gitea Cloud 'Forge' has a free tier; its exact current limits were not re-verified in this pass — confirm before publishing."
+   },
+   {
+    "name": "Metabase",
+    "offer": "Free self-hosted open-source BI/dashboards (Apache-2.0); Metabase Cloud also has a free plan (limits not re-verified here)",
+    "audience": "free-for-all",
+    "category": "BI & dashboards (replaces Tableau/Looker/Metabase paid tiers)",
+    "url": "https://www.metabase.com/",
+    "notes": "Expansion entry (not a seed). Self-hosted Community edition is free; Cloud free tier historically ~150 queries/day, 5 users — verify current numbers."
+   },
+   {
+    "name": "Vaultwarden",
+    "offer": "Completely free self-hosted Bitwarden-compatible password manager (MIT)",
+    "audience": "free-for-all",
+    "category": "Password management (replaces Bitwarden/1Password paid sync)",
+    "url": "https://github.com/vaultwarden/server",
+    "notes": "Expansion entry (not a seed). Unofficial lightweight server that runs a full Bitwarden stack on a small VPS; unofficial so expect no SLA."
+   }
+  ],
+  "front_id": "oss-selfhost"
+ }
+]
