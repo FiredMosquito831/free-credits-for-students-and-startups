@@ -114,6 +114,7 @@ def head(path, title, desc, depth, ld_blocks=(), robots='index, follow, max-imag
     root = '../' * depth
     out = ['<!doctype html>', '<html lang="en">', '<head>', '<meta charset="utf-8">',
            '<meta name="viewport" content="width=device-width, initial-scale=1">',
+           '<script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark"){document.documentElement.setAttribute("data-theme",t)}}catch(e){}})();</script>',
            f'<title>{esc(title)}</title>',
            f'<meta name="description" content="{esc(desc)}">',
            f'<link rel="canonical" href="{esc(canon)}">',
@@ -128,7 +129,12 @@ def head(path, title, desc, depth, ld_blocks=(), robots='index, follow, max-imag
            f'<meta name="twitter:title" content="{esc(title)}">',
            f'<meta name="twitter:description" content="{esc(desc)}">',
            f'<meta name="twitter:image" content="{BASE}assets/og-image.png">',
-           '<meta name="theme-color" content="#1F3A5F">',
+           '<meta name="theme-color" content="#1F3A5F" media="(prefers-color-scheme: light)">',
+           '<meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">',
+           '<meta name="color-scheme" content="light dark">',
+           '<link rel="preconnect" href="https://fonts.googleapis.com">',
+           '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+           '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">',
            f'<link rel="icon" href="{root}assets/favicon.svg" type="image/svg+xml">',
            f'<link rel="manifest" href="{root}site.webmanifest">',
            f'<link rel="stylesheet" href="{root}assets/style.css">']
@@ -139,23 +145,34 @@ def head(path, title, desc, depth, ld_blocks=(), robots='index, follow, max-imag
 
 def shell(path, title, desc, depth, body, ld_blocks=(), robots='index, follow, max-image-preview:large'):
     root = '../' * depth
+    toggle = (
+        '<button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">'
+        '<svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>'
+        '<svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/>'
+        '<path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'
+        '</button>')
     header = (
         '<a class="skip" href="#main">Skip to content</a>\n'
         '<header class="site-header"><div class="wrap bar">'
-        f'<a class="brand" href="{root}index.html">Free Credits &amp; Offers</a>'
+        f'<a class="brand" href="{root}index.html">'
+        f'<svg class="mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">{MARK_INNER}</svg>'
+        '<span>Free Credits &amp; Offers</span></a>'
         '<nav aria-label="Main">'
         f'<a href="{root}index.html#fronts">Fronts</a>'
-        f'<a href="{root}index.html#search">Find a provider</a>'
+        f'<a href="{root}index.html#directory">Directory</a>'
         f'<a href="{root}verification.html">Live checks</a>'
         f'<a href="{root}changes.html">Changes</a>'
         f'<a href="{root}index.html#downloads">Downloads</a>'
-        '</nav></div></header>\n')
+        '</nav>' + toggle + '</div></header>\n')
     footer = (
         '<footer class="site-footer"><div class="wrap">'
+        '<p class="foot-title">Free Credits &amp; Offers for Students and Startups</p>'
         f'<p>Independent research snapshot as of {ASOF}. Not affiliated with any provider named here. '
         'Terms change often: read the provider\'s current page before you sign up or claim an offer.</p>'
-        f'<p><a href="{root}{DOWNLOADS[0]}">PDF report</a> · <a href="{root}research/INDEX.md">Index (Markdown)</a> · '
-        f'<a href="{REPO_URL}" rel="noopener">Source on GitHub</a></p>'
+        f'<p class="foot-links"><a href="{root}{DOWNLOADS[0]}">PDF report</a>'
+        f'<a href="{root}research/INDEX.md">Index (Markdown)</a>'
+        f'<a href="{REPO_URL}" rel="noopener">Source on GitHub</a>'
+        f'<a href="{REPO_URL}/issues/new" rel="noopener">Report an outdated offer</a></p>'
         '</div></footer>\n'
         f'<script src="{root}assets/app.js" defer></script>\n')
     return (head(path, title, desc, depth, ld_blocks, robots) + '<body>\n' + header
@@ -323,6 +340,30 @@ def build_404():
     write('404.html', shell('404.html', title, desc, 0, body, robots='noindex, follow'))
 
 
+FRONT_ICON = {
+    'llm-apis': 'M12 3l1.8 4.6L18.4 9.4l-4.6 1.8L12 15.8l-1.8-4.6L5.6 9.4l4.6-1.8z',
+    'cloud-credits': 'M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.2 9.6 3.5 3.5 0 0 0 7 18z',
+    'databases': 'M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3zm0 0v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6',
+    'hosting-paas': 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18',
+    'vps-servers': 'M4 4h16v6H4zM4 14h16v6H4zM8 7h.01M8 17h.01',
+    'devtools': 'M4 5h16v14H4zM8 10l3 2-3 2M13 16h4',
+    'gpu-ml': 'M9 9h6v6H9zM9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3',
+    'observability': 'M3 12h4l3-7 4 14 3-7h4',
+    'auth-analytics': 'M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z',
+    'email-messaging': 'M4 6h16v12H4zM4 7l8 6 8-6',
+    'apis-data': 'M9 3v5M15 3v5M7 8h10v3a5 5 0 0 1-10 0zM12 16v5',
+    'payments-fintech': 'M3 6h18v12H3zM3 10h18M7 15h4',
+    'student-only': 'M2 9l10-5 10 5-10 5zM6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5',
+    'oss-selfhost': 'M8 6l-4 6 4 6M16 6l4 6-4 6M13 4l-2 16',
+    'extras': 'M12 5v14M5 12h14',
+}
+
+
+def icon(fid):
+    d = FRONT_ICON.get(fid, FRONT_ICON['extras'])
+    return f'<svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="{d}"/></svg>'
+
+
 def build_index():
     confirmed = []
     seen = set()
@@ -335,17 +376,19 @@ def build_index():
     for f in FRONTS:
         n = sum(1 for p in PROVIDERS if f['id'] in p['fronts'])
         if n:
-            fronts_cards.append(f'<a class="card" href="fronts/{f["id"]}.html"><strong>{esc(f["title"])}</strong>'
-                                f'<span>{n} providers · {f["findings"]} findings</span></a>')
+            fronts_cards.append(
+                f'<a class="card" href="fronts/{f["id"]}.html">{icon(f["id"])}'
+                f'<span class="card-body"><strong>{esc(f["title"])}</strong>'
+                f'<span class="meta">{n} providers · {f["findings"]} findings</span></span></a>')
     live_rows = ''.join(
-        f'<tr><td>{esc(trim(it["offer"], 100))}</td><td>{esc(it["provider"])}</td>'
-        f'<td>{esc(trim(it.get("verified_summary", ""), 170))}</td>'
-        f'<td>{link_html(it.get("official_url", ""))}</td></tr>' for it in confirmed[:8])
+        f'<tr><td data-label="Offer">{esc(trim(it["offer"], 100))}</td><td data-label="Provider">{esc(it["provider"])}</td>'
+        f'<td data-label="Verified terms">{esc(trim(it.get("verified_summary", ""), 170))}</td>'
+        f'<td data-label="Official page">{link_html(it.get("official_url", ""))}</td></tr>' for it in confirmed[:8])
     list_items = []
     for p in sorted(WITH_PAGE, key=lambda x: x['name'].lower()):
         hay = ' '.join([p['name'], p['best_offer'], ' '.join(FRONT_TITLE[f] for f in p['fronts'])]).lower()
         list_items.append(f'<li data-provider="{esc(hay)}"><a href="providers/{p["slug"]}.html">{esc(p["name"])}</a>'
-                          f' <span class="muted">— {esc(trim(p["best_offer"], 90))}</span></li>')
+                          f'<br><span class="muted">{esc(trim(p["best_offer"], 110))}</span></li>')
     faq = [
         ('Are these offers free?',
          'Most are free tiers, trial credits, startup programs or student offers. Each has its own limits, duration '
@@ -365,7 +408,8 @@ def build_index():
         ('Is this affiliated with the providers?',
          'No. This is independent research. Provider names are used only to identify the services.'),
     ]
-    faq_html = ''.join(f'<h3>{esc(q)}</h3><p>{esc(a)}</p>' for q, a in faq)
+    faq_html = ''.join(f'<details class="faq-item"><summary>{esc(q)}</summary><p>{esc(a)}</p></details>'
+                       for q, a in faq)
     title = f'{SITE_NAME} (2026)'
     desc = trim(f'Free tiers, trial credits, startup programs and student offers for LLM APIs, cloud, databases, hosting, '
                 f'VPS, dev tools and more: {STATS["providers"]} providers, checked {ASOF}.', 158)
@@ -384,48 +428,59 @@ def build_index():
            dataset,
            {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
                {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for q, a in faq]}]
+    stats = ''.join([
+        f'<div class="stat"><b>{STATS["providers"]}</b><span>providers</span></div>',
+        f'<div class="stat"><b>{STATS["findings"]:,}</b><span>verified findings</span></div>',
+        f'<div class="stat"><b>{STATS["fronts"]}</b><span>service fronts</span></div>',
+        f'<div class="stat"><b>{len(VER["items"])}</b><span>headline offers re-checked live</span></div>',
+    ])
     body = [
-        '<section class="hero">',
-        '<h1>Free credits, offers and bonuses for students and startups</h1>',
+        '<section class="hero" aria-labelledby="hero-title">',
+        f'<p class="eyebrow">Independent research · snapshot as of {ASOF.replace("-", chr(8209))}</p>',
+        '<h1 id="hero-title">Free credits, offers and bonuses for students and startups</h1>',
         '<p class="lead">An independent, checked index of free tiers, trial credits, startup programs and student offers '
         'across LLM and AI APIs, cloud, databases, hosting, VPS and servers, dev tools, GPU and ML, observability, auth, '
         'email, payments and self-hosted open source.</p>',
-        '<div class="stats">'
-        f'<div class="stat"><b>{STATS["providers"]}</b><span>providers</span></div>'
-        f'<div class="stat"><b>{STATS["findings"]:,}</b><span>verified findings</span></div>'
-        f'<div class="stat"><b>{STATS["fronts"]}</b><span>service fronts</span></div>'
-        f'<div class="stat"><b>{len(VER["items"])}</b><span>headline offers re-checked live</span></div>'
+        '<div class="hero-search" role="search">',
+        '<label for="provider-search">Search providers, services or offers</label>',
+        '<input id="provider-search" class="search" type="search" placeholder="Try: hosting, GPU, Cloudflare, student" '
+        'autocomplete="off">',
+        f'<p id="search-status" class="muted" aria-live="polite">{len(WITH_PAGE)} providers</p>',
         '</div>',
-        '<div class="cta"><a class="btn primary" href="downloads/Freebies_Report.pdf">Download the full PDF report</a>'
-        '<a class="btn" href="verification.html">See the live checks</a></div>',
+        '<div class="cta"><a class="btn primary" href="#fronts">Browse service fronts</a>'
+        '<a class="btn" href="downloads/Freebies_Report.pdf">Download the PDF report</a>'
+        '<a class="btn ghost" href="verification.html">See the live checks</a></div>',
+        '</section>',
+        f'<section class="stats" aria-label="Key numbers">{stats}</section>',
         f'<div class="note"><strong>Snapshot as of {ASOF}.</strong> Terms change often. Read each provider’s current page '
         'before you sign up or claim an offer. Not affiliated with any provider.</div>',
-        '</section>',
         '<section id="fronts"><h2>Browse by service front</h2><div class="cards">' + ''.join(fronts_cards) + '</div></section>',
-        '<section id="live"><h2>Live-checked startup credit offers</h2>'
-        '<p>Confirmed against the provider’s official page. Partly confirmed and ended offers are listed on the '
+        '<section id="live"><h2>Confirmed headline offers</h2>'
+        '<p>Confirmed against the provider’s official page. Partly confirmed and ended offers are on the '
         '<a href="verification.html">live checks page</a>.</p>'
-        '<div class="tablewrap"><table><caption class="visually-hidden">Confirmed headline offers with verified terms</caption>'
+        '<div class="tablewrap"><table class="stack"><caption class="visually-hidden">Confirmed headline offers with verified terms</caption>'
         '<thead><tr><th scope="col">Offer</th><th scope="col">Provider</th><th scope="col">Verified terms</th>'
         '<th scope="col">Official page</th></tr></thead><tbody>' + live_rows + '</tbody></table></div></section>',
-        '<section id="search"><h2>Find a provider</h2>'
-        '<label for="provider-search" class="visually-hidden">Search providers</label>'
-        '<input id="provider-search" class="search" type="search" placeholder="Search by provider, service or offer" '
-        'autocomplete="off">'
-        f'<p id="search-status" class="muted" aria-live="polite">{len(WITH_PAGE)} providers</p>'
-        '<ul class="providers" id="provider-list">' + ''.join(list_items) + '</ul></section>',
+        '<section id="directory"><h2>Provider directory</h2>'
+        f'<details class="dir" id="directory-details"><summary>Browse all {len(WITH_PAGE)} providers</summary>'
+        '<p class="muted">Every provider with a page. Filter with the search box at the top.</p>'
+        '<ul class="providers" id="provider-list">' + ''.join(list_items) + '</ul></details></section>',
         '<section id="faq"><h2>Frequently asked questions</h2>' + faq_html + '</section>',
-        '<section id="downloads"><h2>Downloads and data</h2><ul>'
-        '<li><a href="downloads/Freebies_Report.pdf">Full report (PDF)</a></li>'
-        '<li><a href="downloads/Freebies_Report.docx">Full report (editable DOCX)</a></li>'
-        '<li><a href="research/INDEX.md">Index (Markdown)</a> and <a href="research/sections/">per-front sections</a></li>'
-        '<li><a href="data/registry.json">All providers and findings (JSON)</a></li>'
-        '<li><a href="data/quickhits.json">Quick-hit tables (JSON)</a> · '
-        '<a href="data/verification.json">Live checks (JSON)</a></li></ul></section>',
+        '<section id="downloads"><h2>Downloads and data</h2><div class="cards">'
+        '<a class="card" href="downloads/Freebies_Report.pdf"><span class="card-body"><strong>Full report (PDF)</strong>'
+        '<span class="meta">All providers and findings</span></span></a>'
+        '<a class="card" href="downloads/Freebies_Report.docx"><span class="card-body"><strong>Full report (DOCX)</strong>'
+        '<span class="meta">Editable Word version</span></span></a>'
+        '<a class="card" href="research/INDEX.md"><span class="card-body"><strong>Index (Markdown)</strong>'
+        '<span class="meta">Quick hits, changes, corrections</span></span></a>'
+        '<a class="card" href="data/registry.json"><span class="card-body"><strong>All providers (JSON)</strong>'
+        '<span class="meta">Structured data behind the site</span></span></a>'
+        '</div></section>',
+        '<section class="report-cta"><h2>Spotted an outdated offer?</h2>'
+        '<p>Open an issue on GitHub with the provider name and the current terms.</p>'
+        f'<a class="btn" href="{REPO_URL}/issues/new" rel="noopener">Report an outdated offer</a></section>',
     ]
     write('index.html', shell('index.html', title, desc, 0, '\n'.join(body), ldb))
-
-
 
 
 def write_static():
@@ -435,7 +490,7 @@ def write_static():
     (OUT / 'assets/favicon.svg').write_text(FAVICON, encoding='utf-8')
     (OUT / 'site.webmanifest').write_text(json.dumps({
         'name': SITE_NAME, 'short_name': 'Free Credits', 'start_url': './', 'display': 'browser',
-        'background_color': '#FFFFFF', 'theme_color': '#1F3A5F',
+        'background_color': '#FFFFFF', 'theme_color': '#0F766E',
         'icons': [{'src': 'assets/favicon.svg', 'sizes': 'any', 'type': 'image/svg+xml'}]}, indent=2), encoding='utf-8')
     (OUT / 'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n', encoding='utf-8')
     today = ASOF
@@ -446,97 +501,172 @@ def write_static():
     (OUT / 'sitemap.xml').write_text('\n'.join(xml) + '\n', encoding='utf-8')
 
 
-CSS = """:root{--navy:#1F3A5F;--teal:#0F766E;--ink:#14202E;--muted:#4B5B6E;--line:#D9E1EA;--zebra:#F5F8FB;--warn:#FFF5E0;--warnline:#F5C77E;--ok:#DCFCE7;--part:#FEF3C7;--bad:#FEE2E2;--off:#E5E7EB;--info:#E0F2FE}
+CSS = """:root{--bg:#FFFFFF;--surface:#FFFFFF;--ink:#0F172A;--ink-2:#1E293B;--muted:#475569;--line:#D9E3EA;--zebra:#F6F8FB;--link:#0F766E;--accent:#F59E0B;--hero-bg:#F0FDFA;--hero-glow:#CCFBF1;--header-bg:#1F3A5F;--header-ink:#FFFFFF;--header-link:#DBE7F3;--btn-bg:#0F766E;--btn-ink:#FFFFFF;--btn-hover:#0F172A;--cta-bg:#0F172A;--cta-ink:#E2E8F0;--footer-bg:#0F172A;--footer-ink:#CBD5E1;--footer-link:#99F6E4;--note-bg:#FFF7E6;--note-line:#F5C77E;--note-ink:#78350F;--th-bg:#1E293B;--th-ink:#FFFFFF;--ok:#DCFCE7;--ok-ink:#14532D;--part:#FEF3C7;--part-ink:#78350F;--bad:#FEE2E2;--bad-ink:#7F1D1D;--off:#E5E7EB;--off-ink:#374151;--info:#E0F2FE;--info-ink:#0C4A6E;--shadow:0 1px 2px rgba(15,23,42,.06),0 4px 14px rgba(15,23,42,.06);--radius:14px;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0B1220;--surface:#111B2E;--ink:#E6EEF8;--ink-2:#C7D3E3;--muted:#A3B3C9;--line:#263652;--zebra:#0E1829;--link:#5EEAD4;--accent:#FBBF24;--hero-bg:#0E1B2C;--hero-glow:#134E4A;--header-bg:#0B1220;--header-ink:#E6EEF8;--header-link:#C7D3E3;--btn-bg:#2DD4BF;--btn-ink:#0B1220;--btn-hover:#E6EEF8;--cta-bg:#16233A;--cta-ink:#E6EEF8;--footer-bg:#070C16;--footer-ink:#A3B3C9;--footer-link:#5EEAD4;--note-bg:#2A1F08;--note-line:#7C5A12;--note-ink:#FDE68A;--th-bg:#1E2B42;--th-ink:#E6EEF8;--ok:#123524;--ok-ink:#A7F3D0;--part:#3B2A0A;--part-ink:#FDE68A;--bad:#3B1212;--bad-ink:#FECACA;--off:#1F2937;--off-ink:#D1D5DB;--info:#0C2A3F;--info-ink:#BAE6FD;--shadow:0 1px 2px rgba(0,0,0,.4);color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1220;--surface:#111B2E;--ink:#E6EEF8;--ink-2:#C7D3E3;--muted:#A3B3C9;--line:#263652;--zebra:#0E1829;--link:#5EEAD4;--accent:#FBBF24;--hero-bg:#0E1B2C;--hero-glow:#134E4A;--header-bg:#0B1220;--header-ink:#E6EEF8;--header-link:#C7D3E3;--btn-bg:#2DD4BF;--btn-ink:#0B1220;--btn-hover:#E6EEF8;--cta-bg:#16233A;--cta-ink:#E6EEF8;--footer-bg:#070C16;--footer-ink:#A3B3C9;--footer-link:#5EEAD4;--note-bg:#2A1F08;--note-line:#7C5A12;--note-ink:#FDE68A;--th-bg:#1E2B42;--th-ink:#E6EEF8;--ok:#123524;--ok-ink:#A7F3D0;--part:#3B2A0A;--part-ink:#FDE68A;--bad:#3B1212;--bad-ink:#FECACA;--off:#1F2937;--off-ink:#D1D5DB;--info:#0C2A3F;--info-ink:#BAE6FD;--shadow:0 1px 2px rgba(0,0,0,.4);color-scheme:dark}}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff}
-a{color:#1D4ED8}
-a:focus-visible,input:focus-visible{outline:3px solid #F59E0B;outline-offset:2px}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;overflow-x:clip;font:400 15.5px/1.55 "DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3,.brand span,.stat b,.card strong,.foot-title{font-family:"Space Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--link);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
 .skip{position:absolute;left:-9999px;top:auto}
-.skip:focus{left:16px;top:8px;background:#fff;padding:8px 12px;z-index:9;border-radius:6px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-.site-header{background:var(--navy);color:#fff}
-.bar{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;padding:14px 20px}
-.brand{color:#fff;font-weight:700;text-decoration:none;font-size:18px}
-.site-header nav{display:flex;flex-wrap:wrap;gap:6px 18px}
-.site-header nav a{color:#E6EEF7;text-decoration:none;font-size:15px}
-.site-header nav a:hover{text-decoration:underline}
-main{padding:4px 20px 48px}
-h1{font-size:clamp(28px,4vw,42px);line-height:1.15;color:var(--navy);margin:28px 0 12px}
-h2{font-size:clamp(21px,3vw,27px);color:var(--teal);margin:44px 0 12px;border-bottom:2px solid var(--line);padding-bottom:6px}
-h3{font-size:18px;color:var(--navy);margin:24px 0 8px}
-.lead{font-size:19px;max-width:72ch}
-.muted{color:var(--muted)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:24px 0}
-.stat{background:var(--zebra);border:1px solid var(--line);border-radius:12px;padding:16px}
-.stat b{display:block;font-size:30px;color:var(--navy);line-height:1.1}
-.stat span{color:var(--muted);font-size:14px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
-.btn{display:inline-block;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:600;border:1px solid var(--navy);color:var(--navy)}
-.btn.primary{background:var(--navy);color:#fff}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
-.card{display:block;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:var(--ink);background:#fff}
-.card:hover{border-color:var(--teal);box-shadow:0 2px 10px rgba(15,118,110,.14)}
-.card strong{display:block;color:var(--navy);margin-bottom:2px}
-.card span{font-size:14px;color:var(--muted)}
-.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;margin:14px 0}
-table{border-collapse:collapse;width:100%;font-size:14.5px}
-th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-thead th{background:var(--navy);color:#fff;font-weight:600}
+.skip:focus{left:16px;top:8px;background:#fff;color:#0F172A;padding:8px 12px;z-index:20;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+main{padding:0 0 36px}
+section{scroll-margin-top:72px}
+.site-header{position:sticky;top:0;z-index:10;background:var(--header-bg);color:var(--header-ink);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.bar{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between;padding:10px 20px}
+.brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--header-ink);font-weight:700;font-size:17px}
+.mark{width:26px;height:26px;flex:none}
+.site-header nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 18px}
+.site-header nav a{color:var(--header-link);text-decoration:none;font-size:14.5px;font-weight:500;padding:3px 0;border-bottom:2px solid transparent}
+.site-header nav a:hover{color:var(--header-ink);border-bottom-color:var(--accent)}
+.site-header :focus-visible{outline-color:var(--accent)}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:999px;border:1px solid rgba(255,255,255,.28);background:transparent;color:var(--header-ink);cursor:pointer}
+.theme-toggle:hover{background:rgba(255,255,255,.12)}
+.theme-toggle svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hero{position:relative;margin-left:-20px;margin-right:-20px;padding:24px 20px 20px;background:radial-gradient(760px 320px at 0% 0%,var(--hero-glow) 0%,transparent 62%),var(--hero-bg)}
+.eyebrow{display:inline-block;margin:0 0 10px;padding:3px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--link);font-size:12.5px;font-weight:600;letter-spacing:.02em}
+h1{font-size:clamp(26px,4vw,40px);line-height:1.08;color:var(--ink);margin:0 0 10px;letter-spacing:-.02em;max-width:20ch}
+.lead{font-size:15.5px;color:var(--ink-2);max-width:66ch;margin:0 0 16px}
+.hero-search label{display:block;font-weight:600;font-size:14px;margin:0 0 5px}
+.search{width:100%;max-width:600px;min-height:46px;padding:10px 14px;font:500 15.5px "DM Sans",system-ui,sans-serif;color:var(--ink);background:var(--surface);border:2px solid var(--muted);border-radius:12px;-webkit-appearance:none;appearance:none}
+.search::placeholder{color:var(--muted)}
+.search:focus{outline:3px solid var(--accent);outline-offset:2px;border-color:var(--link)}
+#search-status{margin:6px 0 0;font-size:13.5px}
+.cta{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 16px;border-radius:999px;text-decoration:none;font-weight:600;font-size:14.5px;border:2px solid var(--link);color:var(--link);background:var(--surface);transition:background .2s,color .2s,border-color .2s}
+.btn:hover{background:var(--hero-bg);color:var(--ink)}
+.btn.primary{background:var(--btn-bg);border-color:var(--btn-bg);color:var(--btn-ink)}
+.btn.primary:hover{background:var(--btn-hover);border-color:var(--btn-hover);color:var(--btn-ink)}
+.btn.ghost{border-color:transparent;background:transparent}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:20px 0 4px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:clamp(22px,3vw,27px);line-height:1.1;color:var(--link)}
+.stat span{font-size:13px;color:var(--muted)}
+h2{font-size:clamp(20px,2.6vw,24px);line-height:1.2;color:var(--ink);margin:32px 0 10px;padding-top:4px}
+h2::before{content:"";display:block;width:36px;height:4px;border-radius:4px;background:var(--accent);margin:0 0 8px}
+h3{font-size:17px;color:var(--ink);margin:18px 0 6px}
+.note{background:var(--note-bg);border:1px solid var(--note-line);border-left:5px solid var(--accent);border-radius:12px;padding:11px 14px;margin:18px 0;color:var(--note-ink);font-size:14.5px}
+.note p{margin:4px 0 0}
+.note strong{color:var(--note-ink)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px}
+.card{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--surface);color:var(--ink);text-decoration:none;box-shadow:var(--shadow);transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover{border-color:var(--link);transform:translateY(-2px);color:var(--ink)}
+.card-body{display:flex;flex-direction:column;gap:1px;min-width:0}
+.card strong{font-size:15px;line-height:1.3;color:var(--ink)}
+.meta{font-size:13px;color:var(--muted)}
+.ico{flex:none;width:32px;height:32px;padding:7px;border-radius:10px;background:var(--hero-bg);color:var(--link);fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:10px 0;background:var(--surface);-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:13.5px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--th-bg);color:var(--th-ink);font-weight:600}
 tbody tr:nth-child(even){background:var(--zebra)}
 tbody th{font-weight:600}
-.badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap;margin-left:4px}
-.v-confirmed{background:var(--ok)}
-.v-partly_confirmed{background:var(--part)}
-.v-incorrect,.v-no_longer_available{background:var(--bad)}
-.v-unverifiable{background:var(--off)}
-.conf-high{background:var(--ok)}
-.conf-medium{background:var(--info)}
-.conf-low{background:var(--part)}
-.finding{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0}
-.finding h3{margin:0 0 6px}
-dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:4px 14px;margin:8px 0 0;font-size:15px}
-dt{color:var(--muted);font-weight:600}
-dd{margin:0;min-width:0;overflow-wrap:anywhere}
-p,li,td,th,h1,h2,h3{overflow-wrap:anywhere}
-.note{background:var(--warn);border:1px solid var(--warnline);border-radius:12px;padding:14px 16px;margin:18px 0}
-.note p{margin:6px 0 0}
-.crumbs{font-size:14px;color:var(--muted);margin-top:18px}
+td a{white-space:nowrap}
+.badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap;margin:0 4px 0 0;vertical-align:middle}
+.v-confirmed,.conf-high{background:var(--ok);color:var(--ok-ink)}
+.v-partly_confirmed,.conf-low{background:var(--part);color:var(--part-ink)}
+.v-incorrect,.v-no_longer_available{background:var(--bad);color:var(--bad-ink)}
+.v-unverifiable{background:var(--off);color:var(--off-ink)}
+.conf-medium{background:var(--info);color:var(--info-ink)}
+.crumbs{font-size:13.5px;color:var(--muted);margin-top:14px}
 .crumbs a{color:var(--muted)}
-.search{width:100%;max-width:520px;padding:12px 14px;font-size:16px;border:1px solid #8796A8;border-radius:10px;margin:6px 0 4px}
-.list{columns:2 260px;padding-left:18px}
-.list li{margin:4px 0;break-inside:avoid}
-.providers{padding-left:18px;columns:1 320px;column-gap:28px}
-.providers li{margin:0 0 6px;break-inside:avoid}
-.site-footer{border-top:1px solid var(--line);background:#F8FAFC;color:var(--muted);font-size:14px;padding:22px 0}
+.list{padding-left:18px;columns:1 240px;column-gap:24px}
+.list li{margin:3px 0;break-inside:avoid}
+.dir{margin-top:6px}
+.dir>summary{cursor:pointer;list-style:none;padding:10px 40px 10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-weight:600;position:relative}
+.dir>summary::-webkit-details-marker{display:none}
+.dir>summary::after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:20px;line-height:1;color:var(--link)}
+.dir[open]>summary::after{content:"\2212"}
+.dir[open]>summary{margin-bottom:8px}
+.providers{list-style:none;padding:0;margin:0;columns:1 260px;column-gap:12px}
+.providers li{margin:0 0 6px;break-inside:avoid;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:14.5px}
+.providers a{font-weight:600}
+.finding{border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin:12px 0;background:var(--surface);box-shadow:var(--shadow)}
+.finding h3{margin:0 0 6px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+dl{display:grid;grid-template-columns:minmax(0,1fr);gap:2px 12px;margin:8px 0 0;font-size:14.5px}
+dt{color:var(--muted);font-weight:600;margin-top:6px}
+dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.faq-item{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:8px 0;overflow:hidden}
+.faq-item summary{cursor:pointer;list-style:none;padding:11px 42px 11px 14px;font-weight:600;position:relative;min-height:42px}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:20px;line-height:1;color:var(--link)}
+.faq-item[open] summary::after{content:"\2212"}
+.faq-item p{margin:0;padding:0 14px 12px;color:var(--ink-2)}
+.report-cta{margin:36px 0 0;padding:20px;border-radius:12px;background:var(--cta-bg);color:var(--cta-ink)}
+.report-cta h2{color:var(--cta-ink);margin-top:0}
+.report-cta h2::before{background:var(--accent)}
+.report-cta p{color:var(--cta-ink);max-width:60ch}
+.report-cta .btn{border-color:var(--cta-ink);color:var(--cta-ink);background:transparent}
+.report-cta .btn:hover{background:var(--cta-ink);color:var(--cta-bg)}
+.site-footer{background:var(--footer-bg);color:var(--footer-ink);font-size:13.5px;padding:22px 0 28px;margin-top:40px}
+.site-footer a{color:var(--footer-link)}
+.foot-title{color:var(--cta-ink);font-weight:700;font-size:15px;margin:0 0 4px}
+.foot-links{display:flex;flex-wrap:wrap;gap:6px 16px;margin:10px 0 0}
 .visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-img{max-width:100%;height:auto}
-.cards>*,.stats>*,.list>*{min-width:0}
-@media (max-width:640px){dl{grid-template-columns:minmax(0,1fr)}dt{margin-top:6px}main{padding:4px 16px 40px}.bar{padding:12px 16px}.brand{font-size:17px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media print{.site-header,.site-footer,.skip,.cta,.search{display:none}body{font-size:12px}}
+dd,p,li,h1,h2,h3{overflow-wrap:anywhere}
+@media (min-width:640px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{padding-top:34px;padding-bottom:28px}main{padding-bottom:52px}dl{grid-template-columns:max-content minmax(0,1fr)}dt{margin-top:0}}
+@media (min-width:900px){.site-header nav{gap:4px 22px}}
+@media (max-width:640px){.hero{margin-left:-16px;margin-right:-16px;padding-top:18px;padding-bottom:16px;padding-left:16px;padding-right:16px}.wrap{padding:0 16px}.bar{padding:9px 16px}.finding{padding:12px}.report-cta{padding:16px}.brand{font-size:16px}
+table.stack{min-width:0}table.stack thead{position:absolute;left:-9999px}table.stack tr{display:block;padding:9px 11px;border-bottom:1px solid var(--line)}table.stack td{display:block;border:0;padding:2px 0}table.stack td::before{content:attr(data-label);display:block;font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}}
+@media (min-width:1160px){.hero{width:100vw;margin-left:calc(50% - 50vw);margin-right:0;padding-left:max(20px,calc((100vw - 1120px)/2 + 20px));padding-right:max(20px,calc((100vw - 1120px)/2 + 20px))}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}.card:hover{transform:none}}
+@media print{.site-header,.site-footer,.skip,.cta,.hero-search,.report-cta,.theme-toggle{display:none}body{font-size:12px}}
 """
 
+
 JS = """(function () {
+  var root = document.documentElement;
   var input = document.getElementById('provider-search');
-  if (!input) { return; }
-  var items = Array.prototype.slice.call(document.querySelectorAll('#provider-list [data-provider]'));
   var status = document.getElementById('search-status');
-  input.addEventListener('input', function () {
-    var q = input.value.trim().toLowerCase();
-    var shown = 0;
-    items.forEach(function (el) {
-      var hit = !q || el.getAttribute('data-provider').indexOf(q) !== -1;
-      el.hidden = !hit;
-      if (hit) { shown += 1; }
+  var dir = document.getElementById('directory-details');
+  var items = Array.prototype.slice.call(document.querySelectorAll('#provider-list [data-provider]'));
+  if (input) {
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      items.forEach(function (el) {
+        var hit = !q || el.getAttribute('data-provider').indexOf(q) !== -1;
+        el.hidden = !hit;
+        if (hit) { shown += 1; }
+      });
+      if (dir && q) { dir.open = true; }
+      if (status) { status.textContent = shown + (shown === 1 ? ' provider' : ' providers') + ' shown'; }
     });
-    if (status) { status.textContent = shown + (shown === 1 ? ' provider' : ' providers') + ' shown'; }
-  });
+  }
+  var btn = document.querySelector('[data-theme-toggle]');
+  function current() {
+    var t = root.getAttribute('data-theme');
+    if (t) { return t; }
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function paint() {
+    if (!btn) { return; }
+    var dark = current() === 'dark';
+    btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    btn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    btn.querySelector('.i-sun').hidden = !dark;
+    btn.querySelector('.i-moon').hidden = dark;
+  }
+  if (btn) {
+    paint();
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      paint();
+    });
+  }
 })();
 """
 
-FAVICON = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" '
-           'fill="#1F3A5F"/><text x="32" y="45" font-size="40" text-anchor="middle" fill="#fff" '
-           'font-family="Arial, sans-serif" font-weight="700">$</text></svg>\n')
+MARK_INNER = r"""<rect x="3" y="3" width="58" height="58" rx="14" fill="#0F766E"/><rect x="3.75" y="3.75" width="56.5" height="56.5" rx="13.25" fill="none" stroke="#5EEAD4" stroke-opacity="0.18" stroke-width="1"/><g transform="translate(32 31.5) scale(1.04) translate(-32 -31.5)"><path d="M22 34 H42 L40.6 48.4 Q40 53.5 34.4 53.5 H29.6 Q24 53.5 23.4 48.4 Z" fill="#FFFFFF"/><path d="M14 35 L32 27 L50 35 L32 43 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/><path d="M43 9.6 Q44.95 14.65 50 16.5 Q44.95 18.35 43 23.4 Q41.05 18.35 36 16.5 Q41.05 14.65 43 9.6 Z" fill="#F59E0B"/></g>"""
+FAVICON = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Free Credits and Offers">' + MARK_INNER + '</svg>\n'
 
 
 def write_extras():
